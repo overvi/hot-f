@@ -1,0 +1,81 @@
+/* fonts */
+
+@font-face {
+  font-family: "Yekan";
+  src: url(/assets/fonts/Yekan.woff2);
+  font-style: normal;
+}
+
+/* resets */
+
+:root {
+  --bs-body-font-size: 0.875rem;
+  --black: rgb(19, 19, 19);
+  --gray-900: rgb(24, 24, 24);
+  --gray-800: rgb(50, 50, 50);
+}
+
+body {
+  font-family: "Yekan", serif;
+  background-color: var(--black);
+}
+
+/* Table */
+
+.table.table-bordered {
+  border-top-color: transparent;
+  border-color: var(--gray-800);
+}
+.table.table-bordered th {
+  border-left-color: transparent;
+  font-weight: 300;
+}
+
+.table tbody tr:last-child {
+  border-bottom-color: transparent;
+}
+.table tbody tr th {
+  font-size: 1rem;
+}
+.table tbody td:last-child,
+.table thead th:last-child {
+  border-right-color: transparent;
+}
+
+.table th,
+.table td {
+  padding: 1.7rem;
+  text-align: center;
+}
+.table tbody tr {
+  --bs-table-bg: var(--black);
+}
+
+.table thead tr {
+  --bs-table-bg: var(--gray-900);
+  font-weight: 300;
+}
+
+.table tr:hover {
+  --bs-table-bg: rgb(24, 24, 24);
+}
+
+/* Badge */
+
+.badge {
+  font-weight: 300;
+  border: 1px solid darkgray;
+  display: block;
+  width: fit-content;
+  margin: auto;
+}
+
+/* utils */
+
+.text-red-600 {
+  color: crimson;
+}
+
+.text-neutral-400 {
+  color: darkgray;
+}
