@@ -2,8 +2,20 @@
 
 @font-face {
   font-family: "Yekan";
-  src: url(/assets/fonts/Yekan.woff2);
+  src: url(/assets/fonts/YekanBakh-Light.woff2);
   font-style: normal;
+}
+@font-face {
+  font-family: "Yekan";
+  src: url(/assets/fonts/YekanBakh-Bold.woff2);
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Yekan";
+  src: url(/assets/fonts/YekanBakh-Medium.woff2);
+  font-style: normal;
+  font-weight: 600;
 }
 
 /* General */
@@ -12,16 +24,27 @@
   --table-tr-hover-bg: var(--bs-gray-100);
   --table-tbody-bg: var(--bs-white);
   --table-thead-bg: var(--bs-gray-100);
+  --search-box-bg: var(--bs-white);
+  --sidebar-bg: var(--bs-white);
+  --popover-bg: var(--bs-white);
   --bs-badge-color: var(--bs-black);
   --bs-border-color: var(--bs-gray-200);
+  --bs-icon-bg: var(--bs-white);
+  --bs-body-bg: var(--bs-gray-100);
   --bs-dark: #131313;
   --bs-gray-900: #181818;
+  --bs-gray-100: #f3f3f3;
+  --bs-gray-50: #00000005;
 }
 
 [data-bs-theme="dark"] {
   --table-tr-hover-bg: var(--bs-gray-900);
   --table-tbody-bg: var(--bs-dark);
   --table-thead-bg: var(--bs-gray-900);
+  --search-box-bg: var(--bs-gray-900);
+  --sidebar-bg: var(--bs-gray-900);
+  --popover-bg: var(--bs-gray-900);
+  --bs-icon-bg: var(--bs-gray-900);
   --bs-body-bg: var(--bs-dark);
   --bs-table-bg: var(--bs-gray-900);
   --bs-badge-color: var(--bs-white);
@@ -30,10 +53,23 @@
 
 body {
   font-family: "Yekan", serif;
-  --bs-body-font-size: 0.875rem;
+  --bs-body-font-size: 14px;
+}
+
+button {
+  font: inherit !important;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* Table */
+
+.table-wrapper {
+  height: fit-content;
+}
 
 .table.table-bordered {
   border-top-color: transparent;
@@ -57,7 +93,8 @@ body {
 
 .table th,
 .table td {
-  padding: 1.7rem;
+  padding: 1rem;
+  padding-block: 1.5rem;
   text-align: center;
 }
 .table tbody tr {
@@ -83,4 +120,127 @@ body {
   width: fit-content;
   margin: auto;
   --bs-badge-color: var(--bs-badge-color);
+}
+
+/* utils */
+
+.pad-2 {
+  padding: 0.6rem;
+}
+
+.pad-3 {
+  padding: 0.9rem;
+}
+
+.pad-9 {
+  padding: 4rem;
+  padding-inline: 5rem;
+}
+
+.bg-orange {
+  background: var(--bs-warning);
+}
+
+.text-gray-300 {
+  color: var(--bs-gray-300);
+}
+
+/* Nav */
+
+.search {
+  width: 33rem;
+  padding-left: 1rem;
+  background: var(--search-box-bg);
+}
+
+.search input {
+  background: var(--search-box-bg);
+}
+
+.search input:focus {
+  background: transparent;
+}
+
+.search input::placeholder {
+  color: var(--bs-gray-500);
+}
+
+.hotel-profile-btn:hover {
+  color: var(--bs-orange);
+}
+
+.icon-bg {
+  background-color: var(--bs-icon-bg);
+}
+
+/* Accordion */
+
+.accordion {
+  --bs-accordion-bg: transparent;
+  --bs-border-color: transparent;
+  --bs-accordion-btn-padding-x: 0;
+  --bs-accordion-btn-icon-width: 0.5rem;
+  --bs-accordion-active-bg: orange;
+}
+
+.accordion-button {
+  padding-inline: 1rem;
+  padding-block: 0.7rem;
+  border-radius: 100vw;
+  justify-content: space-between;
+  font-size: 0.875rem !important;
+  --bs-accordion-inner-border-radius: 100vw;
+  --bs-accordion-active-color: white;
+}
+
+.accordion-button::after {
+  margin: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+
+.accordion-active {
+  background: var(--bs-ornage);
+  border-radius: 100vw;
+  padding: 1rem;
+}
+
+.accordion-active-item {
+  --bs-btn-color: var(--bs-orange);
+}
+
+.accordion-collapse {
+  background-color: var(--bs-gray-50);
+}
+
+/* Popover */
+
+.custom-pop {
+  --bs-popover-bg: var(--bs-black);
+  --bs-popover-body-color: white;
+  --bs-popover-border-radius: 100vw;
+  --bs-popover-body-padding-y: 0.5rem;
+  --bs-popover-body-padding-x: 0.5rem;
+}
+
+.focus-pop {
+  --bs-popover-bg: var(--popover-bg);
+  --bs-popover-border-radius: 5rem;
+  --bs-popover-border-color: transparent;
+  --bs-popover-border-radius: 1rem;
+  --bs-font-sans-serif: "Yekan";
+}
+
+/* Side Bar */
+
+.side-bar {
+  background-color: var(--sidebar-bg);
+  min-width: 17rem;
+}
+
+.siadebar-tabs {
+  background-color: var(--sidebar-bg);
 }

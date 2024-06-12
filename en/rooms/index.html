@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fa" dir="ltr" data-bs-theme="light">
+<html lang="en" data-bs-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
-  <body class="min-vh-100" style="direction: rtl">
+  <body class="min-vh-100">
     <main class="w-100">
       <header>
         <nav class="d-flex p-3 justify-content-between align-items-center">
@@ -38,7 +38,7 @@
               id="popover-btn"
               class="p-1 px-2 border-0 hotel-profile-btn icon-bg rounded-5"
             >
-              <span class="px-2">Prof. Kayden Rolfson I</span>
+              Prof. Kayden Rolfson I
               <img
                 width="40"
                 height="40"
@@ -50,27 +50,27 @@
             <div id="popover-content" class="d-none gap-3 flex-column">
               <div class="d-flex mb-2 gap-2 m-0 align-items-center">
                 <img src="/assets/images/settings.svg" alt="" />
-                <p class="m-0">تنظیمات</p>
+                <p class="m-0">Settings</p>
               </div>
               <div class="d-flex mb-2 gap-2 align-items-center">
                 <img src="/assets/images/hotels.svg" alt="" />
-                <p class="m-0">مدیریت هتل</p>
+                <p class="m-0">Hotel management</p>
               </div>
               <div
                 class="d-flex mb-2 gap-2 align-items-center border-bottom pb-3"
               >
                 <img src="/assets/images/toggle.svg" alt="" />
-                <p class="m-0">لیست هتل ها</p>
+                <p class="m-0">Hotels list</p>
               </div>
               <div class="d-flex gap-2 align-items-center">
                 <img src="/assets/images/logout.svg" alt="" />
-                <p class="m-0 text-danger">خروج</p>
+                <p class="m-0 text-danger">Logout</p>
               </div>
             </div>
           </div>
           <div class="d-flex align-items-center gap-2">
             <div class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2">
-              <a href="/en/rooms/">
+              <a href="/rooms/">
                 <img
                   type="button"
                   data-bs-toggle="popover"
@@ -80,8 +80,7 @@
                   data-bs-content="Change Language "
                   src="/assets/images/language-circle.svg"
                   alt=""
-                />
-              </a>
+              /></a>
             </div>
             <div class="btn p-0 border-0">
               <div class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2">
@@ -165,10 +164,10 @@
             </div>
           </div>
           <form action="">
-            <div class="search d-flex rounded-5 p-0">
+            <div class="search d-flex rounded-5">
               <input
                 class="form-control shadow-none rounded-5 p-2 border-0"
-                placeholder="  مدیریت رسرواسیون  ..."
+                placeholder="Reservation Search ... "
                 type="text"
               />
               <div class="bg-orange btn border-0 rounded-5 pad-3">
@@ -181,10 +180,12 @@
       <div class="wrapper mt-4 container mw-100">
         <div class="row">
           <div
-            class="side-bar overflow-hidden container mx-3 px-1 rounded-5 px-0 col-2"
+            class="side-bar overflow-hidden container me-5 px-1 rounded-5 px-0 col-2"
           >
             <div class="row">
-              <div class="sidebar-tabs px-3 col-2 d-flex flex-column gap-5">
+              <div
+                class="sidebar-tabs col-2 px-3 col-2 d-flex flex-column gap-5"
+              >
                 <img
                   style="margin-top: 6rem"
                   width="28"
@@ -200,9 +201,10 @@
                 <img width="28" src="/assets/images/calendar.svg" alt="" />
                 <img width="28" src="/assets/images/dollar-circle.svg" alt="" />
               </div>
+
               <div class="col">
                 <div class="px-3 mt-3">
-                  <h1>مدیریت هتل</h1>
+                  <h1>Property management system</h1>
                   <p>نوع اتاق</p>
                 </div>
                 <div class="accordion" id="accordionExample">
@@ -216,7 +218,7 @@
                         aria-expanded="true"
                         aria-controls="collapseOne"
                       >
-                        مدیریت اتاق ها
+                        Room Management
                       </button>
                     </h2>
                     <div
@@ -228,11 +230,11 @@
                         <button
                           class="btn py-2 rounded-5 px-3 d-block bg-white w-100 text-orange border-0 accordion-active-item"
                         >
-                          <span class="me-4">نوع اتاق ها</span>
+                          <span class="me-4">Room types</span>
                         </button>
                         <div class="px-5">
-                          <button class="btn d-block">اتاق ها</button>
-                          <button class="btn">امکانات اتاق</button>
+                          <button class="btn d-block">Rooms</button>
+                          <button class="btn">Amenities</button>
                         </div>
                       </div>
                     </div>
@@ -247,7 +249,7 @@
                         aria-expanded="false"
                         aria-controls="collapseTwo"
                       >
-                        خدمات اتاق
+                        Room services
                       </button>
                     </h2>
                     <div
@@ -256,9 +258,9 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
+                        <button class="btn d-block">Room types</button>
+                        <button class="btn d-block">Rooms</button>
+                        <button class="btn">Amenities</button>
                       </div>
                     </div>
                   </div>
@@ -272,7 +274,7 @@
                         aria-expanded="false"
                         aria-controls="collapseThree"
                       >
-                        مدیریت امکانات
+                        Faciliteis management
                       </button>
                     </h2>
                     <div
@@ -281,9 +283,9 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
+                        <button class="btn d-block">Room types</button>
+                        <button class="btn d-block">Rooms</button>
+                        <button class="btn">Amenities</button>
                       </div>
                     </div>
                   </div>
@@ -297,7 +299,7 @@
                         aria-expanded="false"
                         aria-controls="collapseFour"
                       >
-                        مدیریت نرخ
+                        Rate management
                       </button>
                     </h2>
                     <div
@@ -306,9 +308,9 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
+                        <button class="btn d-block">Room types</button>
+                        <button class="btn d-block">Rooms</button>
+                        <button class="btn">Amenities</button>
                       </div>
                     </div>
                   </div>
@@ -322,7 +324,7 @@
                         aria-expanded="false"
                         aria-controls="collapseFive"
                       >
-                        مدیریت مهمان ها
+                        Guests management
                       </button>
                     </h2>
                     <div
@@ -331,9 +333,9 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
+                        <button class="btn d-block">Room types</button>
+                        <button class="btn d-block">Rooms</button>
+                        <button class="btn">Amenities</button>
                       </div>
                     </div>
                   </div>
@@ -347,7 +349,7 @@
                         aria-expanded="false"
                         aria-controls="collapseSix"
                       >
-                        انبار
+                        Ware house
                       </button>
                     </h2>
                     <div
@@ -356,9 +358,9 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
+                        <button class="btn d-block">Room types</button>
+                        <button class="btn d-block">Rooms</button>
+                        <button class="btn">Amenities</button>
                       </div>
                     </div>
                   </div>
@@ -368,11 +370,11 @@
             <div class="px-2 py-3">
               <img src="/assets/images/logo.svg" alt="" />
               <p>
-                برای استفاده از ابزارهای پیشرفته می‌توانید از بسته حرفه ای
-                منگوتلز استفاده کنید.
+                Heroes, feature sections, newsletter sign up forms — all of the
+                components you need to build beautiful marketing websites.
               </p>
               <button class="btn btn-warning w-100 rounded-5">
-                پیشرفته
+                Advance
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -391,10 +393,9 @@
               </button>
             </div>
           </div>
-
           <div class="col-9">
             <button class="btn btn-warning rounded-5 mb-2">
-              افزودن نوع اتاق
+              Add New Room Type
             </button>
             <div class="rounded-4 table-wrapper p-0 border overflow-hidden">
               <table class="table table-bordered m-0">
