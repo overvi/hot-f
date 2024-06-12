@@ -82,13 +82,3 @@ body {
   margin: auto;
   --bs-badge-color: var(--bs-badge-color);
 }
-
-/* utils */
-
-.text-red-600 {
-  color: crimson;
-}
-
-.text-neutral-400 {
-  color: darkgray;
-}
