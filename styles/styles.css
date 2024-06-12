@@ -1,4 +1,4 @@
-/* fonts */
+/* Fonts */
 
 @font-face {
   font-family: "Yekan";
@@ -6,25 +6,36 @@
   font-style: normal;
 }
 
-/* resets */
+/* General */
 
 :root {
-  --bs-body-font-size: 0.875rem;
-  --black: rgb(19, 19, 19);
-  --gray-900: rgb(24, 24, 24);
-  --gray-800: rgb(50, 50, 50);
+  --table-tr-hover-bg: var(--bs-gray-100);
+  --table-tbody-bg: var(--bs-white);
+  --table-thead-bg: var(--bs-white);
+  --bs-badge-color: var(--bs-black);
+  --bs-dark: #131313;
+  --bs-gray-900: #181818;
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-bg: var(--bs-dark);
+  --bs-table-bg: var(--bs-gray-900);
+  --bs-badge-color: var(--bs-white);
+  --table-tr-hover-bg: var(--bs-gray-900);
+  --table-tbody-bg: var(--bs-dark);
+  --table-thead-bg: var(--bs-gray-900);
 }
 
 body {
   font-family: "Yekan", serif;
-  background-color: var(--black);
+  --bs-body-font-size: 0.875rem;
 }
 
 /* Table */
 
 .table.table-bordered {
   border-top-color: transparent;
-  border-color: var(--gray-800);
+  border-color: var(--bs-table-border-color);
 }
 .table.table-bordered th {
   border-left-color: transparent;
@@ -48,16 +59,17 @@ body {
   text-align: center;
 }
 .table tbody tr {
-  --bs-table-bg: var(--black);
+  --bs-table-bg: var(--table-tbody-bg);
 }
 
 .table thead tr {
-  --bs-table-bg: var(--gray-900);
+  --bs-table-bg: var(--table-thead-bg);
   font-weight: 300;
+  border-top: transparent;
 }
 
 .table tr:hover {
-  --bs-table-bg: rgb(24, 24, 24);
+  --bs-table-bg: var(--table-tr-hover-bg);
 }
 
 /* Badge */
@@ -68,6 +80,7 @@ body {
   display: block;
   width: fit-content;
   margin: auto;
+  --bs-badge-color: var(--bs-badge-color);
 }
 
 /* utils */
