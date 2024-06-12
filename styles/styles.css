@@ -11,19 +11,21 @@
 :root {
   --table-tr-hover-bg: var(--bs-gray-100);
   --table-tbody-bg: var(--bs-white);
-  --table-thead-bg: var(--bs-white);
+  --table-thead-bg: var(--bs-gray-100);
   --bs-badge-color: var(--bs-black);
+  --bs-border-color: var(--bs-gray-200);
   --bs-dark: #131313;
   --bs-gray-900: #181818;
 }
 
 [data-bs-theme="dark"] {
-  --bs-body-bg: var(--bs-dark);
-  --bs-table-bg: var(--bs-gray-900);
-  --bs-badge-color: var(--bs-white);
   --table-tr-hover-bg: var(--bs-gray-900);
   --table-tbody-bg: var(--bs-dark);
   --table-thead-bg: var(--bs-gray-900);
+  --bs-body-bg: var(--bs-dark);
+  --bs-table-bg: var(--bs-gray-900);
+  --bs-badge-color: var(--bs-white);
+  --bs-border-color: var(--bs-gray-800);
 }
 
 body {
