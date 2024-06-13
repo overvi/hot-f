@@ -71,6 +71,12 @@ h1 {
   height: fit-content;
 }
 
+@media (width > 1300px) {
+  .table-col {
+    width: 75%;
+  }
+}
+
 .table.table-bordered {
   border-top-color: transparent;
   border-color: var(--bs-table-border-color);
@@ -247,13 +253,19 @@ h1 {
 
 .side-bar {
   background-color: var(--sidebar-bg);
-  min-width: 20rem;
+  min-width: 17rem;
 }
 
 .siadebar-tabs {
   background-color: var(--sidebar-bg);
 }
 
+.sidebar-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+.sidebar-scroll {
+  scrollbar-width: none; /* Firefox 64 */
+}
 .logout-btn {
   background-color: var(--bs-border-color);
 }
