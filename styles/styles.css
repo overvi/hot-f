@@ -23,7 +23,7 @@
 :root {
   --table-tr-hover-bg: var(--bs-gray-100);
   --table-tbody-bg: var(--bs-white);
-  --table-thead-bg: var(--bs-gray-100);
+  --table-thead-bg: var(--bs-gray-50);
   --search-box-bg: var(--bs-white);
   --sidebar-bg: var(--bs-white);
   --popover-bg: var(--bs-white);
@@ -34,7 +34,8 @@
   --bs-dark: #131313;
   --bs-gray-900: #181818;
   --bs-gray-100: #f3f3f3;
-  --bs-gray-50: #00000005;
+  --bs-gray-50: #f9f9f9;
+  --bs-darkgray: #00000005;
 }
 
 [data-bs-theme="dark"] {
@@ -73,19 +74,19 @@ h1 {
 
 @media (width > 1300px) {
   .table-col {
-    width: 75%;
+    width: 79%;
   }
 }
 
 @media (width > 1100px) {
   .table-col {
-    width: 72%;
+    width: 73.5%;
   }
 }
 
 @media (width > 1350px) {
   .table-col {
-    width: 75%;
+    width: 75.5%;
   }
 }
 
@@ -94,7 +95,6 @@ h1 {
   border-color: var(--bs-table-border-color);
 }
 .table.table-bordered th {
-  border-left-color: transparent;
   font-weight: 300;
 }
 
@@ -252,7 +252,7 @@ h1 {
 }
 
 .accordion-collapse {
-  background-color: var(--bs-gray-50);
+  background-color: var(--bs-darkgray);
 }
 
 /* Popover */
