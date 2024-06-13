@@ -35,6 +35,8 @@
   --bs-gray-900: #181818;
   --bs-gray-100: #f3f3f3;
   --bs-gray-50: #f9f9f9;
+  --bs-orange-700: #f9b033;
+  --bs-green-400: #2fac65;
   --bs-darkgray: #00000005;
 }
 
@@ -64,6 +66,10 @@ button {
 h1 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+img {
+  display: block;
 }
 
 /* Table */
@@ -162,6 +168,10 @@ h1 {
 
 .bg-orange {
   background: var(--bs-warning);
+}
+
+.bg-orange-700 {
+  background-color: var(--bs-orange-700);
 }
 
 .text-gray-300 {
@@ -290,6 +300,20 @@ h1 {
 .sidebar-scroll {
   scrollbar-width: none; /* Firefox 64 */
 }
+
 .logout-btn {
   background-color: var(--bs-border-color);
+}
+
+/* Login */
+
+.form-check-input:checked {
+  background-color: #f9b033;
+  box-shadow: none;
+  border: 0;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
 }
