@@ -175,9 +175,21 @@ h1 {
 /* Nav */
 
 .search {
-  width: 33rem;
+  width: 15rem;
   padding-left: 1rem;
   background: var(--search-box-bg);
+}
+
+@media (width > 1100px) {
+  .search {
+    width: 20rem;
+  }
+}
+
+@media (width > 1300px) {
+  .search {
+    width: 33rem;
+  }
 }
 
 .search input {
