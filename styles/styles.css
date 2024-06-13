@@ -132,6 +132,11 @@ h1 {
   padding: 0.9rem;
 }
 
+.padx-4 {
+  padding-inline: 1.1rem;
+  padding-block: 0.4rem;
+}
+
 .pad-9 {
   padding: 4rem;
   padding-inline: 5rem;
@@ -143,6 +148,10 @@ h1 {
 
 .text-gray-300 {
   color: var(--bs-gray-300);
+}
+
+.w-15 {
+  width: 9rem;
 }
 
 /* Nav */
@@ -188,7 +197,7 @@ h1 {
   padding-block: 0.7rem;
   border-radius: 100vw;
   justify-content: space-between;
-  font-size: 0.875rem !important;
+  font-size: 0.975rem !important;
   --bs-accordion-inner-border-radius: 100vw;
   --bs-accordion-active-color: white;
 }
@@ -238,9 +247,13 @@ h1 {
 
 .side-bar {
   background-color: var(--sidebar-bg);
-  min-width: 17rem;
+  min-width: 20rem;
 }
 
 .siadebar-tabs {
   background-color: var(--sidebar-bg);
+}
+
+.logout-btn {
+  background-color: var(--bs-border-color);
 }

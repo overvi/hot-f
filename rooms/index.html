@@ -17,59 +17,69 @@
     <main class="w-100">
       <header>
         <nav class="d-flex p-3 justify-content-between align-items-center">
-          <div class="d-flex gap-2 align-items-center">
-            <div
-              class="icon-bg mt-2 btn border-0 m-2 mt-0 rounded-5 mb-2 pad-2"
-            >
-              <img
-                class="btn p-0 border-0"
-                src="/assets/images/notification.svg"
-                alt=""
+          <div class="icon-bg padx-4 border-0 mt-0 rounded-5">
+            <img
+              class="btn p-0 border-0"
+              src="/assets/images/logo.svg"
+              alt=""
+              width="15"
+            />
+          </div>
+          <form action="">
+            <div class="search d-flex rounded-5 p-0">
+              <input
+                class="form-control shadow-none rounded-5 p-2 border-0"
+                placeholder="  مدیریت رسرواسیون  ..."
+                type="text"
               />
+              <div class="bg-orange btn border-0 rounded-5 pad-3">
+                <img width="25" src="/assets/images/search-normal.svg" alt="" />
+              </div>
             </div>
+          </form>
 
-            <button
+          <div
+            class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
+          >
+            <img
               type="button"
               data-bs-toggle="popover"
-              data-bs-trigger="focus"
+              data-bs-trigger="hover focus"
               data-bs-placement="bottom"
-              data-bs-custom-class="focus-pop"
-              data-bs-content=""
-              id="popover-btn"
-              class="p-1 px-2 border-0 hotel-profile-btn icon-bg rounded-5"
-            >
-              <span class="px-2">Prof. Kayden Rolfson I</span>
-              <img
-                width="40"
-                height="40"
-                src="/assets/images/espinas.png"
-                alt=""
-              />
-            </button>
-
-            <div id="popover-content" class="d-none gap-3 flex-column">
-              <div class="d-flex mb-2 gap-2 m-0 align-items-center">
-                <img src="/assets/images/settings.svg" alt="" />
-                <p class="m-0">تنظیمات</p>
-              </div>
-              <div class="d-flex mb-2 gap-2 align-items-center">
-                <img src="/assets/images/hotels.svg" alt="" />
-                <p class="m-0">مدیریت هتل</p>
-              </div>
-              <div
-                class="d-flex mb-2 gap-2 align-items-center border-bottom pb-3"
-              >
-                <img src="/assets/images/toggle.svg" alt="" />
-                <p class="m-0">لیست هتل ها</p>
-              </div>
-              <div class="d-flex gap-2 align-items-center">
-                <img src="/assets/images/logout.svg" alt="" />
-                <p class="m-0 text-danger">خروج</p>
-              </div>
-            </div>
+              data-bs-custom-class="custom-pop"
+              data-bs-content="Add Reservation"
+              src="/assets/images/add.svg"
+            />
           </div>
-          <div class="d-flex align-items-center gap-2">
-            <div class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2">
+          <div
+            class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
+          >
+            <img
+              type="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover focus"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-pop"
+              data-bs-content="Calander"
+              src="/assets/images/calendar.svg"
+            />
+          </div>
+          <div
+            class="icon-bg border-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
+          >
+            <img
+              type="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="hover focus"
+              data-bs-placement="bottom"
+              data-bs-custom-class="custom-pop"
+              data-bs-content="Reservations"
+              src="/assets/images/book-saved.svg"
+            />
+          </div>
+
+          <div class="d-flex align-items-center me-5 gap-2">
+            <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
               <a href="/en/rooms/">
                 <img
                   type="button"
@@ -84,7 +94,7 @@
               </a>
             </div>
             <div class="btn p-0 border-0">
-              <div class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2">
+              <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
                 <img
                   type="button"
                   data-bs-toggle="popover"
@@ -92,13 +102,13 @@
                   data-bs-placement="bottom"
                   data-bs-custom-class="focus-pop shadow-sm"
                   data-bs-content=""
-                  id="popover-btn"
+                  class="popover-btn"
                   src="/assets/images/clipboard-text.svg"
                   alt=""
                 />
               </div>
 
-              <div id="popover-content" class="d-none gap-3 flex-column">
+              <div class="d-none popover-content gap-3 flex-column">
                 <p class="fw-bold">Active Reservation</p>
                 <div class="pad-9">
                   <img src="/assets/images/data.svg" alt="" />
@@ -107,7 +117,7 @@
               </div>
             </div>
             <div
-              class="icon-bg toggle-color-mode border-0 m-2 mt-0 rounded-5 mb-2 pad-2"
+              class="icon-bg toggle-color-mode border-0 mt-0 rounded-5 pad-2"
             >
               <div>
                 <img
@@ -124,275 +134,316 @@
             </div>
           </div>
           <div class="d-flex align-items-center gap-2">
-            <div
-              class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2 btn border-0 rounded-5 mb-2 pad-2"
+            <button
+              type="button"
+              data-bs-toggle="popover"
+              data-bs-trigger="focus"
+              data-bs-placement="bottom"
+              data-bs-custom-class="focus-pop"
+              data-bs-content=""
+              class="p-1 px-2 popover-btn border-0 hotel-profile-btn icon-bg rounded-5"
             >
+              <span class="px-2 fw-semibold">Prof. Kayden Rolfson I</span>
               <img
-                type="button"
-                data-bs-toggle="popover"
-                data-bs-trigger="hover focus"
-                data-bs-placement="bottom"
-                data-bs-custom-class="custom-pop"
-                data-bs-content="Add Reservation"
-                src="/assets/images/add.svg"
+                width="40"
+                height="40"
+                src="/assets/images/espinas.png"
+                alt=""
               />
+            </button>
+            <div class="d-flex gap-2 align-items-center">
+              <div class="d-none gap-3 popover-content flex-column">
+                <div class="d-flex mb-2 gap-2 m-0 align-items-center">
+                  <img src="/assets/images/settings.svg" alt="" />
+                  <p class="m-0">تنظیمات</p>
+                </div>
+                <div class="d-flex mb-2 gap-2 align-items-center">
+                  <img src="/assets/images/hotels.svg" alt="" />
+                  <p class="m-0">مدیریت هتل</p>
+                </div>
+                <div
+                  class="d-flex mb-2 gap-2 align-items-center border-bottom pb-3"
+                >
+                  <img src="/assets/images/toggle.svg" alt="" />
+                  <p class="m-0">لیست هتل ها</p>
+                </div>
+                <div class="d-flex gap-2 align-items-center">
+                  <img src="/assets/images/logout.svg" alt="" />
+                  <p class="m-0 text-danger">خروج</p>
+                </div>
+              </div>
             </div>
+
             <div
-              class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2 btn border-0 rounded-5 mb-2 pad-2"
+              class="icon-bg mt-2 btn border-0 m-2 mt-0 rounded-5 mb-2 pad-2"
             >
               <img
-                type="button"
-                data-bs-toggle="popover"
-                data-bs-trigger="hover focus"
-                data-bs-placement="bottom"
-                data-bs-custom-class="custom-pop"
-                data-bs-content="Reservations"
-                src="/assets/images/book-saved.svg"
-              />
-            </div>
-            <div
-              class="icon-bg border-0 mt-0 rounded-5 mb-2 pad-2 btn border-0 rounded-5 mb-2 pad-2"
-            >
-              <img
-                type="button"
-                data-bs-toggle="popover"
-                data-bs-trigger="hover focus"
-                data-bs-placement="bottom"
-                data-bs-custom-class="custom-pop"
-                data-bs-content="Calander"
-                src="/assets/images/calendar.svg"
+                class="btn p-0 border-0"
+                src="/assets/images/notification.svg"
+                alt=""
               />
             </div>
           </div>
-          <form action="">
-            <div class="search d-flex rounded-5 p-0">
-              <input
-                class="form-control shadow-none rounded-5 p-2 border-0"
-                placeholder="  مدیریت رسرواسیون  ..."
-                type="text"
-              />
-              <div class="bg-orange btn border-0 rounded-5 pad-3">
-                <img width="25" src="/assets/images/search-normal.svg" alt="" />
-              </div>
-            </div>
-          </form>
         </nav>
       </header>
-      <div class="wrapper mt-4 container mw-100">
-        <div class="row">
-          <div
-            class="side-bar overflow-hidden container mx-3 px-1 rounded-5 px-0 col-2"
-          >
-            <div class="row">
-              <div class="sidebar-tabs px-3 col-2 d-flex flex-column gap-5">
-                <img
-                  style="margin-top: 6rem"
-                  width="28"
-                  src="/assets/images/toggle.svg"
-                  alt=""
-                />
-                <div
-                  style="width: fit-content; padding: 0.3rem"
-                  class="bg-orange border-0 rounded-5 border-start"
-                >
-                  <img width="28" src="/assets/images/hotels.svg" alt="" />
-                </div>
-                <img width="28" src="/assets/images/calendar.svg" alt="" />
-                <img width="28" src="/assets/images/dollar-circle.svg" alt="" />
-              </div>
-              <div class="col">
-                <div class="px-3 mt-3">
-                  <h1>مدیریت هتل</h1>
-                  <p>نوع اتاق</p>
-                </div>
-                <div class="accordion" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6"
+      <div class="wrapper mt-4 mw-100">
+        <div class="d-flex justify-content-between px-2">
+          <div>
+            <div
+              style="
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+                width: 20rem;
+              "
+              class="side-bar position-fixed overflow-hidden container mx-3 px-1 px-0"
+            >
+              <div class="row">
+                <div class="sidebar-tabs px-3 col-2 d-flex flex-column gap-5">
+                  <img
+                    style="margin-top: 6rem"
+                    width="28"
+                    src="/assets/images/toggle.svg"
+                    alt=""
+                  />
+                  <div
+                    style="width: fit-content; padding: 0.3rem"
+                    class="bg-orange rounded-5 border-0 border-start"
+                  >
+                    <img width="28" src="/assets/images/hotels.svg" alt="" />
+                  </div>
+                  <img width="28" src="/assets/images/calendar.svg" alt="" />
+                  <img
+                    width="28"
+                    src="/assets/images/dollar-circle.svg"
+                    alt=""
+                  />
+                  <div>
+                    <div class="border-0 mt-0 rounded-5">
+                      <img
                         type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        مدیریت اتاق ها
-                      </button>
-                    </h2>
+                        data-bs-toggle="popover"
+                        data-bs-trigger="hover focus"
+                        data-bs-placement="left"
+                        data-bs-custom-class="focus-pop shadow-lg w-15"
+                        data-bs-content=""
+                        class="popover-btn"
+                        width="35"
+                        src="/assets/images/profile.svg"
+                        alt=""
+                      />
+                    </div>
+
+                    <div class="d-none popover-content flex-column">
+                      <div>
+                        <p class="border-bottom pb-3">پروفایل</p>
+                        <p class="text-danger m-0">خروج</p>
+                      </div>
+                    </div>
                     <div
-                      id="collapseOne"
-                      class="accordion-collapse fw-semibold fw-semibold collapse show"
-                      data-bs-parent="#accordionExample"
+                      style="width: fit-content; padding: 0.3rem"
+                      class="logout-btn mt-4 rounded-5 border-0 border-start"
                     >
-                      <div class="py-2">
+                      <img width="25" src="/assets/images/lgout.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  style="height: 32rem; width: 17rem"
+                  class="col-3 overflow-y-scroll"
+                >
+                  <div class="px-3 mt-3">
+                    <h1>مدیریت هتل</h1>
+                    <p>نوع اتاق</p>
+                  </div>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
                         <button
-                          class="btn py-2 rounded-5 px-3 d-block bg-white w-100 text-orange border-0 accordion-active-item"
+                          class="accordion-button fw-semibold fs-6"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
                         >
-                          <span class="me-4">نوع اتاق ها</span>
+                          مدیریت اتاق ها
                         </button>
-                        <div class="px-5">
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse fw-semibold fw-semibold collapse show"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="py-2">
+                          <button
+                            class="btn py-2 rounded-5 px-3 d-block bg-white w-100 text-orange border-0 accordion-active-item"
+                          >
+                            <span class="me-4">نوع اتاق ها</span>
+                          </button>
+                          <div class="px-5">
+                            <button class="btn d-block">اتاق ها</button>
+                            <button class="btn">امکانات اتاق</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button fw-semibold fs-6 collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          خدمات اتاق
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse fw-semibold collapse"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="px-5 py-2">
+                          <button class="btn d-block">نوع اتاق</button>
+                          <button class="btn d-block">اتاق ها</button>
+                          <button class="btn">امکانات اتاق</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button fw-semibold fs-6 collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          مدیریت امکانات
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse fw-semibold collapse"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="px-5 py-2">
+                          <button class="btn d-block">نوع اتاق</button>
+                          <button class="btn d-block">اتاق ها</button>
+                          <button class="btn">امکانات اتاق</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button fw-semibold fs-6 collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          مدیریت نرخ
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse fw-semibold collapse"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="px-5 py-2">
+                          <button class="btn d-block">نوع اتاق</button>
+                          <button class="btn d-block">اتاق ها</button>
+                          <button class="btn">امکانات اتاق</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button fw-semibold fs-6 collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          مدیریت مهمان ها
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse fw-semibold collapse"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="px-5 py-2">
+                          <button class="btn d-block">نوع اتاق</button>
+                          <button class="btn d-block">اتاق ها</button>
+                          <button class="btn">امکانات اتاق</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button
+                          class="accordion-button fw-semibold fs-6 collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          انبار
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSix"
+                        class="accordion-collapse fw-semibold collapse"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="px-5 py-2">
+                          <button class="btn d-block">نوع اتاق</button>
                           <button class="btn d-block">اتاق ها</button>
                           <button class="btn">امکانات اتاق</button>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6 collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
+                  <div class="px-2 py-3">
+                    <img src="/assets/images/logo-per.svg" alt="" />
+                    <p>
+                      برای استفاده از ابزارهای پیشرفته می‌توانید از بسته حرفه ای
+                      منگوتلز استفاده کنید.
+                    </p>
+                    <button class="btn btn-warning w-100 rounded-5">
+                      پیشرفته
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
                       >
-                        خدمات اتاق
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      class="accordion-collapse fw-semibold collapse"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6 collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        مدیریت امکانات
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      class="accordion-collapse fw-semibold collapse"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6 collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        مدیریت نرخ
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      class="accordion-collapse fw-semibold collapse"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6 collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        مدیریت مهمان ها
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      class="accordion-collapse fw-semibold collapse"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button
-                        class="accordion-button fw-semibold fs-6 collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseSix"
-                        aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
-                        انبار
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseSix"
-                      class="accordion-collapse fw-semibold collapse"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div class="px-5 py-2">
-                        <button class="btn d-block">نوع اتاق</button>
-                        <button class="btn d-block">اتاق ها</button>
-                        <button class="btn">امکانات اتاق</button>
-                      </div>
-                    </div>
+                        <path
+                          d="M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="px-2 py-3">
-              <img src="/assets/images/logo.svg" alt="" />
-              <p>
-                برای استفاده از ابزارهای پیشرفته می‌توانید از بسته حرفه ای
-                منگوتلز استفاده کنید.
-              </p>
-              <button class="btn btn-warning w-100 rounded-5">
-                پیشرفته
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M2 15.29V5.71c0-1.33.77-1.65 1.71-.71L6.3 7.59c.39.39 1.03.39 1.41 0L11.29 4a.996.996 0 0 1 1.41 0l3.59 3.59c.39.39 1.03.39 1.41 0L20.29 5c.94-.94 1.71-.62 1.71.71v9.59c0 3-2 5-5 5H7c-2.76-.01-5-2.25-5-5.01Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                </svg>
-              </button>
-            </div>
           </div>
 
-          <div class="col-9">
+          <div class="col-8" style="width: 74%">
             <button class="btn btn-warning rounded-5 mb-2">
               افزودن نوع اتاق
             </button>
