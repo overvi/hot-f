@@ -180,6 +180,10 @@ img {
   background-color: var(--bs-orange-700);
 }
 
+.bg-body {
+  background-color: var(--bs-body-bg);
+}
+
 .text-gray-300 {
   color: var(--bs-gray-300);
 }
@@ -322,4 +326,45 @@ img {
 .form-check-input {
   width: 20px;
   height: 20px;
+}
+
+/* Hotel Select */
+
+.hotel-select img {
+  filter: grayscale(1);
+}
+
+.hotel-select:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.hotel-select:hover .hotel-outline {
+  background-color: var(--bs-orange-700);
+}
+
+.hotel-outline {
+  outline: 1px dashed var(--bs-orange-700);
+  padding: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.hotel-selected .hotel-outline {
+  background-color: var(--bs-orange-700);
+  outline: 0;
+}
+
+.hotel-selected .hotel-name {
+  color: var(--bs-white);
+  background-color: var(--bs-black);
+}
+.hotel-name {
+  background-color: var(--bs-gray-400);
+  padding: 0.3rem;
+  border-radius: 100vw;
+  font-weight: 600;
+}
+
+.hotel-submit:hover {
+  background-color: var(--bs-orange-700) !important;
 }
