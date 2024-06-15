@@ -458,3 +458,59 @@ img {
 .select-day + label:hover {
   background-color: var(--bs-border-color);
 }
+
+/* Calander */
+
+.drp-calendar {
+  font-family: "Yekan";
+}
+
+.drp-selected {
+  display: none !important;
+}
+
+.applyBtn {
+  border-radius: 100vw;
+  background-color: var(--bs-orange-700);
+  border: 0;
+  padding: 0.4rem !important;
+  padding-inline: 1.5rem !important;
+}
+
+.cancelBtn {
+  display: none;
+}
+
+.daterangepicker {
+  border-radius: 1rem !important;
+}
+
+.start-date.active,
+.end-date.active {
+  background-color: var(--bs-orange-700) !important;
+}
+
+.calendar-table {
+  background-color: var(--card-bg) !important;
+}
+
+[data-bs-theme="dark"] {
+  .drp-calendar {
+    background-color: var(--card-bg);
+  }
+  .calendar-table {
+    border: 0 !important;
+  }
+
+  .ends {
+    background-color: var(--bs-dark) !important;
+  }
+
+  .available:hover {
+    background-color: var(--bs-dark) !important;
+  }
+  .available {
+    background-color: var(--bs-dark) !important;
+    color: white !important;
+  }
+}
