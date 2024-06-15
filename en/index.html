@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <script src="/components/nav.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="" dir="ltr"></nav-bar>
+
+      <div
+        style="
+          border-radius: 2rem;
+          width: 3.2rem;
+
+          min-width: 3.2rem;
+          left: 0;
+        "
+        class="side-bar pb-3 position-fixed container mx-3 px-1 px-0"
+      >
+        <div class="row">
+          <div class="sidebar-tabs col-2 d-flex flex-column gap-5">
+            <div
+              style="
+                width: fit-content;
+                margin-left: 0.1rem;
+                padding: 0.3rem;
+                margin-top: 6rem;
+              "
+              class="bg-orange active-item rounded-5 border-0 border-start"
+            >
+              <img width="28" src="/assets/images/toggle.svg" alt="" />
+            </div>
+
+            <img
+              style="margin-left: 0.5rem"
+              width="28"
+              src="/assets/images/hotels.svg"
+              alt=""
+            />
+
+            <img
+              style="margin-left: 0.5rem"
+              width="28"
+              src="/assets/images/calendar.svg"
+              alt=""
+            />
+            <img
+              style="margin-left: 0.5rem"
+              width="28"
+              src="/assets/images/dollar-circle.svg"
+              alt=""
+            />
+            <div style="margin-left: 0.4rem">
+              <div class="border-0 mt-0 rounded-5">
+                <img
+                  type="button"
+                  data-bs-toggle="popover"
+                  data-bs-trigger="hover focus"
+                  data-bs-placement="left"
+                  data-bs-custom-class="focus-pop shadow-lg w-15"
+                  data-bs-content=""
+                  class="popover-btn"
+                  width="35"
+                  src="/assets/images/profile.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="d-none popover-content flex-column">
+                <div>
+                  <p class="border-bottom pb-3">Profile</p>
+                  <p class="text-danger m-0">Logout</p>
+                </div>
+              </div>
+              <div
+                style="width: fit-content; padding: 0.3rem"
+                class="logout-btn mt-4 rounded-5 border-0 border-start"
+              >
+                <img width="25" src="/assets/images/lgout.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="container" style="max-width: 97%">
+        <div
+          dir="ltr"
+          class="d-flex gap-2 m-auto"
+          style="max-width: 73rem; margin-left: 4rem !important"
+        >
+          <a
+            href="
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="m9.02 2.84-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41c0 2.32 1.89 4.22 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33c-1.4-.98-3.65-.93-5 .12ZM12 17.99v-3"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="color: var(--bs-gray-500)"
+              ></path>
+            </svg>
+          </a>
+          <p style="color: var(--bs-gray-500)">/</p>
+          <a href="" class="fw-medium link" style="color: var(--bs-gray-500)"
+            >Dashbord</a
+          >
+        </div>
+        <div class="row" dir="rtl" style="gap: 1rem">
+          <div class="col-3 p-0" style="width: 26.7%">
+            <div
+              class="bg-gray-50 overflow-hidden border-dark bg-table rounded-5"
+            >
+              <div
+                style="height: 4rem"
+                class="d-flex px-3 pt-4 justify-content-between"
+              >
+                <div
+                  class="rounded-4 bg-blue-400"
+                  style="height: fit-content; padding: 0.7rem"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M22 13V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7h4"
+                      stroke="#3280f6"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M22 13V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7h4"
+                      stroke="#3280f6"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M22 13V9c0-5-2-7-7-7H9C4 2 2 4 2 9v6c0 5 2 7 7 7h4M16 19.43 17.58 21 21 17M7 10.5v3M12 10.5v3M17 10.5v3"
+                      stroke="#3280f6"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div
+                  class="d-flex flex-column justify-content-center align-items-baseline"
+                >
+                  <p
+                    style="font-size: 14px !important"
+                    class="fw-bolder m-0 fs-6"
+                  >
+                    Revenue Growth
+                  </p>
+                  <p
+                    style="letter-spacing: 0.7px"
+                    class="fw-semibold text-gray-500"
+                  >
+                    Last month
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="/assets/images/chart-pattern-f.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-2 p-0 overflow-hidden" style="width: 18.3%">
+            <div class="bg-gray-50 border-dark rounded-5 bg-table">
+              <div
+                style="height: 4rem"
+                class="d-flex px-3 pt-4 justify-content-between"
+              >
+                <div
+                  class="rounded-4 bg-orange-500"
+                  style="height: fit-content; padding: 0.7rem"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="transparent"
+                  >
+                    <path
+                      d="M2 22h20"
+                      stroke="#f18b0f"
+                      stroke-width="1.5"
+                      stroke-miterlimit="10"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M9.75 4v18h4.5V4c0-1.1-.45-2-1.8-2h-.9c-1.35 0-1.8.9-1.8 2ZM3 10v12h4V10c0-1.1-.4-2-1.6-2h-.8C3.4 8 3 8.9 3 10ZM17 15v7h4v-7c0-1.1-.4-2-1.6-2h-.8c-1.2 0-1.6.9-1.6 2Z"
+                      stroke="#f18b0f"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+                <div
+                  class="d-flex flex-column justify-content-center align-items-baseline"
+                >
+                  <p
+                    style="font-size: 14px !important"
+                    class="fw-bolder m-0 fs-6"
+                  >
+                    Sales
+                  </p>
+                  <p
+                    style="letter-spacing: 0.7px"
+                    class="fw-semibold text-gray-500"
+                  >
+                    Last Month
+                  </p>
+                </div>
+              </div>
+              <div>
+                <img src="/assets/images/chart-pattern-s.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="col-2 p-0" style="width: 23%">
+            <div
+              dir="ltr"
+              style="height: 217px"
+              class="bg-gray-50 border-dark bg-table px-3 rounded-5"
+            >
+              <div
+                style="height: 4rem"
+                class="d-flex pt-4 justify-content-between"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-baseline"
+                >
+                  <p
+                    style="font-size: 14px !important"
+                    class="fw-bolder m-0 fs-6"
+                  >
+                    Checkin
+                  </p>
+                  <p
+                    style="letter-spacing: 0.7px"
+                    class="fw-semibold text-gray-500"
+                  >
+                    Last Month
+                  </p>
+                </div>
+                <div
+                  class="rounded-4 bg-green-300"
+                  style="height: fit-content; padding: 0.7rem"
+                >
+                  <svg
+                    class=""
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#83cc16"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                      d="M11.68 14.62l2.56-2.56-2.56-2.56M4 12.06h10.17"
+                    ></path>
+                    <path
+                      stroke="#83cc16"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                      d="M12 4c4.42 0 8 3 8 8s-3.58 8-8 8"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="mt-3">
+                <p class="fw-semibold text-gray-500">Total</p>
+                <h2 class="text-green-600">۰</h2>
+              </div>
+              <button
+                type="button"
+                style="margin-top: 1rem"
+                class="btn rounded-5 py-1 btn-outline-success"
+              >
+                View More
+              </button>
+            </div>
+          </div>
+          <div class="col-3 p-0" style="width: 23%">
+            <div
+              dir="ltr"
+              style="height: 217px"
+              class="bg-gray-50 border-dark bg-table px-3 rounded-5"
+            >
+              <div
+                style="height: 4rem"
+                class="d-flex pt-4 justify-content-between"
+              >
+                <div
+                  class="d-flex flex-column justify-content-center align-items-baseline"
+                >
+                  <p
+                    style="font-size: 14px !important"
+                    class="fw-bolder m-0 fs-6"
+                  >
+                    Checkout
+                  </p>
+                  <p
+                    style="letter-spacing: 0.7px"
+                    class="fw-semibold text-gray-500"
+                  >
+                    last month
+                  </p>
+                </div>
+                <div
+                  class="rounded-4 bg-red-300"
+                  style="height: fit-content; padding: 0.7rem"
+                >
+                  <svg
+                    class="text-red-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      stroke="#ef4444"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-miterlimit="10"
+                      stroke-width="1.5"
+                      d="M17.44 14.62L20 12.06 17.44 9.5M9.76 12.06h10.17M11.76 20c-4.42 0-8-3-8-8s3.58-8 8-8"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="mt-3">
+                <p class="fw-semibold text-gray-500">Total</p>
+                <h2 class="text-red-700">۰</h2>
+              </div>
+              <button
+                type="button"
+                style="margin-top: 1rem"
+                class="btn rounded-5 py-1 btn-outline-danger"
+              >
+                View More
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              dir="ltr"
+              style="width: 48%"
+              class="col-6 bg-table border-dark px-0 pt-2 rounded-5"
+            >
+              <p class="fs-6 fw-semibold px-3 pt-2">Daily Report</p>
+              <nav class="px-2">
+                <div
+                  style="
+                    --bs-nav-tabs-link-active-color: black;
+                    --bs-nav-tabs-border-width: 0;
+                  "
+                  class="nav nav-tabs border-bottom"
+                  id="nav-tab"
+                  role="tablist"
+                >
+                  <button
+                    class="nav-link active"
+                    style="
+                      --bs-nav-link-color: gray;
+                      background-color: transparent;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Sales
+                  </button>
+                  <button
+                    class="nav-link border-0"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    style="
+                      background-color: transparent;
+                      --bs-nav-link-color: gray;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Cancelations
+                  </button>
+                </div>
+              </nav>
+              <div class="tab-content pb-3" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-home"
+                  role="tabpanel"
+                  aria-labelledby="nav-home-tab"
+                  tabindex="0"
+                ></div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-profile"
+                  role="tabpanel"
+                  aria-labelledby="nav-profile-tab"
+                  tabindex="0"
+                ></div>
+              </div>
+
+              <div
+                class="overflow-hidden"
+                style="
+                  width: 36rem;
+                  margin: auto;
+
+                  border-top-right-radius: 1.4rem;
+                  margin-top: 0.5rem !important;
+                  border-top-left-radius: 1.4rem;
+                  background-color: var(--table-tr-hover-bg);
+                  padding-top: 0.4rem;
+                "
+              >
+                <table
+                  style="
+                    width: 36rem;
+                    border-inline: transparent;
+                    margin: auto !important;
+                  "
+                  class="table table-small table-bordered m-0"
+                >
+                  <thead>
+                    <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                      <th class="fw-bold" scope="col">Guests</th>
+                      <th class="fw-bold" scope="col">Income</th>
+                      <th class="fw-bold" scope="col">Checkin</th>
+                      <th class="fw-bold" scope="col">Nights</th>
+                      <th class="fw-bold" scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div
+                class="pad-9 d-flex justify-content-center align-items-center flex-column"
+              >
+                <img class="data-svg" src="/assets/images/data.svg" alt="" />
+                <p class="text-gray-300 fw-semibold">No Data</p>
+              </div>
+            </div>
+            <div
+              dir="ltr"
+              style="width: 48%; margin-right: 1rem"
+              class="col-6 bg-table border-dark px-0 pt-2 rounded-5"
+            >
+              <div class="d-flex justify-content-between gap-2">
+                <p class="fs-6 fw-semibold px-3 pt-3">Reservations</p>
+                <div
+                  class="rounded-5 mx-3 d-flex gap-2 p-1"
+                  style="
+                    background-color: var(--table-tr-hover-bg);
+                    height: fit-content;
+                  "
+                >
+                  <div>
+                    <input
+                      name="day"
+                      class="select-day d-none"
+                      id="emrooz"
+                      type="radio"
+                    />
+                    <label
+                      style="cursor: pointer"
+                      class="rounded-5 px-2"
+                      for="emrooz"
+                      >Today</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      name="day"
+                      checked
+                      class="select-day d-none"
+                      id="farda"
+                      type="radio"
+                    />
+                    <label
+                      style="cursor: pointer"
+                      class="rounded-5 px-2"
+                      for="farda"
+                      >Tommorrow</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <nav class="px-2">
+                <div
+                  style="
+                    background-color: transparent;
+                    --bs-nav-tabs-link-active-color: black;
+                    --bs-nav-tabs-border-width: 0;
+                  "
+                  class="nav nav-tabs border-bottom"
+                  id="nav-tab"
+                  role="tablist"
+                >
+                  <button
+                    class="nav-link active border-0"
+                    style="
+                      background-color: transparent;
+                      --bs-nav-link-color: gray;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Arrivals
+                  </button>
+                  <button
+                    class="nav-link border-0"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    style="
+                      background-color: transparent;
+                      --bs-nav-link-color: gray;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Departures
+                  </button>
+                  <button
+                    class="nav-link border-0"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    style="
+                      background-color: transparent;
+                      --bs-nav-link-color: gray;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    Stayovers
+                  </button>
+                  <button
+                    class="nav-link border-0"
+                    id="nav-home-tab"
+                    data-bs-toggle="tab"
+                    style="
+                      background-color: transparent;
+                      --bs-nav-link-color: gray;
+                      --bs-nav-link-hover-color: orange;
+                    "
+                    data-bs-target="#nav-home"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-home"
+                    aria-selected="true"
+                  >
+                    In-House Guests
+                  </button>
+                </div>
+              </nav>
+              <div class="tab-content pb-3" id="nav-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="nav-home"
+                  role="tabpanel"
+                  aria-labelledby="nav-home-tab"
+                  tabindex="0"
+                ></div>
+                <div
+                  class="tab-pane fade"
+                  id="nav-profile"
+                  role="tabpanel"
+                  aria-labelledby="nav-profile-tab"
+                  tabindex="0"
+                ></div>
+              </div>
+
+              <div
+                class="overflow-hidden"
+                style="
+                  width: 36rem;
+                  margin: auto;
+
+                  border-top-right-radius: 1.4rem;
+                  border-top-left-radius: 1.4rem;
+                  background-color: var(--table-tr-hover-bg);
+                  padding-top: 0.4rem;
+                "
+              >
+                <table
+                  style="
+                    width: 36rem;
+                    border-inline: transparent;
+                    margin: auto !important;
+                  "
+                  class="table table-small table-bordered m-0"
+                >
+                  <thead>
+                    <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                      <th class="fw-bold" scope="col">Guests</th>
+                      <th class="fw-bold" scope="col">Income</th>
+                      <th class="fw-bold" scope="col">Checkin</th>
+                      <th class="fw-bold" scope="col">Nights</th>
+                      <th class="fw-bold" scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <div
+                class="pad-9 d-flex justify-content-center align-items-center flex-column"
+              >
+                <img class="data-svg" src="/assets/images/data.svg" alt="" />
+                <p class="text-gray-300 fw-semibold">No Data</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
