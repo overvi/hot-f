@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels - Rooms</title>
+    <script src="/js/theme.js"></script>
+    <link rel="stylesheet" href="/styles/theme.css" />
+
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar-expanded.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  </head>
+  <body class="min-vh-100" style="direction: rtl">
+    <main class="w-100">
+      <nav-bar url="pms/warehouse/add" dir="rtl"></nav-bar>
+      <div class="wrapper mt-2 mw-100">
+        <div class="d-flex justify-content-between">
+          <side-bar-expanded dir="rtl"></side-bar-expanded>
+          <div
+            style="padding-left: 1rem"
+            class="col-8 table-col col-lg-8 col-xl-8"
+          >
+            <div class="form-container">
+              <h5 class="fw-bold p-3 border-bottom">افزودن انبار جدید</h5>
+
+              <form id="add-warehouse" class="px-3">
+                <div class="d-flex gap-2">
+                  <div class="mt-3" style="flex-basis: 100%">
+                    <label class="mb-3" for="title"
+                      ><span class="text-danger mx-2">*</span>عنوان
+                    </label>
+                    <input id="title" class="form-control input" type="text" />
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 mt-3">
+                  <div class="select-container" style="flex-basis: 50%">
+                    <label class="mb-3" for="category"
+                      ><span class="text-danger mx-2">*</span>دسته بندی
+                    </label>
+                    <input
+                      id="category"
+                      type="hidden"
+                      class="d-none custom-select-input"
+                    />
+
+                    <div class="custom-select input form-control">
+                      <button
+                        id="category"
+                        type="button"
+                        class="select-button w-100 rounded5 border-0 btn p-0"
+                      >
+                        <div
+                          class="selected-value d-flex justify-content-between"
+                        >
+                          <p class="mb-0 text-gray-500">انتخاب...</p>
+                          <div class="text-gray-500">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-chevron-down"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <ul class="select-dropdown">
+                        <li>
+                          <input
+                            type="radio"
+                            id="single"
+                            name="room-quantity"
+                          />
+                          <label for="single">Single</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="double"
+                            name="room-quantity"
+                          />
+                          <label for="double">Double</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="triple"
+                            name="room-quantity"
+                          />
+                          <label for="triple">Triple</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="quad" name="room-quantity" />
+                          <label for="quad">Quad</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="quad-plus"
+                            name="room-quantity"
+                          />
+                          <label for="quad-plus">Quad Plus</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="twin" name="room-quantity" />
+                          <label for="twin">Twin</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="select-container" style="flex-basis: 50%">
+                    <label class="mb-3" for="stockers"
+                      ><span class="text-danger mx-2">*</span>تامین کنندگان
+                    </label>
+                    <input
+                      id="stockers"
+                      type="hidden"
+                      class="d-none custom-select-input"
+                    />
+
+                    <div class="custom-select input form-control">
+                      <button
+                        id="stockers"
+                        type="button"
+                        class="select-button w-100 rounded5 border-0 btn p-0"
+                      >
+                        <div
+                          class="selected-value d-flex justify-content-between"
+                        >
+                          <p class="mb-0 text-gray-500">انتخاب...</p>
+                          <div class="text-gray-500">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-chevron-down"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <ul class="select-dropdown">
+                        <li>
+                          <input
+                            type="radio"
+                            id="single"
+                            name="room-quantity"
+                          />
+                          <label for="single">Single</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="double"
+                            name="room-quantity"
+                          />
+                          <label for="double">Double</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="triple"
+                            name="room-quantity"
+                          />
+                          <label for="triple">Triple</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="quad" name="room-quantity" />
+                          <label for="quad">Quad</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="quad-plus"
+                            name="room-quantity"
+                          />
+                          <label for="quad-plus">Quad Plus</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="twin" name="room-quantity" />
+                          <label for="twin">Twin</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="select-container" style="flex-basis: 50%">
+                    <label class="mb-3" for="user"
+                      ><span class="text-danger mx-2">*</span>کاربر
+                    </label>
+                    <input
+                      id="user"
+                      type="hidden"
+                      class="d-none custom-select-input"
+                    />
+
+                    <div class="custom-select input form-control">
+                      <button
+                        id="user"
+                        type="button"
+                        class="select-button w-100 rounded5 border-0 btn p-0"
+                      >
+                        <div
+                          class="selected-value d-flex justify-content-between"
+                        >
+                          <p class="mb-0 text-gray-500">انتخاب...</p>
+                          <div class="text-gray-500">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="16"
+                              height="16"
+                              fill="currentColor"
+                              class="bi bi-chevron-down"
+                              viewBox="0 0 16 16"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                              />
+                            </svg>
+                          </div>
+                        </div>
+                      </button>
+                      <ul class="select-dropdown">
+                        <li>
+                          <input
+                            type="radio"
+                            id="single"
+                            name="room-quantity"
+                          />
+                          <label for="single">Single</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="double"
+                            name="room-quantity"
+                          />
+                          <label for="double">Double</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="triple"
+                            name="room-quantity"
+                          />
+                          <label for="triple">Triple</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="quad" name="room-quantity" />
+                          <label for="quad">Quad</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="quad-plus"
+                            name="room-quantity"
+                          />
+                          <label for="quad-plus">Quad Plus</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="twin" name="room-quantity" />
+                          <label for="twin">Twin</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex gap-2">
+                  <div class="mt-3" style="flex-basis: 80%">
+                    <label class="mb-3" for="stocked"
+                      ><span class="text-danger mx-2">*</span>انبار شده
+                    </label>
+                    <input
+                      id="stocked"
+                      class="form-control input"
+                      type="text"
+                    />
+                  </div>
+                  <div class="mt-3" style="flex-basis: 80%">
+                    <label class="mb-3" for="consumed"
+                      ><span class="text-danger mx-2">*</span>مصرف شده
+                    </label>
+                    <input
+                      id="consumed"
+                      class="form-control input"
+                      type="text"
+                    />
+                  </div>
+                  <div class="mt-3" style="flex-basis: 80%">
+                    <label class="mb-3" for="base-cost"
+                      ><span class="text-danger mx-2">*</span>هزینه واحد
+                    </label>
+                    <input
+                      id="base-cost"
+                      class="form-control input"
+                      type="text"
+                    />
+                  </div>
+                  <div class="mt-3" style="flex-basis: 80%">
+                    <label class="mb-3" for="base-price"
+                      ><span class="text-danger mx-2">*</span>قیمت واحد
+                    </label>
+                    <input
+                      id="base-price"
+                      class="form-control input"
+                      type="text"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-5 pb-3">
+                  <a
+                    href="/pms/warehouse/"
+                    style="border-radius: 1rem"
+                    class="btn border"
+                  >
+                    انصراف
+                  </a>
+                  <button
+                    style="border-radius: 1rem"
+                    class="btn me-3 submit-btn btn-success"
+                  >
+                    ذخیره
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const validator = new JustValidate("#add-warehouse", {
+        errorLabelCssClass: ["mt-2"],
+        errorFieldCssClass: ["border-danger"],
+      });
+
+      validator
+        .addField("#stocked", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+          {
+            rule: "number",
+            errorMessage: " عدد معتبر نیست",
+          },
+        ])
+        .addField("#title", [
+          {
+            rule: "required",
+            errorMessage: "عنوان اجباریست",
+          },
+        ])
+        .addField("#consumed", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+          {
+            rule: "number",
+            errorMessage: " عدد معتبر نیست",
+          },
+        ])
+        .addField("#base-cost", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+          {
+            rule: "number",
+            errorMessage: " عدد معتبر نیست",
+          },
+        ])
+        .addField("#base-price", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+          {
+            rule: "number",
+            errorMessage: " عدد معتبر نیست",
+          },
+        ])
+        .addField("#user", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+        ])
+        .addField("#stockers", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+        ])
+        .addField("#category", [
+          {
+            rule: "required",
+            errorMessage: "فیلد اجباریست",
+          },
+        ]);
+
+      {
+        errorsContainer: document.querySelector(".select-container");
+      }
+    </script>
+    <script src="/js/custom-select.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

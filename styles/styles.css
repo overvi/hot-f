@@ -63,6 +63,7 @@
   --tab-color: var(--bs-orange-700);
   --bs-badge-color: var(--bs-white);
   --bs-border-color: var(--bs-gray-800);
+  --border-box: var(--bs-gray-900);
 }
 
 body {
@@ -237,8 +238,16 @@ img {
   background-color: var(--card-bg);
 }
 
+.text-left {
+  text-align: left !important;
+}
+
 .border-dark {
   border: 1px solid var(--bs-table-bg);
+}
+
+.border-gray-900 {
+  border: 1px solid var(--border-box);
 }
 
 .w-15 {
@@ -287,6 +296,21 @@ img {
 
 .icon-bg {
   background-color: var(--bs-icon-bg);
+}
+
+.nav-a {
+  font: inherit;
+  text-align: right;
+  border: 0;
+}
+
+.active-page {
+  background-color: var(--bs-white);
+  border-radius: 100vw;
+  color: var(--bs-orange);
+  width: 88%;
+  margin-inline: 1rem;
+  text-align: center !important;
 }
 
 /* Accordion */
@@ -506,6 +530,10 @@ img {
     background-color: var(--bs-dark) !important;
   }
 
+  .border-dark {
+    border-color: transparent !important;
+  }
+
   .available:hover {
     background-color: var(--bs-dark) !important;
   }
@@ -513,4 +541,128 @@ img {
     background-color: var(--bs-dark) !important;
     color: white !important;
   }
+}
+
+/* Form */
+
+.input {
+  background-color: var(--sidebar-bg);
+  border-radius: 1rem;
+}
+
+.input:focus {
+  border-color: var(--bs-orange);
+  box-shadow: none;
+  background-color: var(--card-bg);
+}
+
+.select-dropdown {
+  position: absolute;
+  list-style: none;
+  width: fit-content;
+  font-size: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background-color: var(--table-tbody-bg);
+  border-radius: 1.5rem;
+  padding: 10px;
+  margin-top: 10px;
+  height: auto;
+  transition: 0.5s ease;
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+  font-weight: 600;
+}
+
+.select-dropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 0.2rem;
+}
+
+.select-dropdown li label {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.select-dropdown li:hover,
+.select-dropdown input:checked ~ label {
+  background-color: var(--bs-border-color);
+  border-radius: 1.5rem;
+}
+
+.select-dropdown input:focus ~ label {
+  background-color: var(--bs-border-color);
+}
+
+.select-dropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+.custom-select.active .select-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.custom-select {
+  min-width: 100%;
+  width: max-content;
+}
+
+.custom-select-label {
+  cursor: pointer;
+}
+
+.form-checkbox {
+  background-color: var(--card-bg);
+  overflow: hidden;
+  border-radius: 1.2rem;
+  padding: 1rem;
+  position: relative;
+  width: fit-content;
+  transition: border 100ms ease-in;
+}
+
+.form-checkbox p {
+  margin-right: 1.9rem !important;
+}
+
+.form-checkbox label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.form-checkbox:hover {
+  border-color: var(--bs-orange) !important;
+}
+
+.form-options .col-4 {
+  width: 23%;
+}
+
+.form-container {
+  background-color: var(--sidebar-bg);
+  border-radius: 1.7rem;
+  max-width: 31rem;
+  border: 1px solid var(--bs-icon-bg);
+}
+
+.input-addon input {
+  border-radius: 0 1rem 1rem 0;
+}
+
+.input-addon span {
+  border-radius: 1rem 0 0 1rem;
+  background-color: #ffffff05;
 }

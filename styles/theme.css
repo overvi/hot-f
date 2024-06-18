@@ -1,0 +1,12 @@
+/* Default to light mode to prevent flash */
+:root {
+  --data-image: url("/assets/images/data.svg");
+}
+
+[data-bs-theme="dark"] {
+  --data-image: url("/assets/images/data-dark.svg");
+}
+
+.data-svg {
+  content: var(--data-image);
+}

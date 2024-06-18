@@ -15,21 +15,3 @@ popoverBtn.forEach((btn, index) => {
     content: popoverContent[index].innerHTML, // Set the popover content
   });
 });
-
-const colorModeToggler = document.querySelector(".toggle-color-mode");
-
-colorModeToggler.addEventListener("click", () => {
-  const htmlElement = document.documentElement;
-  const datas = document.querySelectorAll(".data-svg");
-  if (htmlElement.getAttribute("data-bs-theme") === "dark") {
-    htmlElement.setAttribute("data-bs-theme", "light");
-    datas.forEach((x) => {
-      x.src = "/assets/images/data.svg";
-    });
-  } else {
-    htmlElement.setAttribute("data-bs-theme", "dark");
-    datas.forEach((x) => {
-      x.src = "/assets/images/data-dark.svg";
-    });
-  }
-});

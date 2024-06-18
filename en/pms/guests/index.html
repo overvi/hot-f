@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels - Rooms</title>
+    <script src="/js/theme.js"></script>
+    <link rel="stylesheet" href="/styles/theme.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar-expanded.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  </head>
+  <body class="min-vh-100" style="direction: ltr">
+    <main class="w-100">
+      <nav-bar url="pms/guests" dir="ltr"></nav-bar>
+      <div class="wrapper mt-2 mw-100">
+        <div class="d-flex justify-content-between">
+          <side-bar-expanded dir="ltr"></side-bar-expanded>
+          <div
+            style="
+              padding-left: 1rem;
+              margin-left: 0.3rem;
+              background-color: var(--card-bg);
+            "
+            class="col-8 border px-0 rounded-5 table-col col-lg-8 col-xl-8"
+          >
+            <div class="d-flex p-3 justify-content-between border-bottom">
+              <h1>Guests</h1>
+              <button
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="btn btn-warning rounded-5 mb-2"
+              >
+                Add New Guest
+              </button>
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div
+                  class="modal-dialog modal-dialog-centered"
+                  style="--bs-modal-width: 37.5rem"
+                >
+                  <div
+                    style="border-radius: 1rem; background: var(--card-bg)"
+                    class="modal-content border-0"
+                  >
+                    <div
+                      class="modal-header border-0"
+                      style="margin-right: auto"
+                    >
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="add-guest" class="px-3">
+                        <div class="d-flex gap-3">
+                          <div>
+                            <label class="mb-3" for="name"
+                              ><span class="text-danger mx-2">*</span>Name
+                            </label>
+                            <input
+                              id="name"
+                              class="form-control input"
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <label class="mb-3" for="last-name"
+                              ><span class="text-danger mx-2">*</span>
+                              Last Name
+                            </label>
+                            <input
+                              id="last-name"
+                              class="form-control input"
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <label class="mb-3" for="username"
+                              ><span class="text-danger mx-2">*</span> Username
+                            </label>
+                            <input id="username" class="form-control input" />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3 mt-4">
+                          <div>
+                            <label class="mb-3" for="email"> Email </label>
+                            <input
+                              id="email"
+                              class="form-control input"
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <label class="mb-3" for="password">
+                              Password
+                            </label>
+                            <input
+                              id="password"
+                              class="form-control input"
+                              type="text"
+                            />
+                          </div>
+                          <div>
+                            <label class="mb-3" for="phone-number"
+                              ><span class="text-danger mx-2">*</span> Phone
+                              Number
+                            </label>
+                            <input
+                              id="phone-number"
+                              class="form-control input"
+                              type="number"
+                            />
+                          </div>
+                        </div>
+                        <div class="d-flex gap-3 mt-3">
+                          <div class="select-container" style="flex-basis: 50%">
+                            <label class="mb-3" for="rule"
+                              ><span class="text-danger mx-2">*</span> Rule
+                            </label>
+                            <input
+                              id="rule"
+                              type="hidden"
+                              class="d-none custom-select-input"
+                            />
+
+                            <div class="custom-select input form-control">
+                              <button
+                                id="rule"
+                                type="button"
+                                class="select-button w-100 rounded5 border-0 btn p-0"
+                              >
+                                <div
+                                  class="selected-value d-flex justify-content-between"
+                                >
+                                  <p class="mb-0 text-gray-500">Select...</p>
+                                  <div class="text-gray-500">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      class="bi bi-chevron-down"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                      />
+                                    </svg>
+                                  </div>
+                                </div>
+                              </button>
+                              <ul class="select-dropdown">
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="single"
+                                    name="room-quantity"
+                                  />
+                                  <label for="single">Single</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="double"
+                                    name="room-quantity"
+                                  />
+                                  <label for="double">Double</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="triple"
+                                    name="room-quantity"
+                                  />
+                                  <label for="triple">Triple</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad">Quad</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad-plus"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad-plus">Quad Plus</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="twin"
+                                    name="room-quantity"
+                                  />
+                                  <label for="twin">Twin</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="select-container" style="flex-basis: 50%">
+                            <label class="mb-3" for="room-type"
+                              ><span class="text-danger mx-2">*</span>Type
+                            </label>
+                            <input
+                              id="room-type"
+                              type="hidden"
+                              class="d-none custom-select-input"
+                            />
+
+                            <div class="custom-select input form-control">
+                              <button
+                                id="room-type"
+                                type="button"
+                                class="select-button w-100 rounded5 border-0 btn p-0"
+                              >
+                                <div
+                                  class="selected-value d-flex justify-content-between"
+                                >
+                                  <p class="mb-0 text-gray-500">Select...</p>
+                                  <div class="text-gray-500">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      class="bi bi-chevron-down"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                      />
+                                    </svg>
+                                  </div>
+                                </div>
+                              </button>
+                              <ul class="select-dropdown">
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="single"
+                                    name="room-quantity"
+                                  />
+                                  <label for="single">Single</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="double"
+                                    name="room-quantity"
+                                  />
+                                  <label for="double">Double</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="triple"
+                                    name="room-quantity"
+                                  />
+                                  <label for="triple">Triple</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad">Quad</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad-plus"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad-plus">Quad Plus</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="twin"
+                                    name="room-quantity"
+                                  />
+                                  <label for="twin">Twin</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <a
+                            href="/en/pms/addons/"
+                            type="button"
+                            style="border-radius: 1rem"
+                            class="btn border me-3"
+                          >
+                            Cancel
+                          </a>
+                          <button
+                            style="border-radius: 1rem"
+                            class="btn submit-btn btn-success"
+                          >
+                            Save
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="px-4">
+              <div
+                class="overflow-hidden mt-3"
+                style="
+                  border-top-right-radius: 1.4rem;
+                  border-top-left-radius: 1.4rem;
+                  background-color: var(--table-tr-hover-bg);
+                "
+              >
+                <table
+                  style="border-bottom: transparent"
+                  class="table table-small table-bordered m-0"
+                >
+                  <thead>
+                    <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                      <th
+                        style="border-left: transparent"
+                        class="fw-bold p-3"
+                        scope="col"
+                      >
+                        User
+                      </th>
+                      <th class="fw-bold p-3" scope="col">Rule</th>
+                      <th class="fw-bold p-3" scope="col">Status</th>
+                      <th class="fw-bold p-3" scope="col">Created</th>
+                      <th class="fw-bold p-3" scope="col">Updated</th>
+                      <th
+                        style="border-left: transparent"
+                        class="fw-bold p-3"
+                        scope="col"
+                      >
+                        Actions
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    style="
+                      border-inline: transparent;
+                      border-bottom: 1px solid var(--bs-border-color);
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <div class="d-flex gap-2 align-items-center">
+                          <span
+                            style="
+                              width: fit-content;
+                              padding-inline: 13px;
+                              padding-block: 8px;
+                              color: white;
+                            "
+                            class="d-block rounded-5 bg-dark-subtle"
+                          >
+                            ۲s
+                          </span>
+                          <p class="m-0 fs-6">21321 sadadas</p>
+                        </div>
+                      </td>
+
+                      <td></td>
+
+                      <td>
+                        <span
+                          class="badge badge text-bg-danger bg-opacity-10 border-danger rounded-5 text-danger"
+                        >
+                          Inactive
+                        </span>
+                      </td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>
+                        <div class="gap-2 d-flex justify-content-center">
+                          <img src="/assets/images/svgexport-18.svg" alt="" />
+                          <img src="/assets/images/svgexport-19.svg" alt="" />
+                          <img src="/assets/images/svgexport-20.svg" alt="" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex gap-2 align-items-center">
+                          <span
+                            style="
+                              width: fit-content;
+                              padding-inline: 13px;
+                              padding-block: 8px;
+                              color: white;
+                            "
+                            class="d-block rounded-5 bg-dark-subtle"
+                          >
+                            ۲s
+                          </span>
+                          <p class="m-0 fs-6">21321 sadadas</p>
+                        </div>
+                      </td>
+
+                      <td></td>
+
+                      <td>
+                        <span
+                          class="badge badge text-bg-danger bg-opacity-10 border-danger rounded-5 text-danger"
+                        >
+                          Inactive
+                        </span>
+                      </td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>
+                        <div class="gap-2 d-flex justify-content-center">
+                          <img src="/assets/images/svgexport-18.svg" alt="" />
+                          <img src="/assets/images/svgexport-19.svg" alt="" />
+                          <img src="/assets/images/svgexport-20.svg" alt="" />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex gap-2 align-items-center">
+                          <span
+                            style="
+                              width: fit-content;
+                              padding-inline: 13px;
+                              padding-block: 8px;
+                              color: white;
+                            "
+                            class="d-block rounded-5 bg-dark-subtle"
+                          >
+                            ۲s
+                          </span>
+                          <p class="m-0 fs-6">21321 sadadas</p>
+                        </div>
+                      </td>
+
+                      <td></td>
+
+                      <td>
+                        <span
+                          class="badge badge text-bg-danger bg-opacity-10 border-danger rounded-5 text-danger"
+                        >
+                          Inactive
+                        </span>
+                      </td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>۱۴۰۳/۰۳/۲۷ ۵:۳۶</td>
+                      <td>
+                        <div class="gap-2 d-flex justify-content-center">
+                          <img src="/assets/images/svgexport-18.svg" alt="" />
+                          <img src="/assets/images/svgexport-19.svg" alt="" />
+                          <img src="/assets/images/svgexport-20.svg" alt="" />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const validator = new JustValidate("#add-guest", {
+        errorLabelCssClass: ["mt-2"],
+        errorFieldCssClass: ["border-danger"],
+      });
+
+      validator
+        .addField("#name", [
+          {
+            rule: "required",
+            errorMessage: "  Name is required",
+          },
+          {
+            rule: "minLength",
+            value: 3,
+            errorMessage: "  at least 3c  ",
+          },
+        ])
+
+        .addField("#last-name", [
+          {
+            rule: "required",
+            errorMessage: " last name is required",
+          },
+          {
+            rule: "minLength",
+            value: 3,
+            errorMessage: "  at least 3c  ",
+          },
+        ])
+        .addField("#username", [
+          {
+            rule: "customRegexp",
+            value: /^(?=.*[a-zA-Z])([a-zA-Z0-9\s]+)$/,
+            errorMessage: " only en chars ",
+          },
+          {
+            rule: "minLength",
+            value: 3,
+            errorMessage: "  at least 3c  ",
+          },
+          {
+            rule: "required",
+            value: 3,
+            errorMessage: " username is required       ",
+          },
+        ])
+        .addField("#email", [
+          {
+            rule: "required",
+            errorMessage: "email is required   ",
+          },
+          {
+            rule: "email",
+
+            errorMessage: "  email is invalid    ",
+          },
+        ])
+        .addField("#phone-number", [
+          {
+            rule: "required",
+            errorMessage: "phone number is required",
+          },
+          {
+            rule: "number",
+            errorMessage: " only numbers are valid   ",
+          },
+          {
+            rule: "customRegexp",
+            value: /^09[0-9]{9}$/,
+            errorMessage: "  phone number is not valid     ",
+          },
+        ])
+        .addField("#rule", [
+          {
+            rule: "required",
+            errorMessage: "   rule is required ",
+          },
+        ])
+        .addField("#room-type", [
+          {
+            rule: "required",
+            errorMessage: "   room type is required   ",
+          },
+        ]);
+
+      {
+        errorsContainer: document.querySelector(".select-container");
+      }
+    </script>
+    <script src="/js/custom-select.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

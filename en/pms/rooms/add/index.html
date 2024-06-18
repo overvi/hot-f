@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels - Rooms</title>
+    <script src="/js/theme.js"></script>
+    <link rel="stylesheet" href="/styles/theme.css" />
+
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar-expanded.js"></script>
+  </head>
+  <body class="min-vh-100" style="direction: ltr">
+    <main class="w-100">
+      <nav-bar url="pms/rooms/add" dir="ltr"></nav-bar>
+      <div class="wrapper mt-2 mw-100">
+        <div class="d-flex justify-content-between">
+          <side-bar-expanded dir="ltr"></side-bar-expanded>
+          <div
+            style="padding-left: 1rem"
+            class="col-8 table-col col-lg-8 col-xl-8"
+          >
+            <div class="form-container" style="max-width: 37rem">
+              <h5 class="fw-bold p-3 border-bottom">Add New Room</h5>
+
+              <div dir="ltr" class="border-dark px-0 pt-2 rounded-5">
+                <nav class="px-2">
+                  <div
+                    style="
+                      background-color: transparent;
+                      --bs-nav-tabs-link-active-color: black;
+                      --bs-nav-tabs-border-width: 0;
+                    "
+                    class="nav nav-tabs border-bottom"
+                    id="nav-tab"
+                    role="tablist"
+                  >
+                    <button
+                      class="nav-link active border-0"
+                      style="
+                        background-color: transparent;
+                        --bs-nav-link-color: gray;
+                        --bs-nav-link-hover-color: orange;
+                      "
+                      id="nav-details"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-home"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-home"
+                      aria-selected="true"
+                    >
+                      Details
+                    </button>
+                    <button
+                      class="nav-link border-0"
+                      id="nav-facilities"
+                      data-bs-toggle="tab"
+                      style="
+                        background-color: transparent;
+                        --bs-nav-link-color: gray;
+                        --bs-nav-link-hover-color: orange;
+                      "
+                      data-bs-target="#nav-profile"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-profile"
+                      aria-selected="true"
+                    >
+                      Amenities
+                    </button>
+                    <button
+                      class="nav-link border-0"
+                      id="nav-bed-type"
+                      data-bs-toggle="tab"
+                      style="
+                        background-color: transparent;
+                        --bs-nav-link-color: gray;
+                        --bs-nav-link-hover-color: orange;
+                      "
+                      data-bs-target="#nav-contact"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-contact"
+                      aria-selected="true"
+                    >
+                      Bed Type
+                    </button>
+                  </div>
+                </nav>
+                <form id="rooms-form" class="px-3">
+                  <div class="tab-content pb-3" id="nav-tabContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="nav-home"
+                      role="tabpanel"
+                      aria-labelledby="nav-d"
+                      tabindex="0"
+                    >
+                      <div class="mt-3">
+                        <label class="mb-3" for="title-input"
+                          ><span class="text-danger mx-2">*</span>Title
+                        </label>
+                        <input
+                          id="title-input"
+                          class="form-control input"
+                          type="text"
+                        />
+                      </div>
+                      <div class="d-flex gap-3 mt-4">
+                        <div class="select-container" style="flex-basis: 50%">
+                          <label class="mb-3" for="room-type"
+                            ><span class="text-danger mx-2">*</span>Room Type
+                          </label>
+                          <input
+                            id="room-type"
+                            type="hidden"
+                            class="d-none custom-select-input"
+                          />
+
+                          <div class="custom-select input form-control">
+                            <button
+                              id="room-type"
+                              type="button"
+                              class="select-button w-100 rounded5 border-0 btn p-0"
+                            >
+                              <div
+                                class="selected-value d-flex justify-content-between"
+                              >
+                                <p class="mb-0 text-gray-500">Select...</p>
+                                <div class="text-gray-500">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                            <ul class="select-dropdown">
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="single"
+                                  name="room-quantity"
+                                />
+                                <label for="single">Single</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="double"
+                                  name="room-quantity"
+                                />
+                                <label for="double">Double</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="triple"
+                                  name="room-quantity"
+                                />
+                                <label for="triple">Triple</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad"
+                                  name="room-quantity"
+                                />
+                                <label for="quad">Quad</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad-plus"
+                                  name="room-quantity"
+                                />
+                                <label for="quad-plus">Quad Plus</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="twin"
+                                  name="room-quantity"
+                                />
+                                <label for="twin">Twin</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div>
+                          <label class="mb-3" for="room-number">
+                            Room Number
+                          </label>
+                          <input
+                            id="room-number"
+                            class="form-control input"
+                            type="text"
+                          />
+                        </div>
+                        <div class="select-container" style="flex-basis: 50%">
+                          <label class="mb-3" for="room-design"
+                            ><span class="text-danger mx-2">*</span>Room View
+                          </label>
+                          <input
+                            id="room-design"
+                            type="hidden"
+                            class="d-none custom-select-input"
+                          />
+
+                          <div class="custom-select input form-control">
+                            <button
+                              id="room-design"
+                              type="button"
+                              class="select-button w-100 rounded5 border-0 btn p-0"
+                            >
+                              <div
+                                class="selected-value d-flex justify-content-between"
+                              >
+                                <p class="mb-0 text-gray-500">Select...</p>
+                                <div class="text-gray-500">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                            <ul class="select-dropdown">
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="single"
+                                  name="room-quantity"
+                                />
+                                <label for="single">Single</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="double"
+                                  name="room-quantity"
+                                />
+                                <label for="double">Double</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="triple"
+                                  name="room-quantity"
+                                />
+                                <label for="triple">Triple</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad"
+                                  name="room-quantity"
+                                />
+                                <label for="quad">Quad</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad-plus"
+                                  name="room-quantity"
+                                />
+                                <label for="quad-plus">Quad Plus</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="twin"
+                                  name="room-quantity"
+                                />
+                                <label for="twin">Twin</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex gap-3 mt-3">
+                        <div>
+                          <label class="mb-3" for="min-stay"> Min Stay</label>
+                          <input
+                            id="min-stay"
+                            class="form-control input"
+                            type="text"
+                          />
+                        </div>
+                        <div>
+                          <label class="mb-3" for="min-person">
+                            Min Occupacy
+                          </label>
+                          <input
+                            id="min-person"
+                            class="form-control input"
+                            type="text"
+                          />
+                        </div>
+                        <div>
+                          <label class="mb-3" for="max-person">
+                            Most Occupay
+                          </label>
+                          <input
+                            id="max-person"
+                            class="form-control input"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+                      <div style="max-width: 70%" class="d-flex gap-3 mt-3">
+                        <div style="flex-basis: 50%">
+                          <label class="mb-3" for="add-bed">
+                            Additional Bed
+                          </label>
+                          <input
+                            id="add-bed"
+                            class="form-control input"
+                            type="text"
+                          />
+                        </div>
+                        <div class="select-container" style="flex-basis: 50%">
+                          <label class="mb-3" for="status-input"
+                            ><span class="text-danger mx-2">*</span>Status
+                          </label>
+                          <input
+                            id="status-input"
+                            type="hidden"
+                            class="d-none custom-select-input"
+                          />
+
+                          <div class="custom-select input form-control">
+                            <button
+                              id="status-input"
+                              type="button"
+                              class="select-button w-100 rounded5 border-0 btn p-0"
+                            >
+                              <div
+                                class="selected-value d-flex justify-content-between"
+                              >
+                                <p class="mb-0 text-gray-500">Select...</p>
+                                <div class="text-gray-500">
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16"
+                                  >
+                                    <path
+                                      fill-rule="evenodd"
+                                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            </button>
+                            <ul class="select-dropdown">
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="single"
+                                  name="room-quantity"
+                                />
+                                <label for="single">Single</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="double"
+                                  name="room-quantity"
+                                />
+                                <label for="double">Double</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="triple"
+                                  name="room-quantity"
+                                />
+                                <label for="triple">Triple</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad"
+                                  name="room-quantity"
+                                />
+                                <label for="quad">Quad</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="quad-plus"
+                                  name="room-quantity"
+                                />
+                                <label for="quad-plus">Quad Plus</label>
+                              </li>
+                              <li>
+                                <input
+                                  type="radio"
+                                  id="twin"
+                                  name="room-quantity"
+                                />
+                                <label for="twin">Twin</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="form-check d-flex p-0 flex-column form-switch mt-5"
+                      >
+                        <input
+                          style="width: 2.5rem; cursor: pointer"
+                          class="form-check-input m-0"
+                          type="checkbox"
+                          role="switch"
+                          id="flexSwitchCheckDefault"
+                        />
+                        <label class="d-block mb-3 order-first" for=""
+                          >Active / Deactive</label
+                        >
+                      </div>
+
+                      <div class="mt-5">
+                        <a
+                          href="/en/pms/rooms/"
+                          type="button"
+                          style="border-radius: 1rem"
+                          class="btn border me-3"
+                        >
+                          Cancel
+                        </a>
+                        <button
+                          type="submit"
+                          style="border-radius: 1rem"
+                          class="btn me-3 btn-success submit-btn"
+                        >
+                          Save
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="nav-profile"
+                      role="tabpanel"
+                      aria-labelledby="nav-facilities"
+                      tabindex="0"
+                    >
+                      <div class="wrapper">
+                        <div class="row mt-3 form-options px-3 d-flex gap-2">
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym2"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym2">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym3"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym3">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym4"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym4">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3 form-options px-3 d-flex gap-2">
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym5"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym5">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym6"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym6">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym7"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym7">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym8"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym8">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3 form-options px-3 d-flex gap-2">
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym9"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym9">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym10"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym10">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym11"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym11">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym12"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym12">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3 form-options px-3 d-flex gap-2">
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym13"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym13">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym14"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym14">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym15"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym15">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym16"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym16">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3 form-options px-3 d-flex gap-2">
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym17"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym17">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym18"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym18">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym19"
+                              />
+                              <p class="m-0">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym19">
+                              </label>
+                            </div>
+                          </div>
+                          <div class="col-4">
+                            <div
+                              class="form-check align-items-center d-flex border form-checkbox"
+                            >
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="gym20"
+                              />
+                              <p class="m-0 me-3">gym</p>
+                              <div>
+                                <img
+                                  src="/assets/images/amenity-gym.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <label class="form-check-label" for="gym20">
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <a
+                            href="/en/pms/rooms/"
+                            type="button"
+                            style="border-radius: 1rem"
+                            class="btn border me-3"
+                          >
+                            Cancel
+                          </a>
+                          <button
+                            style="border-radius: 1rem"
+                            class="btn btn-success"
+                          >
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="nav-contact"
+                      role="tabpanel"
+                      aria-labelledby="nav-contact-tab"
+                      tabindex="0"
+                    >
+                      <div class="p-3">
+                        <p>Bed Type</p>
+                        <div class="d-flex gap-3 mt-4">
+                          <div class="select-container" style="flex-basis: 50%">
+                            <label class="mb-3" for="room-type2"
+                              ><span class="text-danger mx-2">*</span> Room Type
+                            </label>
+                            <input
+                              id="room-type2"
+                              type="hidden"
+                              class="d-none custom-select-input"
+                            />
+
+                            <div class="custom-select input form-control">
+                              <button
+                                id="room-type2"
+                                type="button"
+                                class="select-button w-100 rounded5 border-0 btn p-0"
+                              >
+                                <div
+                                  class="selected-value d-flex justify-content-between"
+                                >
+                                  <p class="mb-0 text-gray-500">Select...</p>
+                                  <div class="text-gray-500">
+                                    <svg
+                                      xmlns="http://www.w3.org/2000/svg"
+                                      width="16"
+                                      height="16"
+                                      fill="currentColor"
+                                      class="bi bi-chevron-down"
+                                      viewBox="0 0 16 16"
+                                    >
+                                      <path
+                                        fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                      />
+                                    </svg>
+                                  </div>
+                                </div>
+                              </button>
+                              <ul class="select-dropdown">
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="single"
+                                    name="room-quantity"
+                                  />
+                                  <label for="single">Single</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="double"
+                                    name="room-quantity"
+                                  />
+                                  <label for="double">Double</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="triple"
+                                    name="room-quantity"
+                                  />
+                                  <label for="triple">Triple</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad">Quad</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="quad-plus"
+                                    name="room-quantity"
+                                  />
+                                  <label for="quad-plus">Quad Plus</label>
+                                </li>
+                                <li>
+                                  <input
+                                    type="radio"
+                                    id="twin"
+                                    name="room-quantity"
+                                  />
+                                  <label for="twin">Twin</label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div style="width: 5rem">
+                            <label class="mb-3" for="numbers"> Quantity </label>
+                            <input
+                              id="numbers"
+                              class="form-control input"
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                        <div class="mt-5">
+                          <a
+                            href="/en/pms/rooms/"
+                            type="button"
+                            style="border-radius: 1rem"
+                            class="btn border me-3"
+                          >
+                            Cancel
+                          </a>
+                          <button
+                            type="submit"
+                            style="border-radius: 1rem"
+                            class="btn submit-btn me-3 btn-success"
+                          >
+                            Save
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const validator = new JustValidate("#rooms-form", {
+        errorLabelCssClass: ["mt-2"],
+        errorFieldCssClass: ["border-danger"],
+      });
+
+      validator
+        .addField("#title-input", [
+          {
+            rule: "required",
+            errorMessage: "Title Is Required",
+          },
+          {
+            rule: "minLength",
+            value: 3,
+            errorMessage: "   At least 3 chars  ",
+          },
+          {
+            rule: "maxLength",
+            value: 15,
+          },
+        ])
+
+        .addField("#status-input", [
+          {
+            rule: "required",
+            errorMessage: "Status is required   ",
+          },
+        ])
+        .addField("#room-type", [
+          {
+            rule: "required",
+            errorMessage: " Room Type is requried   ",
+          },
+        ])
+        .addField("#min-person", [
+          {
+            rule: "required",
+            errorMessage: "min person is required",
+          },
+          {
+            rule: "number",
+            errorMessage: "number is not valid      ",
+          },
+        ])
+        .addField("#min-stay", [
+          {
+            rule: "required",
+            errorMessage: "  min stay is required ",
+          },
+          {
+            rule: "number",
+            errorMessage: "number is not valid",
+          },
+        ])
+        .addField("#room-design", [
+          {
+            rule: "required",
+            errorMessage: "room design is required   ",
+          },
+        ])
+
+        .addField("#room-type2", [
+          {
+            rule: "required",
+            errorMessage: "room type is required   ",
+          },
+        ])
+        .addField("#numbers", [
+          {
+            rule: "number",
+            errorMessage: "number is not valid",
+          },
+        ])
+
+        .addField("#max-person", [
+          {
+            rule: "required",
+            errorMessage: "max person is required    ",
+          },
+          {
+            rule: "number",
+            errorMessage: "is not a valid number",
+          },
+        ])
+
+        .addField("#room-number", [
+          {
+            rule: "number",
+            errorMessage: "is not valid number",
+          },
+          {
+            rule: "required",
+            errorMessage: "room number is required   ",
+          },
+        ])
+        .addField("#add-bed", [
+          {
+            rule: "number",
+            errorMessage: " number is not valid  ",
+          },
+        ]);
+
+      {
+        errorsContainer: document.querySelector(".select-container");
+      }
+    </script>
+    <script src="/js/custom-select.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

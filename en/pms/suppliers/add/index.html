@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels - Rooms</title>
+    <script src="/js/theme.js"></script>
+    <link rel="stylesheet" href="/styles/theme.css" />
+
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar-expanded.js"></script>
+  </head>
+  <body class="min-vh-100" style="direction: ltr">
+    <main class="w-100">
+      <nav-bar url="pms/suppliers/add" dir="ltr"></nav-bar>
+      <div class="wrapper mt-2 mw-100">
+        <div class="d-flex justify-content-between">
+          <side-bar-expanded dir="ltr"></side-bar-expanded>
+          <div
+            style="padding-left: 1rem"
+            class="col-8 table-col col-lg-8 col-xl-8"
+          >
+            <div class="form-container">
+              <h5 class="fw-bold p-3 border-bottom">Add New Supplier</h5>
+
+              <form class="px-3">
+                <div class="d-flex gap-2">
+                  <div class="mt-3" style="flex-basis: 100%">
+                    <label class="mb-3" for=""
+                      ><span class="text-danger mx-2">*</span>Title
+                    </label>
+                    <input class="form-control input" type="text" />
+                  </div>
+                </div>
+
+                <div class="d-flex gap-3 mt-3">
+                  <div style="flex-basis: 50%">
+                    <label class="mb-3" for=""> Contact Person </label>
+                    <input class="form-control input" type="text" />
+                  </div>
+                  <div>
+                    <label class="mb-3" for=""> Phone </label>
+                    <input class="form-control input" type="text" />
+                  </div>
+                </div>
+                <div class="d-flex gap-3 mt-3">
+                  <div style="flex-basis: 50%">
+                    <label class="mb-3" for=""> Email </label>
+                    <input class="form-control input" type="text" />
+                  </div>
+                  <div style="flex-basis: 50%">
+                    <label class="mb-3" for=""
+                      ><span class="text-danger mx-2 d-inline-block">*</span>
+                      Status</label
+                    >
+                    <div class="custom-select input form-control">
+                      <button
+                        type="button"
+                        class="select-button rounded5 btn p-0"
+                      >
+                        <span class="selected-value">Select...</span>
+                      </button>
+                      <ul class="select-dropdown">
+                        <li>
+                          <input
+                            type="radio"
+                            id="standard-room"
+                            name="room-design"
+                          />
+                          <label for="standard-room">Standard Room</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="delux-room"
+                            name="room-design"
+                          />
+                          <label for="delux-room">Delux Room</label>
+                        </li>
+                        <li>
+                          <input type="radio" id="suite" name="room-design" />
+                          <label for="suite">Suite</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="mini-suite"
+                            name="room-design"
+                          />
+                          <label for="mini-suite">Mini Suite</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="presidential-room"
+                            name="room-design"
+                          />
+                          <label for="presidential-room"
+                            >Presidential Suite</label
+                          >
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="guest-room"
+                            name="room-design"
+                          />
+                          <label for="guest-room">Guest Room</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="apartemant"
+                            name="room-design"
+                          />
+                          <label for="apartemant">Aparetemant</label>
+                        </li>
+                        <li>
+                          <input
+                            type="radio"
+                            id="connecting-room"
+                            name="room-design"
+                          />
+                          <label for="connecting-room">Connecting Room</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex gap-2">
+                  <div class="mt-3" style="flex-basis: 100%">
+                    <label class="mb-3" for=""
+                      ><span class="text-danger mx-2">*</span>Address
+                    </label>
+                    <input class="form-control input" type="text" />
+                  </div>
+                </div>
+
+                <div class="mt-5">
+                  <a
+                    href="/en/pms/addons/"
+                    type="button"
+                    style="border-radius: 1rem"
+                    class="btn border me-3"
+                  >
+                    Cancel
+                  </a>
+                  <button style="border-radius: 1rem" class="btn btn-success">
+                    Save
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/js/custom-select.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

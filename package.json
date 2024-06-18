@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "apexcharts": "^3.49.1",
-    "moment-jalaali": "^0.10.0"
+    "bootstrap": "^5.3.3",
+    "moment-jalaali": "^0.10.0",
+    "purgecss": "^6.0.0"
   }
 }

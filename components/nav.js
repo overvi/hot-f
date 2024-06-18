@@ -38,49 +38,33 @@ class Navbar extends HTMLElement {
               </div>
             </form>
   
-            <div
-              class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
-            >
-              <img
-                type="button"
-                data-bs-toggle="popover"
-                data-bs-trigger="hover focus"
-                data-bs-placement="bottom"
-                data-bs-custom-class="custom-pop"
-                data-bs-content="Add Reservation"
-                src="/assets/images/add.svg"
-              />
-            </div>
-            <div
-              class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
-            >
-              <img
-                type="button"
+        
+             <div class="d-flex align-items-center me-0 gap-2">
+             
+              <div class="btn p-0 border-0">
+                <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
+                  <img
+                    type="button"
                 data-bs-toggle="popover"
                 data-bs-trigger="hover focus"
                 data-bs-placement="bottom"
                 data-bs-custom-class="custom-pop"
                 data-bs-content="Calander"
                 src="/assets/images/calendar.svg"
-              />
-            </div>
-            <div
-              class="icon-bg border-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
-            >
-              <img
-                type="button"
-                data-bs-toggle="popover"
-                data-bs-trigger="hover focus"
-                data-bs-placement="bottom"
-                data-bs-custom-class="custom-pop"
-                data-bs-content="Reservations"
-                src="/assets/images/book-saved.svg"
-              />
-            </div>
+                    alt=""
+                  />
+                </div>
+                
   
-            <div class="d-flex align-items-center me-5 gap-2">
-              <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
-                <a href="/en/${url}">
+                <div class="d-none popover-content gap-3 flex-column">
+                  <p class="fw-bold">Active Reservation</p>
+                  <div class="pad-9">
+                    <img class="data-svg" src="/assets/images/data.svg" alt="" />
+                    <p class="text-gray-300 fw-semibold me-2">No Data</p>
+                  </div>
+                </div>
+              </div> <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
+             
                   <img
                     type="button"
                     data-bs-toggle="popover"
@@ -88,11 +72,30 @@ class Navbar extends HTMLElement {
                     data-bs-placement="bottom"
                     data-bs-custom-class="custom-pop"
                     data-bs-content="Change Language "
-                    src="/assets/images/language-circle.svg"
+                    src="/assets/images/book-saved.svg"
                     alt=""
                   />
-                </a>
+    
               </div>
+              <div
+                class="icon-bg  border-0 mt-0 rounded-5 pad-2"
+              >
+                <div>
+                  <img
+                   type="button"
+                data-bs-toggle="popover"
+                data-bs-trigger="hover focus"
+                data-bs-placement="bottom"
+                data-bs-custom-class="custom-pop"
+                data-bs-content="Add Reservation"
+                src="/assets/images/add.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+              <div class="d-flex align-items-center me-5 gap-2">
+             
               <div class="btn p-0 border-0">
                 <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
                   <img
@@ -107,19 +110,27 @@ class Navbar extends HTMLElement {
                     alt=""
                   />
                 </div>
+                
   
-                <div class="d-none popover-content gap-3 flex-column">
-                  <p class="fw-bold">Active Reservation</p>
-                  <div class="pad-9">
-                    <img class="data-svg" src="/assets/images/data.svg" alt="" />
-                    <p class="text-gray-300 fw-semibold me-2">No Data</p>
-                  </div>
-                </div>
+              
+              </div> <div class="icon-bg border-0 mt-0 rounded-5 pad-2">
+                <a href="/en/${url}">
+                  <img
+                    type="button"
+                    data-bs-toggle="popover"
+                    data-bs-trigger="hover focus"
+                    data-bs-placement="bottom"
+                    data-bs-custom-class="custom-pop"
+                    data-bs-content="Change Language "
+                    src="/assets/images/language-circle.svg"
+                    alt=""
+                  />
+                </a>
               </div>
               <div
                 class="icon-bg toggle-color-mode border-0 mt-0 rounded-5 pad-2"
               >
-                <div>
+                <div >
                   <img
                     type="button"
                     data-bs-toggle="popover"
@@ -133,6 +144,7 @@ class Navbar extends HTMLElement {
                 </div>
               </div>
             </div>
+          
             <div class="d-flex align-items-center gap-2">
               <button
                 type="button"
@@ -164,7 +176,9 @@ class Navbar extends HTMLElement {
                 <div
                   class="d-flex mb-2 gap-2 align-items-center border-bottom pb-3"
                 >
-                  <img src="/assets/images/toggle.svg" alt="" />
+                <a>
+                <img src="/assets/images/toggle.svg" alt="" />
+                </a>
                   <p class="m-0">لیست هتل ها</p>
                 </div>
                 <div class="d-flex gap-2 align-items-center">
@@ -244,10 +258,12 @@ class Navbar extends HTMLElement {
                 />
               </div>
   
-              <div
+              <div 
+                style="margin-right : 6rem"
                 class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
               >
                 <img
+       
                   type="button"
                   data-bs-toggle="popover"
                   data-bs-trigger="hover focus"
@@ -345,7 +361,10 @@ class Navbar extends HTMLElement {
                 <div
                   class="d-flex mb-2 gap-2 align-items-center border-bottom pb-3"
                 >
-                  <img src="/assets/images/toggle.svg" alt="" />
+                <a href="/fds">
+                <img src="/assets/images/toggle.svg" alt="" />
+                <a>
+
                   <p class="m-0">Hotels list</p>
                 </div>
                 <div class="d-flex gap-2 align-items-center">
