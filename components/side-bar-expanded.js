@@ -618,7 +618,7 @@ class ExpandedSideBar extends HTMLElement {
     if (currentPage) {
       document.querySelectorAll(".nav-a").forEach((link) => {
         if (link.pathname == currentPage) {
-          link.classList.add("active-tab");
+          link.classList.add("active-page");
         }
       });
     }
