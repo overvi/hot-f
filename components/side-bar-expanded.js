@@ -26,8 +26,8 @@ class ExpandedSideBar extends HTMLElement {
               class="side-bar position-fixed overflow-hidden container mx-3 px-1 px-0"
             >
               <div class="row">
-                <div class="sidebar-tabs px-3 col-2 d-flex flex-column gap-5">
-                <a href="/">
+                <div  class="sidebar-tabs   col-2 d-flex flex-column gap-5">
+                <a href="/" class="me-2">
                 <img
                   style="margin-top: 6rem"
                   width="28"
@@ -35,15 +35,19 @@ class ExpandedSideBar extends HTMLElement {
                   alt=""
                 />
                 </a>
-                  <div
-                    style="width: fit-content; padding: 0.3rem"
-                    class="bg-orange rounded-5 border-0 border-start"
+                  <div 
+                    style="width: fit-content;"
+                    class="active-tab"
                   >
-                <a href="/pms/roomtype">
+                <a href="/pms/roomtype" >
                   <img width="28" src="/assets/images/hotels.svg" alt="" />
                   </a>                  </div>
+                  <a href="/crs/" class="me-2">
+                  
                   <img width="28" src="/assets/images/calendar.svg" alt="" />
-                  <img
+                  </a>
+                  <img 
+                  class="me-2"
                     width="28"
                     src="/assets/images/dollar-circle.svg"
                     alt=""
@@ -324,8 +328,8 @@ class ExpandedSideBar extends HTMLElement {
               class="side-bar position-fixed overflow-hidden container mx-3 px-1 px-0 col-2"
             >
               <div class="row">
-                <div class="sidebar-tabs px-3 col-2 d-flex flex-column gap-5">
-                   <a href="/">
+                <div class="sidebar-tabs  col-2 d-flex flex-column gap-5">
+                   <a href="/en/" class="offset-3">
                 <img
                   style="margin-top: 6rem"
                   width="28"
@@ -335,21 +339,26 @@ class ExpandedSideBar extends HTMLElement {
                 </a>
                   <div
                     style="width: fit-content; padding: 0.3rem"
-                    class="bg-orange rounded-5 border-0 border-start"
+                    class="active-tab"
                   >
                   <a href="/en/pms/roomtype">
                   <img width="28" src="/assets/images/hotels.svg" alt="" />
                   </a>
                   </div>
+                  <a href="/en/crs/" class="offset-3">
+                  
                   <img width="28" src="/assets/images/calendar.svg" alt="" />
+                  </a>
                   <img
+                  class="offset-3"
                     width="28"
                     src="/assets/images/dollar-circle.svg"
                     alt=""
                   />
                   <div>
-                    <div class="border-0 mt-0 rounded-5">
+                    <div class="border-0 mt-0 rounded-5 ">
                       <img
+                      
                         type="button"
                         data-bs-toggle="popover"
                         data-bs-trigger="hover focus"
@@ -609,7 +618,7 @@ class ExpandedSideBar extends HTMLElement {
     if (currentPage) {
       document.querySelectorAll(".nav-a").forEach((link) => {
         if (link.pathname == currentPage) {
-          link.classList.add("active-page");
+          link.classList.add("active-tab");
         }
       });
     }

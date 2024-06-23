@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <script src="/js/theme.js"></script>
+
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
+    ></script>
+    <script single="false" defer src="/js/calander.js"></script>
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="crs/reservations/list" dir="rtl"></nav-bar>
+
+      <div>
+        <side-bar direction="rtl"></side-bar>
+      </div>
+
+      <section
+        class="container align-items-center d-flex justify-content-between"
+        style="max-width: 97%"
+      >
+        <div
+          dir="rtl"
+          class="d-flex gap-2 order-1"
+          style="max-width: 78rem; margin-right: 4rem"
+        >
+          <a
+            href="
+            "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="m9.02 2.84-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41c0 2.32 1.89 4.22 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33c-1.4-.98-3.65-.93-5 .12ZM12 17.99v-3"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                style="color: var(--bs-gray-500)"
+              ></path>
+            </svg>
+          </a>
+          <p style="color: var(--bs-gray-500)">/</p>
+          <a
+            href=""
+            class="fw-semibold fs-6 link"
+            style="color: var(--bs-gray-500)"
+            >رزرواسیون</a
+          >
+        </div>
+        <div class="d-flex gap-2 mb-3">
+          <input
+            placeholder="تاریخ شروع و پایان"
+            id="range"
+            type="text"
+            name="datefilter"
+            lang="fr-CA"
+            style="
+              border: 1px solid lightgray;
+              outline: none;
+              text-align: center;
+              padding-inline: 3rem;
+              padding-block: 0.2rem;
+            "
+            class="rounded-5"
+          />
+        </div>
+      </section>
+      <section class="d-flex gap-3 mw-80" dir="rtl">
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۶</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۶</h1>
+        </div>
+      </section>
+      <section
+        style="max-width: 78rem; margin-left: 2rem"
+        class="bg-table border-gray-900 mt-5 rounded-5 me-auto"
+      >
+        <div class="border-bottom">
+          <div class="d-flex justify-content-between p-3">
+            <a
+              href="/pms/addons/add/"
+              class="btn text-black bg-orange-700 rounded-5 mb-2"
+            >
+              افزودن خدمات اضافی جدید
+            </a>
+            <p class="fs-6 fw-bold">رزرواسیون ها</p>
+          </div>
+        </div>
+        <div>
+          <form action="" dir="rtl" class="d-flex gap-2 py-3 px-3">
+            <div
+              class="form-control position-relative rounded-5 bg-table d-flex"
+              style="width: 230px"
+            >
+              <svg
+                class="text-neutral-400"
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M11.5 21a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM22 22l-2-2"
+                  stroke="lightgray"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </svg>
+              <input
+                style="width: 200px; outline: 0"
+                class="bg-transparent me-4 top-0 h-100 shadow-none border-0 position-absolute"
+                type="text"
+                placeholder="جستجو..."
+              />
+            </div>
+            <button class="btn border rounded-5">جستجو</button>
+          </form>
+          <div
+            class="overflow-hidden"
+            style="
+              border-top-right-radius: 1.4rem;
+              border-top-left-radius: 1.4rem;
+              background-color: var(--table-tr-hover-bg);
+              padding-top: 0.4rem;
+            "
+          >
+            <table
+              style="border-inline: transparent; margin: auto !important"
+              class="table table-small table-bordered m-0"
+            >
+              <thead>
+                <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                  <th class="fw-bold" scope="col">عملیات</th>
+                  <th class="fw-bold" scope="col">منبع</th>
+                  <th class="fw-bold" scope="col">وضعیت</th>
+                  <th class="fw-bold" scope="col">قیمت کل</th>
+                  <th class="fw-bold" scope="col">تاریخ ترک کردن</th>
+                  <th class="fw-bold" scope="col">تاریخ رسیدن</th>
+                  <th class="fw-bold" scope="col">شماره اتاق ها</th>
+                  <th class="fw-bold" scope="col">تاریخ رزرو</th>
+                  <th class="fw-bold" scope="col">نام</th>
+                  <th class="fw-bold" scope="col">رزرواسیون</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="gap-2 d-flex justify-content-center">
+                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img src="/assets/images/svgexport-19.svg" alt="" />
+                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                    </div>
+                  </td>
+                  <td>شرکتی</td>
+                  <td>
+                    <span
+                      style="color: #d48806 !important"
+                      class="badge badge text-bg-warning bg-opacity-10 border-warning rounded-5"
+                    >
+                      درحال انجام
+                    </span>
+                  </td>
+                  <td>7.92 میلیون</td>
+                  <td>۱۴۰۳/۰۴/۵ ۱۲:۰۰</td>
+                  <td>۱۴۰۳/۰۳/۲۹ ۱۴:۰۰</td>
+                  <td>
+                    <span class="border rounded-5 px-2">103</span>
+                  </td>
+                  <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                  <td>llll llll</td>
+                  <td>RES@20240301BS417609</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gap-2 d-flex justify-content-center">
+                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img src="/assets/images/svgexport-19.svg" alt="" />
+                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                    </div>
+                  </td>
+                  <td>شرکتی</td>
+                  <td>
+                    <span
+                      style="color: #d48806 !important"
+                      class="badge badge text-bg-warning bg-opacity-10 border-warning rounded-5"
+                    >
+                      درحال انجام
+                    </span>
+                  </td>
+                  <td>7.92 میلیون</td>
+                  <td>۱۴۰۳/۰۴/۵ ۱۲:۰۰</td>
+                  <td>۱۴۰۳/۰۳/۲۹ ۱۴:۰۰</td>
+                  <td>
+                    <span class="border rounded-5 px-2">103</span>
+                  </td>
+                  <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                  <td>llll llll</td>
+                  <td>RES@20240301BS417609</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gap-2 d-flex justify-content-center">
+                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img src="/assets/images/svgexport-19.svg" alt="" />
+                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                    </div>
+                  </td>
+                  <td>شرکتی</td>
+                  <td>
+                    <span
+                      style="color: #d48806 !important"
+                      class="badge badge text-bg-warning bg-opacity-10 border-warning rounded-5"
+                    >
+                      درحال انجام
+                    </span>
+                  </td>
+                  <td>7.92 میلیون</td>
+                  <td>۱۴۰۳/۰۴/۵ ۱۲:۰۰</td>
+                  <td>۱۴۰۳/۰۳/۲۹ ۱۴:۰۰</td>
+                  <td>
+                    <span class="border rounded-5 px-2">103</span>
+                  </td>
+                  <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                  <td>llll llll</td>
+                  <td>RES@20240301BS417609</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="gap-2 d-flex justify-content-center">
+                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img src="/assets/images/svgexport-19.svg" alt="" />
+                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                    </div>
+                  </td>
+                  <td>شرکتی</td>
+                  <td>
+                    <span
+                      style="color: #d48806 !important"
+                      class="badge badge text-bg-warning bg-opacity-10 border-warning rounded-5"
+                    >
+                      درحال انجام
+                    </span>
+                  </td>
+                  <td>7.92 میلیون</td>
+                  <td>۱۴۰۳/۰۴/۵ ۱۲:۰۰</td>
+                  <td>۱۴۰۳/۰۳/۲۹ ۱۴:۰۰</td>
+                  <td>
+                    <span class="border rounded-5 px-2">103</span>
+                  </td>
+                  <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                  <td>llll llll</td>
+                  <td>RES@20240301BS417609</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

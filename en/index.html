@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mangotels</title>
     <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
     <script src="/js/theme.js"></script>
     <link rel="stylesheet" href="/styles/theme.css" />
 
@@ -43,83 +44,10 @@
     <main>
       <nav-bar url="" dir="ltr"></nav-bar>
 
-      <div
-        style="
-          border-radius: 2rem;
-          width: 3.2rem;
-
-          min-width: 3.2rem;
-          left: 0;
-        "
-        class="side-bar pb-3 position-fixed container mx-3 px-1 px-0"
-      >
-        <div class="row">
-          <div class="sidebar-tabs col-2 d-flex flex-column gap-5">
-            <div
-              style="
-                width: fit-content;
-                margin-left: 0.1rem;
-                padding: 0.3rem;
-                margin-top: 6rem;
-              "
-              class="bg-orange active-item rounded-5 border-0 border-start"
-            >
-              <img width="28" src="/assets/images/toggle.svg" alt="" />
-            </div>
-
-            <a href="/en/pms/roomtype/">
-              <img
-                style="margin-left: 0.5rem"
-                width="28"
-                src="/assets/images/hotels.svg"
-                alt=""
-              />
-            </a>
-
-            <img
-              style="margin-left: 0.5rem"
-              width="28"
-              src="/assets/images/calendar.svg"
-              alt=""
-            />
-            <img
-              style="margin-left: 0.5rem"
-              width="28"
-              src="/assets/images/dollar-circle.svg"
-              alt=""
-            />
-            <div style="margin-left: 0.4rem">
-              <div class="border-0 mt-0 rounded-5">
-                <img
-                  type="button"
-                  data-bs-toggle="popover"
-                  data-bs-trigger="hover focus"
-                  data-bs-placement="left"
-                  data-bs-custom-class="focus-pop shadow-lg w-15"
-                  data-bs-content=""
-                  class="popover-btn"
-                  width="35"
-                  src="/assets/images/profile.svg"
-                  alt=""
-                />
-              </div>
-
-              <div class="d-none popover-content flex-column">
-                <div>
-                  <p class="border-bottom pb-3">Profile</p>
-                  <p class="text-danger m-0">Logout</p>
-                </div>
-              </div>
-              <div
-                style="width: fit-content; padding: 0.3rem"
-                class="logout-btn mt-4 rounded-5 border-0 border-start"
-              >
-                <img width="25" src="/assets/images/lgout.svg" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <side-bar direction="ltr"></side-bar>
       </div>
+
       <section class="container" style="max-width: 97%">
         <div class="d-flex">
           <div

@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="fa" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <script src="/js/theme.js"></script>
+
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
+    ></script>
+    <script single="false" defer src="/js/calander.js"></script>
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="crs/reservations/1" dir="rtl"></nav-bar>
+
+      <div>
+        <side-bar direction="rtl"></side-bar>
+      </div>
+
+      <section class="d-flex gap-3 mw-80 ps-4" dir="rtl">
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table rounded-5 border-gray-900 p-4 w-12">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۰</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۶</h1>
+        </div>
+        <div class="bg-table w-12 rounded-5 p-4 border-gray-900">
+          <p class="text-gray-500">لغو شده</p>
+          <h1>۶</h1>
+        </div>
+      </section>
+      <section style="margin-right: 5rem; padding-inline: 1rem">
+        <nav class="mt-4 rounded-5" dir="rtl">
+          <div
+            style="
+              --bs-nav-tabs-link-active-color: black;
+              --bs-nav-tabs-border-width: 0;
+            "
+            class="nav nav-tabs bg-table rounded-5 mb-3 border-bottom px-1 pt-2"
+            id="nav-tab"
+            role="tablist"
+          >
+            <button
+              class="nav-link active"
+              style="
+                --bs-nav-link-color: gray;
+                background-color: transparent;
+                --bs-nav-link-hover-color: orange;
+              "
+              id="stay-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#stay"
+              type="button"
+              role="tab"
+              aria-controls="stay"
+              aria-selected="true"
+            >
+              اقامت
+            </button>
+
+            <button
+              class="nav-link border-0"
+              id="bill-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#bill"
+              type="button"
+              role="tab"
+              aria-controls="bill"
+              aria-selected="true"
+            >
+              صورتحساب
+            </button>
+            <button
+              class="nav-link border-0"
+              id="information-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#information"
+              type="button"
+              role="tab"
+              aria-controls="information"
+              aria-selected="true"
+            >
+              اطلاعات مهمان
+            </button>
+            <button
+              class="nav-link border-0"
+              id="note-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#note"
+              type="button"
+              role="tab"
+              aria-controls="note"
+              aria-selected="true"
+            >
+              یادداشت ها
+            </button>
+            <button
+              class="nav-link border-0"
+              id="documents-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#documents"
+              type="button"
+              role="tab"
+              aria-controls="documents"
+              aria-selected="true"
+            >
+              مدارک
+            </button>
+            <button
+              class="nav-link border-0"
+              id="reservations-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#reservations"
+              type="button"
+              role="tab"
+              aria-controls="reservations"
+              aria-selected="true"
+            >
+              گردش رزرو
+            </button>
+            <button
+              class="nav-link border-0"
+              id="notifications-tab"
+              data-bs-toggle="tab"
+              style="
+                background-color: transparent;
+                --bs-nav-link-color: gray;
+                --bs-nav-link-hover-color: orange;
+              "
+              data-bs-target="#notifications"
+              type="button"
+              role="tab"
+              aria-controls="notifications"
+            >
+              اطلاعیه
+            </button>
+          </div>
+          <div class="tab-content pb-3" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="stay"
+              role="tabpanel"
+              aria-labelledby="stay-tab"
+              tabindex="0"
+            >
+              <div
+                class="overflow-hidden"
+                style="
+                  border-top-right-radius: 1.4rem;
+                  border-top-left-radius: 1.4rem;
+                  background-color: var(--table-tr-hover-bg);
+                  padding-top: 0.4rem;
+                "
+              >
+                <table
+                  style="border-inline: transparent; margin: auto !important"
+                  class="table table-small table-bordered m-0"
+                >
+                  <thead>
+                    <tr style="--bs-table-bg: var(--table-thead-bg)">
+                      <th class="fw-bold" scope="col">رزرواسیون</th>
+                      <th class="fw-bold" scope="col">نوع اتاق</th>
+                      <th class="fw-bold" scope="col">شماره اتاق</th>
+                      <th class="fw-bold" scope="col">مهمان</th>
+                      <th class="fw-bold" scope="col">ورود / خروج</th>
+                      <th class="fw-bold" scope="col">ترکیب مهمانان</th>
+                      <th class="fw-bold" scope="col">تعداد شب</th>
+                      <th class="fw-bold" scope="col">قیمت کل</th>
+                      <th class="fw-bold" scope="col">مقیم</th>
+                      <th class="fw-bold" scope="col">عملیات</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>199</td>
+                      <td>Standard Room - Double</td>
+                      <td>103</td>
+                      <td>undefined undefined</td>
+                      <td>1403/05/4-1403/04/2</td>
+                      <td>0 1 0</td>
+                      <td>4</td>
+                      <td>4,320,000تومان</td>
+                      <td>
+                        <div class="form-check d-flex flex-column form-switch">
+                          <input
+                            style="width: 2.5rem; cursor: pointer"
+                            class="form-check-input"
+                            type="checkbox"
+                            role="switch"
+                            id="percentage-switch"
+                          />
+                        </div>
+                      </td>
+                      <td>
+                        <button class="btn border rounded-5 p-0 px-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2ZM19 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2ZM12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2Z"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                            ></path>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="bill"
+              role="tabpanel"
+              aria-labelledby="bill-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-2">
+                <div
+                  class="bg-table p-3 border rounded-4"
+                  style="width: fit-content; height: fit-content"
+                >
+                  <button
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                    class="btn rounded-5 w-100 border border-warning text-warning"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 12h12M12 18V6"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    افزودن فولیو جدید
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-centered"
+                      style="--bs-modal-width: 37.5rem"
+                    >
+                      <div
+                        style="border-radius: 1rem; background: var(--card-bg)"
+                        class="modal-content border-0"
+                      >
+                        <div
+                          class="modal-header border-0 m-0 d-flex justify-content-between"
+                          style="margin-right: auto"
+                        >
+                          <h5 class="m-0">افزودن فولیو جدید</h5>
+                          <button
+                            type="button"
+                            class="btn-close m-0"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="add-guest" class="px-3">
+                            <div class="d-flex gap-3">
+                              <div style="flex-basis: 100%">
+                                <label class="mb-3" for="name"
+                                  ><span class="text-danger mx-2">*</span>عنوان
+                                </label>
+                                <input
+                                  id="name"
+                                  class="form-control input"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+                            <div class="d-flex gap-3 mt-4 align-items-center">
+                              <div>
+                                <label class="mb-3" for="email">
+                                  جمع فرعی
+                                </label>
+                                <input
+                                  id="email"
+                                  class="form-control input"
+                                  type="text"
+                                />
+                              </div>
+                              <div
+                                class="form-check d-flex flex-column form-switch"
+                              >
+                                <input
+                                  style="width: 2.5rem; cursor: pointer"
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  role="switch"
+                                  id="percentage-switch"
+                                />
+                                <label
+                                  class="d-block mb-3 order-first"
+                                  for="percentage-switch"
+                                >
+                                  پرداخت شده
+                                </label>
+                              </div>
+                            </div>
+                            <div class="d-flex align-items-center mt-5">
+                              <div class="w-100">
+                                <label class="mb-3" for="description">
+                                  توضیحات
+                                </label>
+                                <textarea
+                                  id="description"
+                                  style="min-height: 8rem"
+                                  class="form-control input"
+                                  type=""
+                                ></textarea>
+                              </div>
+                            </div>
+                            <div class="mt-5">
+                              <a
+                                href="/pms/guests/"
+                                style="border-radius: 1rem"
+                                class="btn border"
+                              >
+                                انصراف
+                              </a>
+                              <button
+                                style="border-radius: 1rem"
+                                class="btn submit-btn me-3 btn-success"
+                              >
+                                ذخیره
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="pad-9 d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <img
+                      class="data-svg"
+                      src="/assets/images/data.svg"
+                      alt=""
+                    />
+                    <p class="text-gray-300 text-nowrap fw-semibold">
+                      داده ای موجود نیست
+                    </p>
+                  </div>
+                </div>
+                <div style="flex-basis: 100%">
+                  <div
+                    class="border bg-table rounded-5 mb-3 d-flex flex-column"
+                  >
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#itemModal"
+                      class="border-bottom border-0 align-self-end m-3 btn rounded-5 p-1 px-2"
+                      style="
+                        background: var(--bs-orange-700);
+                        color: var(--card-bg);
+                      "
+                    >
+                      افزودن ایتم جدید
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="itemModal"
+                      tabindex="-1"
+                      aria-labelledby="itemModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered ml-0 mt-0 mb-0"
+                        style="--bs-modal-width: 25.5rem"
+                      >
+                        <div
+                          style="
+                            border-radius: 1rem;
+                            background: var(--card-bg);
+                            height: 104vh;
+                          "
+                          class="modal-content border-0 rounded-0"
+                        >
+                          <div
+                            class="modal-header border-0 m-0 d-flex justify-content-between"
+                            style="margin-right: auto"
+                          >
+                            <h5 class="m-0">افزودن ایتم جدید</h5>
+                            <button
+                              type="button"
+                              class="btn-close m-0"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form id="add-guest" class="px-3">
+                              <div class="d-flex gap-3">
+                                <div style="flex-basis: 100%">
+                                  <label class="mb-3" for="name"
+                                    ><span class="text-danger mx-2">*</span
+                                    >عنوان
+                                  </label>
+                                  <input
+                                    id="name"
+                                    class="form-control input"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+                              <div class="d-flex gap-3 mt-4 align-items-center">
+                                <div>
+                                  <label class="mb-3" for="email"> فی </label>
+                                  <input
+                                    id="email"
+                                    class="form-control input"
+                                    type="text"
+                                  />
+                                </div>
+                                <div>
+                                  <label class="mb-3" for="email">
+                                    تعداد
+                                  </label>
+                                  <input
+                                    id="email"
+                                    class="form-control input"
+                                    type="text"
+                                  />
+                                </div>
+                                <div>
+                                  <label class="mb-3" for="email">
+                                    مجموع
+                                  </label>
+                                  <input
+                                    id="email"
+                                    class="form-control input"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="select-container mt-3"
+                                style="flex-basis: 50%"
+                              >
+                                <label
+                                  id="type-label"
+                                  class="mb-3"
+                                  for="type-input"
+                                >
+                                  <span class="text-danger mx-2">*</span>
+                                  موجودیت
+                                </label>
+                                <input
+                                  id="type-input"
+                                  type="hidden"
+                                  class="d-none custom-select-input"
+                                />
+
+                                <div class="custom-select input form-control">
+                                  <button
+                                    id="type-input-button"
+                                    type="button"
+                                    class="select-button w-100 rounded5 border-0 btn p-0"
+                                  >
+                                    <div
+                                      class="selected-value d-flex justify-content-between"
+                                    >
+                                      <p class="mb-0 text-gray-500">
+                                        انتخاب...
+                                      </p>
+                                      <div class="text-gray-500">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="16"
+                                          height="16"
+                                          fill="currentColor"
+                                          class="bi bi-chevron-down"
+                                          viewBox="0 0 16 16"
+                                        >
+                                          <path
+                                            fill-rule="evenodd"
+                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </button>
+                                  <ul class="select-dropdown">
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="single"
+                                        name="room-quantity"
+                                      />
+                                      <label for="single">Single</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="double"
+                                        name="room-quantity"
+                                      />
+                                      <label for="double">Double</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="triple"
+                                        name="room-quantity"
+                                      />
+                                      <label for="triple">Triple</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="quad"
+                                        name="room-quantity"
+                                      />
+                                      <label for="quad">Quad</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="quad-plus"
+                                        name="room-quantity"
+                                      />
+                                      <label for="quad-plus">Quad Plus</label>
+                                    </li>
+                                    <li>
+                                      <input
+                                        type="radio"
+                                        id="twin"
+                                        name="room-quantity"
+                                      />
+                                      <label for="twin">Twin</label>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="d-flex align-items-center mt-5">
+                                <div class="w-100">
+                                  <label class="mb-3" for="description">
+                                    توضیحات
+                                  </label>
+                                  <textarea
+                                    id="description"
+                                    style="min-height: 8rem"
+                                    class="form-control input"
+                                    type=""
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="mt-5">
+                                <a
+                                  href="/pms/guests/"
+                                  style="border-radius: 1rem"
+                                  class="btn border"
+                                >
+                                  انصراف
+                                </a>
+                                <button
+                                  style="border-radius: 1rem"
+                                  class="btn submit-btn me-3 btn-success"
+                                >
+                                  ذخیره
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="overflow-hidden mt-3 m-3"
+                      style="
+                        border-top-right-radius: 1.4rem;
+                        border-top-left-radius: 1.4rem;
+                        background-color: var(--table-tr-hover-bg);
+                      "
+                    >
+                      <table
+                        style="
+                          border-inline: transparent;
+                          margin: auto !important;
+                        "
+                        class="table table-small table-bordered m-0"
+                      >
+                        <thead>
+                          <tr style="--bs-table-bg: var(--table-thead-bg)">
+                            <th class="fw-bold" scope="col">قیمت کل</th>
+                            <th class="fw-bold" scope="col">تعداد</th>
+                            <th class="fw-bold" scope="col">قیمت</th>
+                            <th class="fw-bold" scope="col">توضیحات</th>
+                            <th class="fw-bold" scope="col">تاریخ ایجاد</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="pad-9 d-flex justify-content-center align-items-center flex-column"
+                    >
+                      <img
+                        class="data-svg"
+                        src="/assets/images/data.svg"
+                        alt=""
+                      />
+                      <p class="text-gray-300 fw-semibold">
+                        داده ای موجود نیست
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    style="flex-basis: 100%"
+                    class="border bg-table rounded-4 d-flex flex-column"
+                  >
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#itemModal"
+                      class="border-bottom border-0 align-self-end m-3 btn rounded-5 p-1 px-2"
+                      style="
+                        background: var(--bs-orange-700);
+                        color: var(--card-bg);
+                      "
+                    >
+                      افزودن ایتم جدید
+                    </button>
+
+                    <div
+                      class="overflow-hidden mt-3 m-3"
+                      style="
+                        border-top-right-radius: 1.4rem;
+                        border-top-left-radius: 1.4rem;
+                        background-color: var(--table-tr-hover-bg);
+                      "
+                    >
+                      <table
+                        style="
+                          border-inline: transparent;
+                          margin: auto !important;
+                        "
+                        class="table table-small table-bordered m-0"
+                      >
+                        <thead>
+                          <tr style="--bs-table-bg: var(--table-thead-bg)">
+                            <th class="fw-bold" scope="col">قیمت کل</th>
+                            <th class="fw-bold" scope="col">تعداد</th>
+                            <th class="fw-bold" scope="col">قیمت</th>
+                            <th class="fw-bold" scope="col">توضیحات</th>
+                            <th class="fw-bold" scope="col">تاریخ ایجاد</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                    <div
+                      class="pad-9 d-flex justify-content-center align-items-center flex-column"
+                    >
+                      <img
+                        class="data-svg"
+                        src="/assets/images/data.svg"
+                        alt=""
+                      />
+                      <p class="text-gray-300 fw-semibold">
+                        داده ای موجود نیست
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="information"
+              role="tabpanel"
+              aria-labelledby="information-tab"
+              tabindex="0"
+            >
+              <div
+                style="border: 1px solid rgba(0, 0, 0, 0.06)"
+                class="overflow-hidden mt-3 m-3 rounded-4"
+              >
+                <div class="rounded-5">
+                  <div class="rounded-5">
+                    <table class="table">
+                      <tbody>
+                        <tr style="--bs-table-bg: var(--table-thead-bg)">
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>نام</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p>undefined undefined</p></span>
+                          </td>
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>ملیت</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>کد ملی</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                        </tr>
+                        <tr style="--bs-table-bg: var(--table-thead-bg)">
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>شماره پاسپورت</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>شماره موبایل</span>
+                          </th>
+                          <td colspan="3">
+                            <span><p></p></span>
+                          </td>
+                        </tr>
+                        <tr style="--bs-table-bg: var(--table-thead-bg)">
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>ایمیل</span>
+                          </th>
+                          <td colspan="5">
+                            <span><p></p></span>
+                          </td>
+                        </tr>
+                        <tr style="--bs-table-bg: var(--table-thead-bg)">
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>جنسیت</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>شهر</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                          <th
+                            style="background: var(--bs-table-accent-bg)"
+                            colspan="1"
+                          >
+                            <span>استان</span>
+                          </th>
+                          <td colspan="1">
+                            <span><p></p></span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="note"
+              role="tabpanel"
+              aria-labelledby="note-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-2">
+                <div
+                  class="bg-table p-3 rounded-5"
+                  style="flex-basis: 15.25rem"
+                >
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-4 rounded-4 fw-semibold"
+                        style="background: var(--bs-orange-700)"
+                        >یادداشت های اخیر</span
+                      >
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-4 rounded-4 fw-semibold"
+                        style="background: var(--bs-orange-700)"
+                      >
+                        یادداشت های فعال</span
+                      >
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-4 rounded-4 fw-semibold"
+                        style="background: var(--bs-orange-700)"
+                      >
+                        یادداشت های ارشیو
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-table rounded-5 p-3"
+                  style="flex-basis: 15.25rem"
+                >
+                  <div>
+                    <button
+                      data-bs-toggle="modal"
+                      data-bs-target="#newNote"
+                      class="rounded-5 bg-transparent d-flex gap-1"
+                      style="
+                        border: 1px solid var(--bs-orange-700);
+                        padding: 0.3rem;
+                      "
+                    >
+                      <span
+                        class="d-block p-2 rounded-5"
+                        style="
+                          background: var(--bs-orange-700);
+                          height: fit-content;
+                        "
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M6 12h12M12 18V6"
+                            stroke="#fff"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </span>
+                      افزودن یادداشت های جدید
+                    </button>
+                    <div
+                      class="modal fade"
+                      id="newNote"
+                      tabindex="-1"
+                      aria-labelledby="newNoteLabel"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="modal-dialog modal-dialog-centered"
+                        style="--bs-modal-width: 37.5rem"
+                      >
+                        <div
+                          style="
+                            border-radius: 1rem;
+                            background: var(--card-bg);
+                          "
+                          class="modal-content border-0"
+                        >
+                          <div
+                            class="modal-header border-0 m-0 d-flex justify-content-between"
+                            style="margin-right: auto"
+                          >
+                            <h5 class="m-0">افزودن فولیو جدید</h5>
+                            <button
+                              type="button"
+                              class="btn-close m-0"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
+                          </div>
+                          <div class="modal-body">
+                            <form id="add-guest" class="px-3">
+                              <div class="d-flex gap-3">
+                                <div style="flex-basis: 100%">
+                                  <label class="mb-3" for="name"
+                                    ><span class="text-danger mx-2">*</span
+                                    >عنوان یادداشت
+                                  </label>
+                                  <input
+                                    id="name"
+                                    class="form-control input"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="d-flex align-items-center mt-5">
+                                <div class="w-100">
+                                  <label class="mb-3" for="description">
+                                    پی نوشت
+                                  </label>
+                                  <textarea
+                                    id="description"
+                                    style="min-height: 8rem"
+                                    class="form-control input"
+                                    type=""
+                                  ></textarea>
+                                </div>
+                              </div>
+                              <div class="mt-5">
+                                <a
+                                  href="/pms/guests/"
+                                  style="border-radius: 1rem"
+                                  class="btn border"
+                                >
+                                  انصراف
+                                </a>
+                                <button
+                                  style="border-radius: 1rem"
+                                  class="btn submit-btn me-3 btn-success"
+                                >
+                                  ذخیره
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mt-4 d-flex flex-column gap-2">
+                      <div>
+                        <p class="fw-semibold fs-6">رزرواسیون محمد مهدی زاده</p>
+                        <p>2024/02/14 - 20.25</p>
+                        <p>مهمان حیوان خانگی دارد</p>
+                      </div>
+                      <div>
+                        <p class="fw-semibold fs-6">رزرواسیون محمد مهدی زاده</p>
+                        <p>2024/02/14 - 20.25</p>
+                        <p>مهمان حیوان خانگی دارد</p>
+                      </div>
+                      <div>
+                        <p class="fw-semibold fs-6">رزرواسیون محمد مهدی زاده</p>
+                        <p>2024/02/14 - 20.25</p>
+                        <p>مهمان حیوان خانگی دارد</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-table p-3 rounded-5" style="height: fit-content">
+                  <div
+                    class="p-3 rounded-4 d-flex gap-3"
+                    style="background: var(--table-thead-bg)"
+                  >
+                    <span
+                      class="d-block rounded-5"
+                      style="
+                        width: 5px;
+                        height: 5rem;
+                        background: var(--bs-orange-700);
+                      "
+                    ></span>
+                    <div>
+                      <p class="fw-semibold fs-6">رزرواسیون محمد مهدی زاده</p>
+                      <p class="m-0">2024/02/14 - 20.25</p>
+                      <p class="m-0" style="color: var(--bs-gray-600)">
+                        مهمان حیوان خانگی دارد
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-0 mt-3">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
+                    و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="documents"
+              role="tabpanel"
+              aria-labelledby="documents-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-3">
+                <div
+                  class="bg-table p-3 rounded-5"
+                  style="flex-basis: 25.25rem"
+                >
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-3 rounded-5"
+                        style="background: var(--bs-orange-700)"
+                        >فاکتور ها
+                      </span>
+                    </p>
+                  </div>
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-3 rounded-5"
+                        style="background: var(--bs-orange-700)"
+                      >
+                        رزرواسیون ها
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div style="flex-basis: 100%" class="bg-table p-3 rounded-4">
+                  <div
+                    class="overflow-hidden"
+                    style="
+                      margin: auto;
+                      border-top-right-radius: 1.4rem;
+                      border-top-left-radius: 1.4rem;
+                    "
+                  >
+                    <table
+                      style="border-inline: transparent"
+                      class="table table-small table-bordered m-0"
+                    >
+                      <thead>
+                        <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                          <th class="fw-bold" scope="col">عنوان</th>
+                          <th class="fw-bold" scope="col">تاریخ ایجاد</th>
+                          <th class="fw-bold" scope="col">فرمت</th>
+                          <th class="fw-bold" scope="col">توضیحات</th>
+                          <th class="fw-bold" scope="col">عملیات</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>-</td>
+                          <td>PDF</td>
+                          <td>1403/04/2 12:23</td>
+                          <td>ووچر</td>
+                          <td>
+                            <div class="gap-2 d-flex justify-content-center">
+                              <img
+                                src="/assets/images/svgexport-18.svg"
+                                alt=""
+                              />
+                              <img
+                                src="/assets/images/svgexport-19.svg"
+                                alt=""
+                              />
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="reservations"
+              role="tabpanel"
+              aria-labelledby="reservations-tab"
+              tabindex="0"
+            >
+              <div style="width: 60%" class="p-3 rounded-5 bg-table">
+                <div
+                  class="overflow-hidden"
+                  style="
+                    margin: auto;
+                    border-top-right-radius: 1.4rem;
+                    border-top-left-radius: 1.4rem;
+                  "
+                >
+                  <table
+                    style="border-inline: transparent"
+                    class="table table-small table-bordered m-0"
+                  >
+                    <thead>
+                      <tr style="--bs-table-bg: var(--table-tr-hover-bg)">
+                        <th class="fw-bold" scope="col">عنوان</th>
+                        <th class="fw-bold" scope="col">تاریخ ایجاد</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+                <div
+                  class="pad-9 d-flex justify-content-center align-items-center flex-column"
+                >
+                  <img class="data-svg" src="/assets/images/data.svg" alt="" />
+                  <p class="text-gray-300 fw-semibold">داده ای موجود نیست</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="notifications"
+              role="tabpanel"
+              aria-labelledby="notifications-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-2">
+                <div
+                  class="bg-table p-3 rounded-5"
+                  style="flex-basis: 23.25rem; height: fit-content"
+                >
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-3 rounded-5"
+                        style="background: var(--bs-orange-700)"
+                      >
+                        ایمیل ها</span
+                      >
+                    </p>
+                  </div>
+
+                  <div>
+                    <p>
+                      <span
+                        class="d-block p-3 rounded-5"
+                        style="background: var(--bs-orange-700)"
+                      >
+                        پیام ها
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="bg-table rounded-5 p-3"
+                  style="flex-basis: 65.25rem; height: fit-content"
+                >
+                  <div
+                    class="overflow-hidden"
+                    style="
+                      border-top-right-radius: 1.4rem;
+                      border-top-left-radius: 1.4rem;
+                      background-color: var(--table-tr-hover-bg);
+                      padding-top: 0.4rem;
+                    "
+                  >
+                    <table
+                      style="
+                        border-inline: transparent;
+                        margin: auto !important;
+                      "
+                      class="table table-small table-bordered m-0"
+                    >
+                      <thead>
+                        <tr style="--bs-table-bg: var(--table-thead-bg)">
+                          <th class="fw-bold" scope="col">عملیات</th>
+                          <th class="fw-bold" scope="col">منبع</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                          <td>llll llll</td>
+                        </tr>
+                        <tr>
+                          <td>۱۴۰۳/۰۳/۲۶ ۱۱:۰۷</td>
+                          <td>llll llll</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="bg-table p-3 rounded-5" style="height: fit-content">
+                  <div
+                    class="p-3 rounded-4 d-flex gap-3"
+                    style="background: var(--table-thead-bg)"
+                  >
+                    <span
+                      class="d-block rounded-5"
+                      style="
+                        width: 5px;
+                        height: 5rem;
+                        background: var(--bs-orange-700);
+                      "
+                    ></span>
+                    <div>
+                      <p class="fw-semibold fs-6">رزرواسیون محمد مهدی زاده</p>
+                      <p class="m-0">2024/02/14 - 20.25</p>
+                      <p class="m-0" style="color: var(--bs-gray-600)">
+                        مهمان حیوان خانگی دارد
+                      </p>
+                    </div>
+                  </div>
+                  <p class="mb-0 mt-3">
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و
+                    با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه
+                    و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی
+                    تکنولوژی مورد نیاز
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
