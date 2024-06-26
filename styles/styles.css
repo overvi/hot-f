@@ -251,6 +251,11 @@ img {
   background-color: #d9f99d;
 }
 
+.success-btn {
+  background-color: #2fac65;
+  color: white;
+}
+
 .bg-table {
   background-color: var(--card-bg);
 }
@@ -777,3 +782,5 @@ img {
 .bs-stepper-circle:not(.active .bs-stepper-circle) {
   color: var(--bs-black);
 }
+
+/* Map */

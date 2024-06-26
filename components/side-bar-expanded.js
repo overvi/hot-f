@@ -46,12 +46,16 @@ class ExpandedSideBar extends HTMLElement {
                   
                   <img width="28" src="/assets/images/calendar.svg" alt="" />
                   </a>
+
+                  <a href="/finance/transactions">
+                  
                   <img 
                   class="me-2"
                     width="28"
                     src="/assets/images/dollar-circle.svg"
                     alt=""
                   />
+                  </a>
                   <div>
                     <div class="border-0 mt-0 rounded-5">
                       <img
@@ -349,12 +353,15 @@ class ExpandedSideBar extends HTMLElement {
                   
                   <img width="28" src="/assets/images/calendar.svg" alt="" />
                   </a>
-                  <img
+                 <a href="/en/finance/transactions">
+                  
+                  <img 
                   class="offset-3"
                     width="28"
                     src="/assets/images/dollar-circle.svg"
                     alt=""
                   />
+                  </a>
                   <div>
                     <div class="border-0 mt-0 rounded-5 ">
                       <img

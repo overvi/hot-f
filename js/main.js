@@ -10,7 +10,7 @@ const popoverContent = document.querySelectorAll(".popover-content");
 
 popoverBtn.forEach((btn, index) => {
   const popover = new bootstrap.Popover(btn, {
-    trigger: "hover", // Set the trigger to 'hover'
+    sanitize: false,
     html: true, // Allow HTML content
     content: popoverContent[index].innerHTML, // Set the popover content
   });

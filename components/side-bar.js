@@ -54,12 +54,15 @@ class Sidebar extends HTMLElement {
             >
               <img width="28" src="/assets/images/calendar.svg" alt="" />
             </a>
+                <a href="/finance/transactions">
+            
             <img
               style="margin-left: 0.5rem"
               width="28"
               src="/assets/images/dollar-circle.svg"
               alt=""
             />
+            </a>
             <div style="margin-left: 0.4rem">
               <div class="border-0 mt-0 rounded-5">
                 <img
@@ -71,6 +74,7 @@ class Sidebar extends HTMLElement {
                   data-bs-content=""
                   class="popover-btn"
                   width="35"
+                  style="margin-top : 1rem"
                   src="/assets/images/profile.svg"
                   alt=""
                 />
@@ -136,12 +140,16 @@ class Sidebar extends HTMLElement {
             >
               <img width="28" src="/assets/images/calendar.svg" alt="" />
             </a>
+
+            <a href="/en/finance/transactions">
+            
             <img
               style="margin-left: 0.5rem"
               width="28"
               src="/assets/images/dollar-circle.svg"
               alt=""
             />
+            </a>
             <div style="margin-left: 0.4rem">
               <div class="border-0 mt-0 rounded-5">
                 <img

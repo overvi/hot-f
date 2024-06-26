@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fa" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <script src="/js/theme.js"></script>
+
+    <script src="/components/side-bar-expanded.js"></script>
+
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
+    ></script>
+    <script single="false" defer src="/js/calander.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="settings/profile" dir="ltr"></nav-bar>
+
+      <side-bar direction="ltr"></side-bar>
+      <div style="margin-left: 4rem">
+        <section class="px-3">
+          <div
+            class="d-flex justify-content-between align-items-center"
+            dir="ltr"
+          >
+            <div
+              dir="ltr"
+              class="d-flex gap-2 order-1"
+              style="max-width: 78rem; margin-right: 4rem"
+            >
+              <a
+                href="
+            "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="m9.02 2.84-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41c0 2.32 1.89 4.22 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33c-1.4-.98-3.65-.93-5 .12ZM12 17.99v-3"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    style="color: var(--bs-gray-500)"
+                  ></path>
+                </svg>
+              </a>
+              <p style="color: var(--bs-gray-500)">/</p>
+              <a
+                href=""
+                class="fw-medium link"
+                style="color: var(--bs-gray-500)"
+                >تراکنش ها</a
+              >
+            </div>
+          </div>
+        </section>
+        <section
+          style="background: var(--card-bg); max-width: 39.9rem"
+          class="rounded-5 p-3 m-auto border-gray-900"
+        >
+          <div>
+            <div style="position: relative; width: fit-content; margin: auto">
+              <div
+                class="m-auto overflow-hidden"
+                style="
+                  background: var(--bs-gray-200);
+                  width: fit-content;
+                  border-radius: 100vw;
+                "
+              >
+                <img
+                  class="m-auto"
+                  width="118"
+                  src="/assets/images/profile.svg"
+                  alt=""
+                />
+              </div>
+              <input type="file" class="d-none" id="pp" />
+              <label
+                for="pp"
+                style="position: absolute; right: 0; bottom: 0; cursor: pointer"
+              >
+                <svg
+                  class="text-primary absolute bottom-0 z-20 cursor-pointer"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="34"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  fill="#f9b233"
+                >
+                  <path
+                    opacity=".4"
+                    d="M15.48 3H7.52C4.07 3 2 5.06 2 8.52v7.95C2 19.94 4.07 22 7.52 22h7.95c3.46 0 5.52-2.06 5.52-5.52V8.52C21 5.06 18.93 3 15.48 3Z"
+                    fill="#f9b233"
+                  ></path>
+                  <path
+                    d="M21.02 2.978c-1.79-1.8-3.54-1.84-5.38 0l-1.13 1.12c-.1.1-.13.24-.09.37.7 2.45 2.66 4.41 5.11 5.11.03.01.08.01.11.01.1 0 .2-.04.27-.11l1.11-1.12c.91-.91 1.36-1.78 1.36-2.67 0-.9-.45-1.79-1.36-2.71ZM17.86 10.42c-.27-.13-.53-.26-.77-.41-.2-.12-.4-.25-.59-.39-.16-.1-.34-.25-.52-.4-.02-.01-.08-.06-.16-.14-.31-.25-.64-.59-.95-.96-.02-.02-.08-.08-.13-.17-.1-.11-.25-.3-.38-.51-.11-.14-.24-.34-.36-.55-.15-.25-.28-.5-.4-.76-.13-.28-.23-.54-.32-.79L7.9 10.72c-.35.35-.69 1.01-.76 1.5l-.43 2.98c-.09.63.08 1.22.47 1.61.33.33.78.5 1.28.5.11 0 .22-.01.33-.02l2.97-.42c.49-.07 1.15-.4 1.5-.76l5.38-5.38c-.25-.08-.5-.19-.78-.31Z"
+                    fill="#f9b233"
+                  ></path></svg
+              ></label>
+            </div>
+
+            <div
+              class="d-flex flex-column justify-content-center align-items-center"
+            >
+              <p class="mt-3 fs-5">_</p>
+              <div style="max-width: 35rem" class="container gy-4">
+                <div class="d-flex gap-3 row" dir="ltr">
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Name
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Last Name
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row my-4" dir="ltr">
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Email
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="d-flex gap-3 row" dir="ltr">
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Phone
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Phone
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="d-flex gap-3 row mt-4" dir="ltr">
+                  <div class="select-container col">
+                    <label id="title-label" class="mb-3" for="title-input">
+                      Username
+                    </label>
+                    <input
+                      id="title-input"
+                      type="text"
+                      class="form-control input"
+                      required
+                    />
+                  </div>
+                  <div class="col position-relative">
+                    <label
+                      id="title-label"
+                      class="mb-3 d-block"
+                      for="basic_password"
+                    >
+                      Password
+                    </label>
+                    <input
+                      id="basic_password"
+                      class="form-control input"
+                      placeholder="1234567"
+                    />
+                    <span
+                      onclick="togglePasswordVisibility()"
+                      class="m-auto px-3 position-absolute"
+                      style="right: 0.5rem; top: 2.8rem"
+                      id="toggleIcon"
+                    >
+                      <svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="eye-invisible"
+                        width="1em"
+                        height="1em"
+                        fill="gray"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"
+                        ></path>
+                        <path
+                          d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"
+                        ></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+                <div class="align-self-start mt-4">
+                  <button class="btn rounded-4 success-btn border-0 me-3">
+                    Update
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script>
+      const togglePasswordVisibility = () => {
+        const passwordInput = document.getElementById("basic_password");
+        const icon = document.getElementById("toggleIcon");
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          icon.innerHTML =
+            '<svg viewBox="64 64 896 896" focusable="false" data-icon="eye-invisible" width="1em" height="1em" fill="gray" aria-hidden="true"><path d="M942.2 486.2Q889.47 375.11 816.7 305l-50.88 50.88C807.31 395.53 843.45 447.4 874.7 512 791.5 684.2 673.4 766 512 766q-72.67 0-133.87-22.38L323 798.75Q408 838 512 838q288.3 0 430.2-300.3a60.29 60.29 0 000-51.5zm-63.57-320.64L836 122.88a8 8 0 00-11.32 0L715.31 232.2Q624.86 186 512 186q-288.3 0-430.2 300.3a60.3 60.3 0 000 51.5q56.69 119.4 136.5 191.41L112.48 835a8 8 0 000 11.31L155.17 889a8 8 0 0011.31 0l712.15-712.12a8 8 0 000-11.32zM149.3 512C232.6 339.8 350.7 258 512 258c54.54 0 104.13 9.36 149.12 28.39l-70.3 70.3a176 176 0 00-238.13 238.13l-83.42 83.42C223.1 637.49 183.3 582.28 149.3 512zm246.7 0a112.11 112.11 0 01146.2-106.69L401.31 546.2A112 112 0 01396 512z"></path><path d="M508 624c-3.46 0-6.87-.16-10.25-.47l-52.82 52.82a176.09 176.09 0 00227.42-227.42l-52.82 52.82c.31 3.38.47 6.79.47 10.25a111.94 111.94 0 01-112 112z"></path></svg>';
+        } else {
+          passwordInput.type = "password";
+          icon.innerHTML =
+            '<svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="gray" aria-hidden="true"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg>';
+        }
+      };
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

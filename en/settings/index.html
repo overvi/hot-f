@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="fa" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <script src="/js/theme.js"></script>
+
+    <script src="/components/side-bar.js"></script>
+
+    <script src="/components/nav.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
+    ></script>
+    <script single="false" defer src="/js/calander.js"></script>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="settings" dir="ltr"></nav-bar>
+
+      <side-bar direction="ltr"></side-bar>
+
+      <section
+        style="background: var(--card-bg); width: 93%; margin-left: 5rem"
+        class="rounded-5 border-gray-900"
+      >
+        <h5 dir="ltr" class="fw-bold p-3 border-bottom">Settings</h5>
+        <div dir="ltr">
+          <nav class="px-2 mt-5">
+            <div
+              style="
+                --bs-nav-tabs-link-active-color: black;
+                --bs-nav-tabs-border-width: 0;
+              "
+              class="nav nav-tabs border-bottom"
+              id="nav-tab"
+              role="tablist"
+            >
+              <button
+                class="nav-link active"
+                style="
+                  --bs-nav-link-color: gray;
+                  background-color: transparent;
+                  --bs-nav-link-hover-color: orange;
+                "
+                id="nav-social-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#nav-social"
+                type="button"
+                role="tab"
+                aria-controls="nav-social"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="mb-1"
+                  fill="none"
+                >
+                  <path
+                    opacity=".4"
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M12 13.75c.41 0 .75-.34.75-.75V8c0-.41-.34-.75-.75-.75s-.75.34-.75.75v5c0 .41.34.75.75.75ZM12.92 15.619c-.05-.12-.12-.23-.21-.33-.1-.09-.21-.16-.33-.21a1 1 0 0 0-.76 0c-.12.05-.23.12-.33.21-.09.1-.16.21-.21.33-.05.12-.08.25-.08.38s.03.26.08.38c.05.13.12.23.21.33.1.09.21.16.33.21.12.05.25.08.38.08s.26-.03.38-.08.23-.12.33-.21c.09-.1.16-.2.21-.33.05-.12.08-.25.08-.38s-.03-.26-.08-.38Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span style="margin-left: 0.5rem">Social</span>
+              </button>
+              <button
+                class="nav-link border-0"
+                id="nav-finance-tab"
+                data-bs-toggle="tab"
+                style="
+                  background-color: transparent;
+                  --bs-nav-link-color: gray;
+                  --bs-nav-link-hover-color: orange;
+                "
+                data-bs-target="#nav-finance"
+                type="button"
+                role="tab"
+                aria-controls="nav-finance"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  class="mb-1"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    opacity=".4"
+                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81v8.37C2 19.83 4.17 22 7.81 22h8.37c3.64 0 5.81-2.17 5.81-5.81V7.81C22 4.17 19.83 2 16.19 2Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="m14.26 12-1.51-.53V8.08h.36c.81 0 1.47.71 1.47 1.58 0 .41.34.75.75.75s.75-.34.75-.75c0-1.7-1.33-3.08-2.97-3.08h-.36V6c0-.41-.34-.75-.75-.75s-.75.34-.75.75v.58h-.65c-1.48 0-2.69 1.25-2.69 2.78 0 1.79 1.04 2.36 1.83 2.64l1.51.53v3.38h-.36c-.81 0-1.47-.71-1.47-1.58 0-.41-.34-.75-.75-.75s-.75.34-.75.75c0 1.7 1.33 3.08 2.97 3.08h.36V18c0 .41.34.75.75.75s.75-.34.75-.75v-.58h.65c1.48 0 2.69-1.25 2.69-2.78-.01-1.8-1.05-2.37-1.83-2.64Zm-4.02-1.41c-.51-.18-.82-.35-.82-1.22 0-.71.53-1.28 1.19-1.28h.65v2.86l-1.02-.36Zm3.16 5.33h-.65v-2.86l1.01.35c.51.18.82.35.82 1.22 0 .71-.53 1.29-1.18 1.29Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span style="margin-left: 0.5rem">Financial</span>
+              </button>
+              <button
+                class="nav-link border-0"
+                id="nav-reservation-tab"
+                data-bs-toggle="tab"
+                style="
+                  background-color: transparent;
+                  --bs-nav-link-color: gray;
+                  --bs-nav-link-hover-color: orange;
+                "
+                data-bs-target="#nav-reservation"
+                type="button"
+                role="tab"
+                aria-controls="nav-reservation"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="mb-1"
+                  fill="none"
+                >
+                  <path
+                    opacity=".4"
+                    d="M20.5 7v8H6.35c-1.57 0-2.85 1.28-2.85 2.85V7c0-4 1-5 5-5h7c4 0 5 1 5 5Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M20.5 15v3.5c0 1.93-1.57 3.5-3.5 3.5H7c-1.93 0-3.5-1.57-3.5-3.5v-.65C3.5 16.28 4.78 15 6.35 15H20.5ZM16 7.75H8c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h8c.41 0 .75.34.75.75s-.34.75-.75.75ZM13 11.25H8c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h5c.41 0 .75.34.75.75s-.34.75-.75.75Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span style="margin-left: 0.5rem">Reservation</span>
+              </button>
+              <button
+                class="nav-link border-0"
+                id="nav-payment-tab"
+                data-bs-toggle="tab"
+                style="
+                  background-color: transparent;
+                  --bs-nav-link-color: gray;
+                  --bs-nav-link-hover-color: orange;
+                "
+                data-bs-target="#nav-payment"
+                type="button"
+                role="tab"
+                aria-controls="nav-payment"
+                aria-selected="true"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  class="mb-1"
+                  fill="none"
+                >
+                  <path
+                    d="M22 19v3H2v-3c0-.55.45-1 1-1h18c.55 0 1 .45 1 1Z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-miterlimit="10"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    opacity=".6"
+                    d="M8 11H4v7h4v-7Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    opacity=".4"
+                    d="M12 11H8v7h4v-7Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    opacity=".6"
+                    d="M16 11h-4v7h4v-7Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    opacity=".4"
+                    d="M20 11h-4v7h4v-7Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M23 22.75H1c-.41 0-.75-.34-.75-.75s.34-.75.75-.75h22c.41 0 .75.34.75.75s-.34.75-.75.75ZM21.37 5.75l-9-3.6c-.2-.08-.54-.08-.74 0l-9 3.6c-.35.14-.63.55-.63.93V10c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V6.68c0-.38-.28-.79-.63-.93ZM12 8.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+                <span style="margin-left: 0.5rem">Payment</span>
+              </button>
+            </div>
+          </nav>
+          <div class="tab-content pb-3 mt-4 px-3" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-social"
+              role="tabpanel"
+              aria-labelledby="nav-social-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-3" style="max-width: 40rem">
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="default-language">
+                    Default Language
+                  </label>
+                  <input
+                    id="default-language"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="default-location">
+                    Default Location
+                  </label>
+                  <input
+                    id="default-location"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="default-calendar">
+                    Default Calendar
+                  </label>
+                  <input
+                    id="default-calendar"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mt-3">
+                <button class="btn me-3 rounded-4 border">Cancel</button>
+                <button class="btn rounded-4 success-btn border-0 me-3">
+                  Updated
+                </button>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show"
+              id="nav-finance"
+              role="tabpanel"
+              aria-labelledby="nav-finance-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-3" style="max-width: 30rem">
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="tax"> Tax </label>
+                  <input
+                    id="tax"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="type-label" class="mb-3" for="currency">
+                    currency
+                  </label>
+                  <input
+                    id="currency"
+                    type="hidden"
+                    class="d-none custom-select-input"
+                  />
+
+                  <div class="custom-select input form-control">
+                    <button
+                      id="type-input-button"
+                      type="button"
+                      class="select-button w-100 rounded5 border-0 btn p-0"
+                    >
+                      <div
+                        class="selected-value d-flex justify-content-between"
+                      >
+                        <p class="mb-0 text-gray-500">Select...</p>
+                        <div class="text-gray-500">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                    <ul class="select-dropdown">
+                      <li>
+                        <input type="radio" id="single" name="room-quantity" />
+                        <label for="single">Single</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="double" name="room-quantity" />
+                        <label for="double">Double</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="triple" name="room-quantity" />
+                        <label for="triple">Triple</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="quad" name="room-quantity" />
+                        <label for="quad">Quad</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          id="quad-plus"
+                          name="room-quantity"
+                        />
+                        <label for="quad-plus">Quad Plus</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="twin" name="room-quantity" />
+                        <label for="twin">Twin</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <button class="btn me-3 rounded-4 border">Cancel</button>
+                <button class="btn rounded-4 success-btn border-0 me-3">
+                  Updated
+                </button>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show"
+              id="nav-reservation"
+              role="tabpanel"
+              aria-labelledby="nav-reservation-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-3">
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="stay-time">
+                    Stay Time
+                  </label>
+                  <input
+                    id="stay-time"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="first-cancel">
+                    First Cancel Time
+                  </label>
+                  <input
+                    id="first-cancel"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="second-cancel">
+                    Second Cancel Time
+                  </label>
+                  <input
+                    id="second-cancel"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="third-cancel">
+                    Third Cancel Time
+                  </label>
+                  <input
+                    id="third-cancel"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="fourth-no-show">
+                    Fourth No Show Time
+                  </label>
+                  <input
+                    id="fourth-no-show"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="second-no-show">
+                    Second No Show Time
+                  </label>
+                  <input
+                    id="second-no-show"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mt-3">
+                <button class="btn me-3 rounded-4 border">Cancel</button>
+                <button class="btn rounded-4 success-btn border-0 me-3">
+                  Updated
+                </button>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade show"
+              id="nav-payment"
+              role="tabpanel"
+              aria-labelledby="nav-payment-tab"
+              tabindex="0"
+            >
+              <div class="d-flex gap-3" style="max-width: 30rem">
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="title-label" class="mb-3" for="default-gate">
+                    Default Gateway
+                  </label>
+                  <input
+                    id="default-gate"
+                    type="text"
+                    class="form-control input"
+                    required
+                  />
+                </div>
+                <div class="select-container" style="flex-basis: 50%">
+                  <label id="type-label" class="mb-3" for="payment">
+                    Payment
+                  </label>
+                  <input
+                    id="payment"
+                    type="hidden"
+                    class="d-none custom-select-input"
+                  />
+
+                  <div class="custom-select input form-control">
+                    <button
+                      id="type-input-button"
+                      type="button"
+                      class="select-button w-100 rounded5 border-0 btn p-0"
+                    >
+                      <div
+                        class="selected-value d-flex justify-content-between"
+                      >
+                        <p class="mb-0 text-gray-500">Select...</p>
+                        <div class="text-gray-500">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-chevron-down"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </button>
+                    <ul class="select-dropdown">
+                      <li>
+                        <input type="radio" id="single" name="room-quantity" />
+                        <label for="single">Single</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="double" name="room-quantity" />
+                        <label for="double">Double</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="triple" name="room-quantity" />
+                        <label for="triple">Triple</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="quad" name="room-quantity" />
+                        <label for="quad">Quad</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          id="quad-plus"
+                          name="room-quantity"
+                        />
+                        <label for="quad-plus">Quad Plus</label>
+                      </li>
+                      <li>
+                        <input type="radio" id="twin" name="room-quantity" />
+                        <label for="twin">Twin</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <button class="btn me-3 rounded-4 border">Cancel</button>
+                <button class="btn rounded-4 success-btn border-0 me-3">
+                  Updated
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/custom-select.js"></script>
+  </body>
+</html>
