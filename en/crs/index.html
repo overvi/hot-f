@@ -22,9 +22,9 @@
 
   <body>
     <main>
-      <nav-bar url="crs/" dir="ltr"></nav-bar>
+      <nav-bar url="crs" dir="ltr"></nav-bar>
       <div>
-        <side-bar dir="ltr"></side-bar>
+        <side-bar direction="ltr"></side-bar>
       </div>
 
       <section>
@@ -75,22 +75,25 @@
             </a>
             <p style="color: var(--bs-gray-500)">/</p>
             <a href="" class="fw-medium link" style="color: var(--bs-gray-500)"
-              >Dashboard</a
+              >Dashbaord</a
             >
             <p class="text-gray-500">/</p>
             <p class="text-gray-500 fw-bold">Hotel Management</p>
           </div>
         </div>
       </section>
-      <section style="margin-left: 5rem">
+      <section style="margin-left: 5rem; margin-right: 2rem">
         <div class="rounded-4 fs-6 table-wrapper p-0 border overflow-hidden">
           <table dir="rtl" class="table table--crs table-bordered m-0">
             <thead>
-              <tr class="fw-semibold">
+              <tr
+                style="--bs-table-bg-state: var(--card-bg)"
+                class="fw-semibold"
+              >
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -100,7 +103,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -110,7 +113,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -120,7 +123,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -130,7 +133,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -140,7 +143,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -150,7 +153,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -160,7 +163,7 @@
                 <th scope="col" class="crs-heading">
                   <div class="crs-container flow-content">
                     <span>8</span>
-                    <p class="fw-bold m-0">یکشنبه 3 ام</p>
+                    <p class="fw-bold m-0">Sunday 3</p>
                     <div class="percentage">
                       <div class="bar"></div>
                       <p class="m-0">13%</p>
@@ -174,7 +177,8 @@
                       border-radius: 100vw;
                     "
                     class="badge m-0 d-block w-100 fs-6"
-                    >خرداد - تیر</span
+                  >
+                    Khordad - Tir</span
                   >
                   <div class="crs-btn">
                     <button class="btn">
@@ -295,7 +299,7 @@
                     <button class="btn">
                       <img src="/assets/images/left-chevron.svg" alt="" />
                     </button>
-                    <p class="m-0 text-white">امروز</p>
+                    <p class="m-0 text-white">Today</p>
                     <button class="btn">
                       <img src="/assets/images/right-chevron.svg" alt="" />
                     </button>
@@ -304,7 +308,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr style="--bs-table-bg-state: var(--card-bg)">
                 <td scope="row">
                   0
                   <br />
@@ -367,7 +371,7 @@
                   style="padding-left: 0; padding-block: 0"
                   class="crs-dategrid"
                 >
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex side-toggler justify-content-between">
                     <div
                       style="margin-top: 1.5rem; margin-left: 1rem"
                       class="d-flex gap-2 crs-date-container"
@@ -401,7 +405,213 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr
+                style="--bs-table-bg-state: var(--card-bg)"
+                class="table-room-tab d-none"
+              >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+                <td class="p-0" colspan="2">
+                  <div
+                    type="button"
+                    data-bs-toggle="popover-details"
+                    data-bs-trigger="focus"
+                    data-bs-placement="left"
+                    tabindex="0"
+                    data-bs-custom-class="focus-pop shadow-lg mw-50"
+                    data-bs-content=""
+                    class="p-3 spe popover-details-btn bg-orange-300 crs-status"
+                    style="
+                      text-align: right;
+                      border: 3px solid rgb(245, 216, 112);
+                      border-top-left-radius: 10vw;
+                    "
+                  >
+                    <p class="m-0">In Progress</p>
+                  </div>
+
+                  <div class="d-none popover-details-content gap-3 flex-column">
+                    <div class="d-flex gap-1">
+                      <nav class="px-2" style="flex-basis: 100%">
+                        <div
+                          style="
+                            --bs-nav-tabs-link-active-color: black;
+                            --bs-nav-tabs-border-width: 0;
+                          "
+                          class="nav nav-tabs border-bottom"
+                          id="nav-tab"
+                          role="tablist"
+                        >
+                          <button
+                            class="nav-link"
+                            style="
+                              --bs-nav-link-color: gray;
+                              background-color: transparent;
+                              --bs-nav-link-hover-color: orange;
+                            "
+                            id="nav-profile-tab"
+                            data-bs-toggle="tab"
+                            data-bs-target="#nav-profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-profile"
+                          >
+                            Notes
+                          </button>
+                          <button
+                            class="nav-link border-0 active"
+                            id="nav-home-tab"
+                            data-bs-toggle="tab"
+                            style="
+                              background-color: transparent;
+                              --bs-nav-link-color: gray;
+                              --bs-nav-link-hover-color: orange;
+                            "
+                            data-bs-target="#nav-home"
+                            type="button"
+                            role="tab"
+                            aria-controls="nav-home"
+                          >
+                            Reservations
+                          </button>
+                        </div>
+                        <div class="tab-content pb-3" id="nav-tabContent">
+                          <div
+                            class="tab-pane fade show active"
+                            id="nav-home"
+                            role="tabpanel"
+                            aria-labelledby="nav-home-tab"
+                            tabindex="0"
+                          >
+                            <div dir="ltr" class="my-3">
+                              <div
+                                class="rounded-5 p-2 d-flex justify-content-between"
+                                style="background: var(--bs-gray-50)"
+                              >
+                                <p class="m-0">Reservation Details</p>
+                                <svg
+                                  class="text-primary"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="orange"
+                                >
+                                  <path
+                                    fill="orange"
+                                    d="M7.81 2h8.37C19.83 2 22 4.17 22 7.81v8.37c0 3.64-2.17 5.81-5.81 5.81H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2z"
+                                    opacity=".4"
+                                  ></path>
+                                  <path
+                                    fill="orange"
+                                    d="M5.47 11.47l4.29-4.29c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-3.01 3.01H18c.41 0 .75.34.75.75s-.34.75-.75.75H7.81l3.01 3.01c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22s-.38-.07-.53-.22l-4.29-4.29a.75.75 0 010-1.06z"
+                                  ></path>
+                                </svg>
+                              </div>
+                              <div
+                                class="rounded-5 p-2 mt-2 d-flex justify-content-between"
+                                style="background: var(--bs-gray-50)"
+                              >
+                                <p class="m-0">Room Change</p>
+                                <svg
+                                  class="text-primary"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="24"
+                                  height="24"
+                                  viewBox="0 0 24 24"
+                                  fill="none"
+                                >
+                                  <path
+                                    fill="orange"
+                                    d="M7.81 2h8.37C19.83 2 22 4.17 22 7.81v8.37c0 3.64-2.17 5.81-5.81 5.81H7.81C4.17 22 2 19.83 2 16.19V7.81C2 4.17 4.17 2 7.81 2z"
+                                    opacity=".4"
+                                  ></path>
+                                  <path
+                                    fill="orange"
+                                    d="M5.47 11.47l4.29-4.29c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-3.01 3.01H18c.41 0 .75.34.75.75s-.34.75-.75.75H7.81l3.01 3.01c.29.29.29.77 0 1.06-.15.15-.34.22-.53.22s-.38-.07-.53-.22l-4.29-4.29a.75.75 0 010-1.06z"
+                                  ></path>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            class="tab-pane fade mt-4"
+                            id="nav-profile"
+                            dir="ltr"
+                            role="tabpanel"
+                            aria-labelledby="nav-profile-tab"
+                            tabindex="0"
+                          >
+                            <div>
+                              <h5 style="color: var(--bs-orange-700)">
+                                رزرواسیون نیما میرخوانی
+                              </h5>
+                              <strong>2025 - 2024/02/14</strong>
+                              <p class="mt-2 text-xs">
+                                نام خانوادگی را به میرضایی تغییر دادیم
+                              </p>
+                            </div>
+                            <div>
+                              <h5 style="color: var(--bs-orange-700)">
+                                رزرواسیون نیما میرخوانی
+                              </h5>
+                              <strong>2025 - 2024/02/14</strong>
+                              <p class="mt-2 text-xs">
+                                نام خانوادگی را به میرضایی تغییر دادیم
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </nav>
+
+                      <div
+                        class="bg-orange-700 p-1 rounded-5"
+                        style="flex-basis: 100%"
+                      >
+                        <div class="bg-table rounded-5 p-2">
+                          <div class="d-flex justify-content-between mx-2">
+                            <span
+                              style="align-self: center"
+                              class="badge badge m-0 text-bg-success bg-opacity-10 border-success rounded-5 text-success"
+                            >
+                              رزرواسیون
+                            </span>
+                            <div>
+                              <p class="m-0">In Progress</p>
+                              <p class="m-0">00988123712</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div dir="ltr" class="text-white p-3">
+                          <div class="mt-1">
+                            <p class="m-0">ورود و خروج</p>
+                            <p class="m-0">1403/04/1 - 1403/04/12</p>
+                          </div>
+                          <div class="mt-3">
+                            <p class="m-0">مهمانان</p>
+                            <p class="m-0">1</p>
+                          </div>
+                          <div class="mt-3">
+                            <p class="m-0">مجموع</p>
+                            <p class="m-0">5,300,000 تومان</p>
+                          </div>
+                          <div class="mt-3">
+                            <p class="m-0">مانده حساب</p>
+                            <p class="m-0">5,300,000 تومان</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td>استاندارد یک تخته (101)</td>
+              </tr>
+              <tr style="--bs-table-bg-state: var(--card-bg)">
                 <td scope="row">
                   0
                   <br />
@@ -464,7 +674,7 @@
                   style="padding-left: 0; padding-block: 0"
                   class="crs-dategrid"
                 >
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex side-toggler justify-content-between">
                     <div
                       style="margin-top: 1.5rem; margin-left: 1rem"
                       class="d-flex gap-2 crs-date-container"
@@ -498,7 +708,21 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr
+                style="--bs-table-bg-state: var(--card-bg)"
+                class="table-room-tab d-none"
+              >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>استاندارد یک تخته (101)</td>
+              </tr>
+              <tr style="--bs-table-bg-state: var(--card-bg)">
                 <td scope="row">
                   0
                   <br />
@@ -561,7 +785,7 @@
                   style="padding-left: 0; padding-block: 0"
                   class="crs-dategrid"
                 >
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex side-toggler justify-content-between">
                     <div
                       style="margin-top: 1.5rem; margin-left: 1rem"
                       class="d-flex gap-2 crs-date-container"
@@ -595,7 +819,21 @@
                   </div>
                 </td>
               </tr>
-              <tr>
+              <tr
+                style="--bs-table-bg-state: var(--card-bg)"
+                class="table-room-tab d-none"
+              >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>استاندارد یک تخته (101)</td>
+              </tr>
+              <tr style="--bs-table-bg-state: var(--card-bg)">
                 <td scope="row">
                   0
                   <br />
@@ -658,7 +896,7 @@
                   style="padding-left: 0; padding-block: 0"
                   class="crs-dategrid"
                 >
-                  <div class="d-flex justify-content-between">
+                  <div class="d-flex side-toggler justify-content-between">
                     <div
                       style="margin-top: 1.5rem; margin-left: 1rem"
                       class="d-flex gap-2 crs-date-container"
@@ -691,6 +929,20 @@
                     ></span>
                   </div>
                 </td>
+              </tr>
+              <tr
+                style="--bs-table-bg-state: var(--card-bg)"
+                class="table-room-tab d-none"
+              >
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>استاندارد یک تخته (101)</td>
               </tr>
             </tbody>
           </table>
@@ -702,6 +954,43 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
     <script src="/js/main.js"></script>
+    <script>
+      const sideTabs = document.querySelectorAll(".table-room-tab");
+      const toggler = document.querySelectorAll(".side-toggler");
+
+      toggler.forEach((item, index) => {
+        item.addEventListener("click", () => {
+          sideTabs[index].classList.toggle("d-none");
+        });
+      });
+    </script>
+
+    <script defer>
+      const popoverTrigger = document.querySelector(".popover-details-btn");
+      const popoverDetailsContent = document.querySelector(
+        ".popover-details-content"
+      );
+
+      const content = popoverDetailsContent.innerHTML;
+      popoverDetailsContent.remove();
+
+      const popover = new bootstrap.Popover(popoverTrigger, {
+        sanitize: false,
+        trigger: "click",
+        html: true,
+        content: content,
+      });
+
+      window.addEventListener("click", (ev) => {
+        if (!ev.target.closest(".popover-body")) {
+          popover.hide();
+        }
+      });
+    </script>
   </body>
 </html>

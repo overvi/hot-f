@@ -23,6 +23,12 @@
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: "Yekan";
+  src: url(/assets/fonts/YekanBakh-Fat.woff2);
+  font-style: normal;
+  font-weight: 800;
+}
 
 /* General */
 
@@ -45,6 +51,7 @@
   --bs-gray-50: #f9f9f9;
   --bs-lightblue: #bfdbfe;
   --bs-orange-700: #f9b033;
+  --bs-orange-300: rgba(245, 216, 112, 0.3);
   --bs-green-400: #2fac65;
   --bs-darkgray: #00000005;
 }
@@ -155,6 +162,10 @@ img {
   --bs-table-bg: var(--table-tr-hover-bg);
 }
 
+.table-no-hover tr:hover {
+  --bs-table-bg: var(--card-bg);
+}
+
 .table--crs th {
   --bs-table-bg: var(--card-bg);
   padding-inline: 0;
@@ -203,6 +214,11 @@ img {
   padding-inline: 5rem;
 }
 
+.mw-50 {
+  max-width: 30rem;
+  width: 100%;
+}
+
 .bg-orange {
   background: var(--bs-warning);
 }
@@ -215,6 +231,9 @@ img {
   background-color: #fbdd8c;
 }
 
+.bg-orange-300 {
+  background-color: var(--bs-orange-300);
+}
 .bg-body {
   background-color: var(--bs-body-bg);
 }
@@ -769,6 +788,22 @@ img {
   justify-content: center;
 }
 
+.crs-status {
+  position: relative;
+}
+
+.crs-status::before {
+  top: -0.2rem;
+  left: -0.2rem;
+  content: " ";
+  position: absolute;
+  cursor: pointer;
+  display: block;
+  border-radius: 100vw;
+  background-color: red;
+  width: 16px;
+  height: 16px;
+}
 /* Stepper */
 
 .active .bs-stepper-circle {

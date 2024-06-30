@@ -61,7 +61,8 @@ class ExpandedSideBar extends HTMLElement {
                       <img
                         type="button"
                         data-bs-toggle="popover"
-                        data-bs-trigger="hover focus"
+                        data-bs-trigger="focus"
+                        tabindex="0"
                         data-bs-placement="left"
                         data-bs-custom-class="focus-pop shadow-lg w-15"
                         data-bs-content=""
@@ -74,8 +75,8 @@ class ExpandedSideBar extends HTMLElement {
 
                     <div class="d-none popover-content flex-column">
                       <div>
-                        <p class="border-bottom pb-3">پروفایل</p>
-                        <p class="text-danger m-0">خروج</p>
+                        <a href="/settings/profile" class="border-bottom link-body-emphasis d-block pb-3 link-underline link-underline-opacity-0">پروفایل</a>
+                        <p class="text-danger m-0 pt-3">خروج</p>
                       </div>
                     </div>
                     <div
@@ -293,7 +294,7 @@ class ExpandedSideBar extends HTMLElement {
                       برای استفاده از ابزارهای پیشرفته می‌توانید از بسته حرفه ای
                       منگوتلز استفاده کنید.
                     </p>
-                    <button class="btn btn-warning w-100 rounded-5">
+                    <a href="/subscription" class="btn btn-warning w-100 rounded-5">
                       پیشرفته
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -310,7 +311,7 @@ class ExpandedSideBar extends HTMLElement {
                           stroke-linejoin="round"
                         ></path>
                       </svg>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -368,7 +369,8 @@ class ExpandedSideBar extends HTMLElement {
                       
                         type="button"
                         data-bs-toggle="popover"
-                        data-bs-trigger="hover focus"
+                        data-bs-trigger="focus"
+                        tabindex="0"
                         data-bs-placement="left"
                         data-bs-custom-class="focus-pop shadow-lg w-15"
                         data-bs-content=""
@@ -381,8 +383,8 @@ class ExpandedSideBar extends HTMLElement {
 
                     <div class="d-none popover-content flex-column">
                       <div class="fw-semibold">
-                        <p class="border-bottom pb-3">Profile</p>
-                        <p class="text-danger m-0">Exit</p>
+                        <a href="/en/settings/profile" class="border-bottom link-underline-opacity-0 link-body-emphasis d-block pb-3">Profile</a>
+                        <p class="text-danger m-0 pt-3">Exit</p>
                       </div>
                     </div>
                     <div
@@ -593,7 +595,7 @@ class ExpandedSideBar extends HTMLElement {
                       of the components you need to build beautiful marketing
                       websites.
                     </p>
-                    <button class="btn btn-warning w-100 rounded-5">
+                    <a href="/en/subscription" class="btn btn-warning w-100 rounded-5">
                       Advanced
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +612,7 @@ class ExpandedSideBar extends HTMLElement {
                           stroke-linejoin="round"
                         ></path>
                       </svg>
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

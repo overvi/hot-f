@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="fa" style="scrollbar-width: none !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mangotels</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <script src="/js/theme.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-stepper/dist/js/bs-stepper.min.js"></script>
+    <link
+      crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bs-stepper/dist/css/bs-stepper.min.css"
+    />
+
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
+    ></script>
+    <script single="false" defer src="/js/calander.js"></script>
+    <link rel="stylesheet" href="/styles/config.css" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+  </head>
+
+  <body>
+    <main>
+      <nav-bar url="subscription/" dir="ltr"></nav-bar>
+      <side-bar direction="ltr"></side-bar>
+
+      <div
+        dir="ltr"
+        class="d-flex gap-2 order-1"
+        style="max-width: 78rem; margin-left: 5rem"
+      >
+        <a
+          href="
+            "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="m9.02 2.84-5.39 4.2C2.73 7.74 2 9.23 2 10.36v7.41c0 2.32 1.89 4.22 4.21 4.22h11.58c2.32 0 4.21-1.9 4.21-4.21V10.5c0-1.21-.81-2.76-1.8-3.45l-6.18-4.33c-1.4-.98-3.65-.93-5 .12ZM12 17.99v-3"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="color: var(--bs-gray-500)"
+            ></path>
+          </svg>
+        </a>
+        <p style="color: var(--bs-gray-500)">/</p>
+        <a href="" class="fw-medium link" style="color: var(--bs-gray-500)"
+          >Subscribition</a
+        >
+      </div>
+
+      <div class="bs-stepper" dir="ltr">
+        <div
+          style="max-width: 60rem"
+          class="bs-stepper-header m-auto"
+          role="tablist"
+        >
+          <div class="step" data-target="#information">
+            <button
+              type="button"
+              class="step-trigger"
+              role="tab"
+              aria-controls="information"
+              id="information-trigger"
+            >
+              <span
+                class="bs-stepper-circle"
+                style="width: 8px; height: 8px; padding: 0"
+              ></span>
+              <span class="bs-stepper-label"> Select Subscribition </span>
+            </button>
+          </div>
+          <div class="line"></div>
+          <div class="step" data-target="#addons">
+            <button
+              type="button"
+              class="step-trigger"
+              role="tab"
+              aria-controls="addons"
+              id="addons-trigger"
+            >
+              <span
+                class="bs-stepper-circle"
+                style="width: 8px; height: 8px; padding: 0"
+              ></span>
+              <span class="bs-stepper-label"> Bill</span>
+            </button>
+          </div>
+
+          <div class="line"></div>
+          <div class="step" data-target="#payment">
+            <button
+              type="button"
+              class="step-trigger"
+              role="tab"
+              aria-controls="payment"
+              id="payment-trigger"
+            >
+              <span
+                class="bs-stepper-circle"
+                style="width: 8px; height: 8px; padding: 0"
+              ></span>
+              <span class="bs-stepper-label">Pay</span>
+            </button>
+          </div>
+        </div>
+        <div class="bs-stepper-content">
+          <!-- your steps content here -->
+
+          <div
+            id="information"
+            class="content w-100"
+            role="tabpanel"
+            aria-labelledby="information-trigger"
+          >
+            <div class="d-flex" style="margin-left: 4rem" dir="ltr">
+              <div
+                style="
+                  border-top-right-radius: 2rem;
+                  border-bottom-right-radius: 2rem;
+                  border-top-left-radius: 2rem;
+                  width: 14rem;
+                  min-width: 16rem;
+                  height: fit-content;
+                "
+                class="side-bar overflow-hidden container mx-3 px-1 px-0"
+              >
+                <div class="row">
+                  <div
+                    style="height: 33rem; width: 16.2rem"
+                    class="col-3 overflow-y-scroll sidebar-scroll"
+                  >
+                    <div class="px-3 mt-3">
+                      <h1 style="font-size: 30px">Pannels And Prices</h1>
+                      <div>
+                        <div class="bg-orange-700 rounded-5 p-3">
+                          <p class="m-0 fw-bold">5 and 3 stars hotels</p>
+                          <p>
+                            best pannels with amenities for 3 and 5 star hotels
+                          </p>
+                        </div>
+                        <div class="my-3 rounded-5 p-3">
+                          <p class="m-0 fw-bold">5 and 3 stars hotels</p>
+                          <p>
+                            best pannels with amenities for 3 and 5 star hotels
+                          </p>
+                        </div>
+                        <div class="my-3 rounded-5 p-3">
+                          <p class="m-0 fw-bold">5 and 3 stars hotels</p>
+                          <p>
+                            best pannels with amenities for 3 and 5 star hotels
+                          </p>
+                        </div>
+                        <div class="rounded-5 p-3 mb-3">
+                          <p class="m-0 fw-bold">5 and 3 stars hotels</p>
+                          <p>
+                            best pannels with amenities for 3 and 5 star hotels
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-table border-gray-900 rounded-5 w-100 p-3 ml-2">
+                <div
+                  class="overflow-hidden"
+                  style="
+                    border-top-right-radius: 1.4rem;
+                    border-top-left-radius: 1.4rem;
+                    background-color: var(--table-thead-bg);
+                    padding-top: 0.4rem;
+                  "
+                >
+                  <table
+                    style="border-inline: transparent; margin: auto !important"
+                    class="table table-small table-bordered m-0"
+                  >
+                    <thead>
+                      <tr style="--bs-table-bg: var(--table-thead-bg)">
+                        <th class="fw-bold" scope="col">Plans</th>
+                        <th class="fw-bold" scope="col">Price</th>
+                        <th class="fw-bold" scope="col">Support</th>
+                        <th class="fw-bold" scope="col">Services</th>
+                        <th class="fw-bold" scope="col">Addons</th>
+                        <th class="fw-bold" scope="col">Details</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div
+                            class="rounded-5 p-4"
+                            style="
+                              background: var(--table-thead-bg);
+                              width: 9rem;
+                            "
+                          >
+                            <p class="fw-bold mb-0">پلن حرفه ای</p>
+                          </div>
+                        </td>
+                        <td>3.000.000 تومان</td>
+                        <td>
+                          <svg
+                            class="text-green-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                              fill="green"
+                            ></path>
+                            <path
+                              d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                              fill="green"
+                            ></path>
+                          </svg>
+                        </td>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>
+                          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
+                          چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون
+                          بلکه روزنامه
+                        </td>
+                        <td>
+                          <svg
+                            class="text-primary cursor-pointer"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="orange"
+                          >
+                            <path
+                              opacity=".4"
+                              d="M21.25 9.15C18.94 5.52 15.56 3.43 12 3.43c-1.78 0-3.51.52-5.09 1.49-1.58.98-3 2.41-4.16 4.23-1 1.57-1 4.12 0 5.69 2.31 3.64 5.69 5.72 9.25 5.72 1.78 0 3.51-.52 5.09-1.49 1.58-.98 3-2.41 4.16-4.23 1-1.56 1-4.12 0-5.69ZM12 16.04c-2.24 0-4.04-1.81-4.04-4.04S9.76 7.96 12 7.96s4.04 1.81 4.04 4.04-1.8 4.04-4.04 4.04Z"
+                              fill="orange"
+                            ></path>
+                            <path
+                              d="M11.998 9.14a2.855 2.855 0 0 0 0 5.71c1.57 0 2.86-1.28 2.86-2.85s-1.29-2.86-2.86-2.86Z"
+                              fill="orange"
+                            ></path>
+                          </svg>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="addons"
+            class="content"
+            role="tabpanel"
+            aria-labelledby="addons-trigger"
+          >
+            <div class="container" style="max-width: 90%; margin-left: 5rem">
+              <div class="row gap-4">
+                <div class="col border-gray-900 rounded-5 p-3 bg-orange-700">
+                  <div
+                    style="background: #ffffff33"
+                    class="rounded-3 p-3 text-center"
+                  >
+                    <h5>Selected Plan</h5>
+                  </div>
+                  <div class="mt-3">
+                    <p class="fw-bold mb-0">Professional</p>
+                    <p>best for hotels with more than 20 rooms</p>
+                  </div>
+                  <div class="mt-3 border-bottom pb-2">
+                    <p>Year/ <span class="fs-1 fw-bold">۳,۰۰۰,۰۰۰</span></p>
+                  </div>
+                  <div class="mt-3">
+                    <p class="fw-bold">Amenities</p>
+                    <div class="d-flex flex-column gap-3">
+                      <div
+                        class="d-flex align-items-center gap-2"
+                        style="max-width: 14rem"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity=".4"
+                            d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                            fill="#fff"
+                          ></path>
+                          <path
+                            d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                            fill="#fff"
+                          ></path>
+                        </svg>
+                        <p class="m-0">
+                          decent Prices according to international rates
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center gap-2"
+                        style="max-width: 14rem"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity=".4"
+                            d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                            fill="#fff"
+                          ></path>
+                          <path
+                            d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                            fill="#fff"
+                          ></path>
+                        </svg>
+                        <p class="m-0">
+                          decent Prices according to international rates
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center gap-2"
+                        style="max-width: 14rem"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity=".4"
+                            d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                            fill="#fff"
+                          ></path>
+                          <path
+                            d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                            fill="#fff"
+                          ></path>
+                        </svg>
+                        <p class="m-0">
+                          decent Prices according to international rates
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center gap-2"
+                        style="max-width: 14rem"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            opacity=".4"
+                            d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                            fill="#fff"
+                          ></path>
+                          <path
+                            d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                            fill="#fff"
+                          ></path>
+                        </svg>
+                        <p class="m-0">
+                          decent Prices according to international rates
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-7 border-gray-900 bg-table rounded-5 p-3">
+                  <div>
+                    <h5 class="border-bottom pb-3">Plan Details</h5>
+                    <div
+                      class="overflow-hidden border-bottom mb-3"
+                      style="
+                        border-top-right-radius: 1.4rem;
+                        border-top-left-radius: 1.4rem;
+                        background-color: var(--table-thead-bg);
+                        padding-top: 0.4rem;
+                      "
+                    >
+                      <table
+                        style="
+                          border-inline: transparent;
+                          margin: auto !important;
+                        "
+                        class="table table-small table-no-hover table-bordered m-0"
+                      >
+                        <thead>
+                          <tr style="--bs-table-bg: var(--table-thead-bg)">
+                            <th class="fw-bold" scope="col">Price</th>
+                            <th class="fw-bold" scope="col">Support</th>
+                            <th class="fw-bold" scope="col">Services</th>
+                            <th class="fw-bold" scope="col">
+                              Channel Management
+                            </th>
+                            <th class="fw-bold" scope="col">Services</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>3.000.000 تومان</td>
+                            <td>
+                              <svg
+                                class="text-green-500"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="green"
+                              >
+                                <path
+                                  opacity=".4"
+                                  d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                                  fill="green"
+                                ></path>
+                                <path
+                                  d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                                  fill="green"
+                                ></path>
+                              </svg>
+                            </td>
+                            <td>
+                              استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی
+                            </td>
+                            <td>
+                              <svg
+                                class="text-green-500"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="green"
+                              >
+                                <path
+                                  opacity=".4"
+                                  d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+                                  fill="green"
+                                ></path>
+                                <path
+                                  d="M10.58 15.582a.75.75 0 0 1-.53-.22l-2.83-2.83a.754.754 0 0 1 0-1.06c.29-.29.77-.29 1.06 0l2.3 2.3 5.14-5.14c.29-.29.77-.29 1.06 0 .29.29.29.77 0 1.06l-5.67 5.67a.75.75 0 0 1-.53.22Z"
+                                  fill="green"
+                                ></path>
+                              </svg>
+                            </td>
+                            <td>
+                              استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <p>
+                      Adding costs Lorem Ipsum is a fictitious text with the
+                      production of incomprehensible simplicity from the
+                      printing industry and using graphic designers Printers and
+                      texts, but also newspaper conversion rates Lorem Ipsom is
+                      the fictitious text with the production of
+                      incomprehensible simplicity from the printing industry and
+                      with the use of graphic designers Lorem payment processing
+                      Epsom fake text with the production of incomprehensible
+                      simplicity from the printing industry, channel management
+                      with more than 300 channels. Production of simplicity
+                    </p>
+                  </div>
+                </div>
+                <div class="col bg-table border-gray-900 rounded-5 p-3">
+                  <div>
+                    <h5 class="border-bottom pb-3">Plan Details</h5>
+                    <div
+                      class="overflow-hidden border-bottom mb-2"
+                      style="
+                        border-top-right-radius: 1.4rem;
+                        border-top-left-radius: 1.4rem;
+                        background-color: var(--table-thead-bg);
+                        padding-top: 0.4rem;
+                      "
+                    >
+                      <table
+                        style="
+                          border-inline: transparent;
+                          margin: auto !important;
+                          border-right: var(--card-bg);
+                        "
+                        class="table table-small table-no-hover table-bordered m-0"
+                      >
+                        <thead>
+                          <tr style="--bs-table-bg: var(--table-thead-bg)">
+                            <th class="fw-bold" scope="col">Thing</th>
+                            <th class="fw-bold" scope="col">Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی
+                            </td>
+                            <td>3.000.000 تومان</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="border-bottom pb-2">
+                      <p class="m-0 fs-4">
+                        <span class="fw-bold">Total</span> 3,000,000 $
+                      </p>
+                    </div>
+                    <div>
+                      <button
+                        style="margin-top: 8rem; background: #2fac65"
+                        class="btn rounded-4 w-100 btn-success border-0"
+                      >
+                        Payment Details
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="payment"
+            class="content"
+            role="tabpanel"
+            aria-labelledby="payment-trigger"
+          >
+            <div
+              class="d-flex bg-table align-items-center rounded-5 p-3 gap-3"
+              style="margin-left: 4rem"
+            >
+              <div style="flex-basis: 60%">
+                <img src="/assets/images/success.svg" alt="" />
+              </div>
+              <div style="flex-basis: 100%">
+                <div>
+                  <h5 style="font-weight: 800" class="fs-1">Success</h5>
+                  <div
+                    style="background: #f0fee7; border: 2px dotted #95f264"
+                    class="rounded-5 p-2"
+                  >
+                    <p class="mb-0 fs-2 me-3" style="color: #389e0d">
+                      <span class="fw-bold">Payment Number </span>
+                      : 2287051200
+                    </p>
+                  </div>
+                  <div class="mt-3">
+                    <button class="btn rounded-4 me-3 btn-success">
+                      Pyament Details
+                    </button>
+                    <button class="btn rounded-4 border">
+                      New Reservation
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div style="flex-basis: 100%">
+                <div>
+                  <h4 class="border-bottom pb-3">Bills</h4>
+                </div>
+                <div
+                  class="overflow-hidden border-bottom mb-3"
+                  style="
+                    border-top-right-radius: 1.4rem;
+                    border-top-left-radius: 1.4rem;
+                    background-color: var(--table-thead-bg);
+                    padding-top: 0.4rem;
+                  "
+                >
+                  <table
+                    style="border-inline: transparent; margin: auto !important"
+                    class="table table-no-hover table-small table-bordered m-0"
+                  >
+                    <thead>
+                      <tr style="--bs-table-bg: var(--table-thead-bg)">
+                        <th class="fw-bold" scope="col">Plans</th>
+                        <th class="fw-bold" scope="col">Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>3.000.000 تومان</td>
+                      </tr>
+                      <tr>
+                        <td>استخر، باشگاه، خشکشویی استخر، باشگاه، خشکشویی</td>
+                        <td>3.000.000 تومان</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="d-flex gap-2">
+                  <span class="fw-bold fs-3">Total</span>
+                  <p class="fs-3">3,000,000 $</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div
+          style="margin-left: 5rem !important"
+          class="col-11 m-4 mt-0 border-gray-900 py-4 bg-table rounded-5 ml-4 d-flex justify-content-between align-items-center"
+        >
+          <div class="mx-3">
+            <button
+              form="information-form"
+              type="button"
+              class="btn submit-btn border stepper-next rounded-4"
+            >
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                    d="M9.57 5.93L3.5 12l6.07 6.07M20.5 12H3.67"
+                  ></path>
+                </svg>
+                <span>Next</span>
+              </div>
+            </button>
+          </div>
+          <div class="mx-3">
+            <button type="button" class="btn border rounded-4 stepper-pre">
+              <div>
+                <span>Back</span>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-miterlimit="10"
+                    stroke-width="1.5"
+                    d="M14.43 5.93L20.5 12l-6.07 6.07M3.5 12h16.83"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let currentStep = 0;
+
+        const mainD = document.querySelector(".col-8");
+        const stepperEl = document.querySelector(".bs-stepper");
+        const form = document.getElementById("information-form");
+        const subD = document.querySelector(".col-3");
+        const alert = document.querySelector(".alert");
+        const next = document.querySelector(".stepper-next");
+        const pre = document.querySelector(".stepper-pre");
+        const stepper = new Stepper(stepperEl);
+
+        stepperEl.addEventListener("show.bs-stepper", function (event) {
+          currentStep = event.detail.indexStep;
+          to = event.detail.to;
+        });
+
+        next.addEventListener("click", (ev) => {
+          stepper.next();
+          if (currentStep !== 1) {
+            ev.preventDefault();
+            next.setAttribute("type", "submit");
+          }
+
+          if (currentStep !== 0) {
+            mainD.classList.remove("col-8");
+            mainD.style.width = "92%";
+            subD.classList.add("d-none");
+            alert.classList.remove("d-none");
+            alert.classList.add("d-flex");
+          }
+        });
+        pre.addEventListener("click", () => {
+          stepper.previous();
+          if (currentStep == 0) {
+            mainD.classList.add("col-8");
+            mainD.style.width = "68%";
+            subD.classList.remove("d-none");
+          }
+        });
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

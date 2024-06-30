@@ -58,6 +58,78 @@
       <side-bar direction="ltr"></side-bar>
 
       <section class="container mw-100">
+        <div
+          dir="rtl"
+          style="
+            max-width: 91%;
+            background: snow;
+            border-radius: 1rem !important;
+            margin-left: 6rem;
+          "
+          class="alert alert-warning d-none justify-content-between align-items-center"
+          role="alert"
+        >
+          <div>
+            <div class="d-flex align-items-center mb-3">
+              <svg
+                viewBox="64 64 896 896"
+                focusable="false"
+                data-icon="exclamation-circle"
+                width="2em"
+                height="2em"
+                fill="orange"
+                aria-hidden="true"
+              >
+                <path
+                  d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+                ></path>
+              </svg>
+              <p class="text-black me-2 mb-0" style="font-size: 16px">
+                Warning
+              </p>
+            </div>
+            <div>
+              <p>Your Reservation Will expire in 10 min</p>
+            </div>
+          </div>
+          <div>
+            <p
+              class="timer mb-0"
+              style="font-size: 30px; color: var(--bs-orange-700)"
+              id="countdownTimer"
+            ></p>
+          </div>
+          <script>
+            var countdownTime = 15 * 60; // 15 minutes in seconds
+            var countdownFunction = setInterval(function () {
+              // Calculate minutes and seconds
+              var minutes = Math.floor(countdownTime / 60);
+              var seconds = countdownTime % 60;
+
+              // Format minutes and seconds with leading zeros if necessary
+              var formattedTime =
+                (minutes < 10 ? "0" : "") +
+                minutes +
+                ":" +
+                (seconds < 10 ? "0" : "") +
+                seconds;
+
+              // Display the countdown timer
+              document.getElementById("countdownTimer").textContent =
+                formattedTime;
+
+              // Decrease countdown time by 1 second
+              countdownTime--;
+
+              // Stop the countdown if it reaches 0
+              if (countdownTime < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdownTimer").textContent = "00:00"; // Optional: Display '00:00' when countdown ends
+                // Add code here to handle what happens after the countdown ends
+              }
+            }, 1000); // Update every second (1000 milliseconds)
+          </script>
+        </div>
         <div class="row gap-2 pb-3 d-flex justify-content-center ml-3">
           <div
             style="width: 68%; min-height: 33rem"
@@ -1871,6 +1943,8 @@
         const stepperEl = document.querySelector(".bs-stepper");
         const form = document.getElementById("information-form");
         const subD = document.querySelector(".col-3");
+        const alert = document.querySelector(".alert");
+
         const next = document.querySelector(".stepper-next");
         const pre = document.querySelector(".stepper-pre");
         const stepper = new Stepper(stepperEl);
@@ -1893,6 +1967,8 @@
             mainD.classList.remove("col-8");
             mainD.style.width = "92%";
             subD.classList.add("d-none");
+            alert.classList.remove("d-none");
+            alert.classList.add("d-flex");
           }
         });
         pre.addEventListener("click", () => {
