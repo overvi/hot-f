@@ -49,6 +49,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script defer src="/js/hotel-select.js"></script>
   </head>
 
   <body>
@@ -65,7 +66,7 @@
             background: snow;
             border-radius: 1rem !important;
           "
-          class="alert alert-warning d-none justify-content-between align-items-center"
+          class="alert alert-warning d-flex justify-content-between align-items-center"
           role="alert"
         >
           <div>
@@ -1163,7 +1164,7 @@
                     </div>
                     <button
                       data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
+                      data-bs-target="#additionModal"
                       class="btn border rounded-5"
                     >
                       <div class="d-flex">
@@ -1188,9 +1189,9 @@
 
                     <div
                       class="modal fade"
-                      id="exampleModal"
+                      id="additionModal"
                       tabindex="-1"
-                      aria-labelledby="exampleModalLabel"
+                      aria-labelledby="additionModalLabel"
                       aria-hidden="true"
                     >
                       <div
@@ -1959,14 +1960,6 @@
           }
           if (currentStep !== 1 || validator.isValid) {
             stepper.next();
-          }
-
-          if (currentStep !== 0) {
-            mainD.classList.remove("col-8");
-            mainD.style.width = "92%";
-            subD.classList.add("d-none");
-            alert.classList.remove("d-none");
-            alert.classList.add("d-flex");
           }
         });
         pre.addEventListener("click", () => {

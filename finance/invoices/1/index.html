@@ -42,6 +42,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script defer src="/js/hotel-select.js"></script>
   </head>
 
   <body style="--bs-border-color: var(--table-tr-hover-bg) !important">
@@ -89,7 +90,8 @@
                   <img
                     type="button"
                     data-bs-toggle="popover"
-                    data-bs-trigger="hover focus"
+                    data-bs-trigger="focus"
+                    tabindex="0"
                     data-bs-placement="left"
                     data-bs-custom-class="focus-pop shadow-lg w-15"
                     data-bs-content=""
@@ -102,8 +104,12 @@
 
                 <div class="d-none popover-content flex-column">
                   <div>
-                    <p class="border-bottom pb-3">پروفایل</p>
-                    <p class="text-danger m-0">خروج</p>
+                    <a
+                      href="/settings/profile"
+                      class="border-bottom link-body-emphasis d-block pb-3 link-underline link-underline-opacity-0"
+                      >پروفایل</a
+                    >
+                    <p class="text-danger m-0 pt-3">خروج</p>
                   </div>
                 </div>
                 <div

@@ -22,6 +22,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="/js/onbaording.js"></script>
+    <script defer src="/js/hotel-select.js"></script>
   </head>
   <body class="min-vh-100">
     <div
@@ -135,18 +136,7 @@
           </span>
         </div>
       </section>
-      <script>
-        const selects = document.querySelectorAll(".hotel-select");
 
-        selects.forEach((select) => {
-          select.addEventListener("click", () => {
-            selects.forEach((item) => {
-              item.classList.remove("hotel-selected");
-            });
-            select.classList.add("hotel-selected");
-          });
-        });
-      </script>
       <button
         class="btn pt-1 hotel-submit text-white w-25 mt-4 mb-3 fs-5"
         style="background: var(--bs-green-400); border-radius: 1rem"

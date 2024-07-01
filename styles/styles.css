@@ -37,6 +37,7 @@
   --table-tbody-bg: var(--bs-white);
   --table-thead-bg: var(--bs-gray-50);
   --search-box-bg: var(--bs-white);
+  --hotel-name: var(--bs-gray-400);
   --card-bg: var(--bs-white);
   --sidebar-bg: var(--bs-white);
   --tab-color: var(--bs-black);
@@ -61,6 +62,7 @@
   --table-tbody-bg: var(--bs-dark);
   --table-thead-bg: var(--bs-gray-900);
   --search-box-bg: var(--bs-gray-900);
+  --hotel-name: var(--bs-gray-700);
   --card-bg: var(--bs-dark);
   --sidebar-bg: var(--bs-gray-900);
   --popover-bg: var(--bs-gray-900);
@@ -176,7 +178,7 @@ img {
 }
 
 .table--crs td {
-  padding-block: 0.8rem;
+  padding-block: 0.4rem;
 }
 
 /* Badge */
@@ -305,6 +307,36 @@ img {
   width: 15rem;
   padding-left: 1rem;
   background: var(--search-box-bg);
+}
+
+.search-popover {
+  width: 100%;
+  max-width: 34rem;
+  left: -1.5rem !important;
+  background: var(--card-bg);
+  font: inherit !important;
+}
+
+.search-popover-l {
+  left: 2rem !important;
+}
+
+.search-popover .popover-arrow {
+  display: none !important;
+}
+
+.search-item {
+  cursor: pointer;
+  padding: 0.1rem;
+  padding-inline: 0.4rem;
+  border-radius: 100vw;
+  transition: all 800ms;
+  font-weight: 700;
+}
+
+.search-item:hover {
+  color: var(--bs-orange);
+  background-color: var(--table-thead-bg);
 }
 
 @media (width > 1100px) {
@@ -479,10 +511,6 @@ img {
   filter: grayscale(1);
 }
 
-.hotel-select:hover img {
-  filter: brightness(0) invert(1);
-}
-
 .hotel-select:hover .hotel-outline {
   background-color: var(--bs-orange-700);
 }
@@ -504,7 +532,7 @@ img {
   background-color: var(--bs-black);
 }
 .hotel-name {
-  background-color: var(--bs-gray-400);
+  background-color: var(--hotel-name);
   padding: 0.3rem;
   border-radius: 100vw;
   font-weight: 600;

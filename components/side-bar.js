@@ -192,7 +192,6 @@ class Sidebar extends HTMLElement {
 
     if (currentPage) {
       document.querySelectorAll(".side-tab").forEach((link) => {
-        console.log(link.pathname, currentPage);
         if (link.pathname == currentPage) {
           link.classList.add("active-tab");
           link.classList.add("active-item");

@@ -42,6 +42,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script defer src="/js/hotel-select.js"></script>
   </head>
 
   <body>
@@ -90,7 +91,8 @@
                   <img
                     type="button"
                     data-bs-toggle="popover"
-                    data-bs-trigger="hover focus"
+                    data-bs-trigger="focus"
+                    tabindex="0"
                     data-bs-placement="left"
                     data-bs-custom-class="focus-pop shadow-lg w-15"
                     data-bs-content=""
@@ -103,8 +105,12 @@
 
                 <div class="d-none popover-content flex-column">
                   <div>
-                    <p class="border-bottom pb-3">پروفایل</p>
-                    <p class="text-danger m-0">خروج</p>
+                    <a
+                      href="/settings/profile"
+                      class="border-bottom link-body-emphasis d-block pb-3 link-underline link-underline-opacity-0"
+                      >پروفایل</a
+                    >
+                    <p class="text-danger m-0 pt-3">خروج</p>
                   </div>
                 </div>
                 <div
@@ -250,32 +256,33 @@
               <tbody>
                 <tr>
                   <td>
-                    <svg
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                    <a href="1/">
+                      <svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="text-neutral-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
                         fill="none"
-                      ></path>
-                      <path
-                        d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                      ></path>
-                    </svg>
+                      >
+                        <path
+                          d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                    ></a>
                   </td>
                   <td>11,700,000</td>
                   <td>پرداخت نشده</td>
@@ -287,32 +294,33 @@
                 </tr>
                 <tr>
                   <td>
-                    <svg
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                    <a href="1/">
+                      <svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="text-neutral-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
                         fill="none"
-                      ></path>
-                      <path
-                        d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                      ></path>
-                    </svg>
+                      >
+                        <path
+                          d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                    ></a>
                   </td>
                   <td>11,700,000</td>
                   <td>پرداخت نشده</td>
@@ -324,32 +332,33 @@
                 </tr>
                 <tr>
                   <td>
-                    <svg
-                      xmlns:xlink="http://www.w3.org/1999/xlink"
-                      class="text-neutral-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                    >
-                      <path
-                        d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                    <a href="1/">
+                      <svg
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        class="text-neutral-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
                         fill="none"
-                      ></path>
-                      <path
-                        d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
-                        stroke="#A3A3A3"
-                        stroke-width="1.5px"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                      ></path>
-                    </svg>
+                      >
+                        <path
+                          d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                          stroke="#A3A3A3"
+                          stroke-width="1.5px"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          fill="none"
+                        ></path></svg
+                    ></a>
                   </td>
                   <td>11,700,000</td>
                   <td>پرداخت نشده</td>

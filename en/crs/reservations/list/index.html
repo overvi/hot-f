@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="/styles/theme.css" />
     <script src="/js/theme.js"></script>
 
-    <script src="/components/nav.js"></script>
-    <script src="/components/side-bar.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -16,6 +19,9 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="/components/nav.js"></script>
+    <script src="/components/side-bar.js"></script>
+
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/moment-jalaali@0.9.2/build/moment-jalaali.js"
@@ -41,6 +47,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script defer src="/js/hotel-select.js"></script>
   </head>
 
   <body>
@@ -202,9 +209,76 @@
                 <tr>
                   <td>
                     <div class="gap-2 d-flex justify-content-center">
-                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img
+                        type="button"
+                        data-bs-toggle="popover"
+                        data-bs-trigger="focus"
+                        data-bs-placement="top"
+                        tabindex="0"
+                        data-bs-custom-class="focus-pop shadow-lg"
+                        data-bs-content=""
+                        class="popover-btn"
+                        src="/assets/images/svgexport-18.svg"
+                        alt=""
+                      />
+                      <div class="d-none popover-content gap-3 flex-column">
+                        <div>
+                          <div class="d-flex align-items-center gap-2">
+                            <svg
+                              viewBox="64 64 896 896"
+                              focusable="false"
+                              data-icon="exclamation-circle"
+                              width="1em"
+                              height="1em"
+                              fill="orange"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+                              ></path>
+                            </svg>
+                            <p class="m-0">Are You Sure ?</p>
+                          </div>
+                          <div class="mt-1">
+                            <button class="btn border me-2 rounded-5 btn-sm">
+                              Cancel
+                            </button>
+                            <button
+                              class="btn text-white btn-warning btn-sm border-0 rounded-5"
+                            >
+                              Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                       <img src="/assets/images/svgexport-19.svg" alt="" />
-                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                      <a href="/en/crs/reservations/1/">
+                        <svg
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          class="text-neutral-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path></svg
+                      ></a>
                     </div>
                   </td>
                   <td>شرکتی</td>
@@ -229,9 +303,76 @@
                 <tr>
                   <td>
                     <div class="gap-2 d-flex justify-content-center">
-                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img
+                        type="button"
+                        data-bs-toggle="popover"
+                        data-bs-trigger="focus"
+                        data-bs-placement="top"
+                        tabindex="0"
+                        data-bs-custom-class="focus-pop shadow-lg"
+                        data-bs-content=""
+                        class="popover-btn"
+                        src="/assets/images/svgexport-18.svg"
+                        alt=""
+                      />
+                      <div class="d-none popover-content gap-3 flex-column">
+                        <div>
+                          <div class="d-flex align-items-center gap-2">
+                            <svg
+                              viewBox="64 64 896 896"
+                              focusable="false"
+                              data-icon="exclamation-circle"
+                              width="1em"
+                              height="1em"
+                              fill="orange"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+                              ></path>
+                            </svg>
+                            <p class="m-0">Are You Sure ?</p>
+                          </div>
+                          <div class="mt-1">
+                            <button class="btn border me-2 rounded-5 btn-sm">
+                              Cancel
+                            </button>
+                            <button
+                              class="btn text-white btn-warning btn-sm border-0 rounded-5"
+                            >
+                              Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                       <img src="/assets/images/svgexport-19.svg" alt="" />
-                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                      <a href="/en/crs/reservations/1/">
+                        <svg
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          class="text-neutral-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path></svg
+                      ></a>
                     </div>
                   </td>
                   <td>شرکتی</td>
@@ -256,9 +397,76 @@
                 <tr>
                   <td>
                     <div class="gap-2 d-flex justify-content-center">
-                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img
+                        type="button"
+                        data-bs-toggle="popover"
+                        data-bs-trigger="focus"
+                        data-bs-placement="top"
+                        tabindex="0"
+                        data-bs-custom-class="focus-pop shadow-lg"
+                        data-bs-content=""
+                        class="popover-btn"
+                        src="/assets/images/svgexport-18.svg"
+                        alt=""
+                      />
+                      <div class="d-none popover-content gap-3 flex-column">
+                        <div>
+                          <div class="d-flex align-items-center gap-2">
+                            <svg
+                              viewBox="64 64 896 896"
+                              focusable="false"
+                              data-icon="exclamation-circle"
+                              width="1em"
+                              height="1em"
+                              fill="orange"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+                              ></path>
+                            </svg>
+                            <p class="m-0">Are You Sure ?</p>
+                          </div>
+                          <div class="mt-1">
+                            <button class="btn border me-2 rounded-5 btn-sm">
+                              Cancel
+                            </button>
+                            <button
+                              class="btn text-white btn-warning btn-sm border-0 rounded-5"
+                            >
+                              Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                       <img src="/assets/images/svgexport-19.svg" alt="" />
-                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                      <a href="/en/crs/reservations/1/">
+                        <svg
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          class="text-neutral-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path></svg
+                      ></a>
                     </div>
                   </td>
                   <td>Company</td>
@@ -283,9 +491,76 @@
                 <tr>
                   <td>
                     <div class="gap-2 d-flex justify-content-center">
-                      <img src="/assets/images/svgexport-18.svg" alt="" />
+                      <img
+                        type="button"
+                        data-bs-toggle="popover"
+                        data-bs-trigger="focus"
+                        data-bs-placement="top"
+                        tabindex="0"
+                        data-bs-custom-class="focus-pop shadow-lg"
+                        data-bs-content=""
+                        class="popover-btn"
+                        src="/assets/images/svgexport-18.svg"
+                        alt=""
+                      />
+                      <div class="d-none popover-content gap-3 flex-column">
+                        <div>
+                          <div class="d-flex align-items-center gap-2">
+                            <svg
+                              viewBox="64 64 896 896"
+                              focusable="false"
+                              data-icon="exclamation-circle"
+                              width="1em"
+                              height="1em"
+                              fill="orange"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z"
+                              ></path>
+                            </svg>
+                            <p class="m-0">Are You Sure ?</p>
+                          </div>
+                          <div class="mt-1">
+                            <button class="btn border me-2 rounded-5 btn-sm">
+                              Cancel
+                            </button>
+                            <button
+                              class="btn text-white btn-warning btn-sm border-0 rounded-5"
+                            >
+                              Save
+                            </button>
+                          </div>
+                        </div>
+                      </div>
                       <img src="/assets/images/svgexport-19.svg" alt="" />
-                      <img src="/assets/images/svgexport-20.svg" alt="" />
+                      <a href="/en/crs/reservations/1/">
+                        <svg
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          class="text-neutral-400"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M15.58 12c0 1.98-1.6 3.58-3.58 3.58S8.42 13.98 8.42 12s1.6-3.58 3.58-3.58 3.58 1.6 3.58 3.58Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path>
+                          <path
+                            d="M12 20.27c3.53 0 6.82-2.08 9.11-5.68.9-1.41.9-3.78 0-5.19-2.29-3.6-5.58-5.68-9.11-5.68-3.53 0-6.82 2.08-9.11 5.68-.9 1.41-.9 3.78 0 5.19 2.29 3.6 5.58 5.68 9.11 5.68Z"
+                            stroke="#A3A3A3"
+                            stroke-width="1.5px"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            fill="none"
+                          ></path></svg
+                      ></a>
                     </div>
                   </td>
                   <td>Company</td>
@@ -313,11 +588,7 @@
         </div>
       </section>
     </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpگcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+
     <script src="/js/main.js"></script>
   </body>
 </html>

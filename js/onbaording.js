@@ -11,4 +11,3 @@ if (localStorage.getItem("loginSuccess")) {
 }
 
 const data = localStorage.getItem("loginSuccess");
-console.log(data);

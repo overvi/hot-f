@@ -42,6 +42,7 @@
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
     />
+    <script defer src="/js/hotel-select.js"></script>
   </head>
   <body class="min-vh-100" style="direction: rtl">
     <main class="w-100">
@@ -58,7 +59,7 @@
               <button
                 type="button"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#rateModal"
                 class="btn btn-warning rounded-5 mb-2"
               >
                 افزودن نرخ جدید
@@ -66,9 +67,9 @@
 
               <div
                 class="modal fade"
-                id="exampleModal"
+                id="rateModal"
                 tabindex="-1"
-                aria-labelledby="exampleModalLabel"
+                aria-labelledby="rateModalLabel"
                 aria-hidden="true"
               >
                 <div

@@ -625,6 +625,40 @@ class ExpandedSideBar extends HTMLElement {
     const currentPage = window.location.pathname;
 
     if (currentPage) {
+      const buttons = document.querySelectorAll(".accordion-button");
+      const collapses = document.querySelectorAll(".accordion-collapse");
+      const navs = collapses[3].querySelectorAll(".nav-a");
+
+      collapses.forEach((collapse, index) => {
+        const nav = collapse.querySelectorAll(".nav-a");
+
+        nav.forEach((item) => {
+          if (currentPage.includes("add/") || currentPage.includes("guests")) {
+            buttons.forEach((item) => {
+              item.classList.add("collapsed");
+            });
+
+            collapses.forEach((item) => {
+              item.classList.remove("show");
+            });
+          } else if (
+            item.pathname == currentPage.slice(0, currentPage.length - 1)
+          ) {
+            buttons.forEach((item) => {
+              item.classList.add("collapsed");
+            });
+
+            collapses.forEach((item) => {
+              item.classList.remove("show");
+            });
+
+            collapse.classList.add("show");
+
+            buttons[index].classList.remove("collapsed");
+          }
+        });
+      });
+
       document.querySelectorAll(".nav-a").forEach((link) => {
         if (link.pathname == currentPage) {
           link.classList.add("active-page");

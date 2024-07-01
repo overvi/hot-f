@@ -16,98 +16,98 @@ class Navbar extends HTMLElement {
   getRtlContent(url) {
     return `
       <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-dialog-centered"
-        style="--bs-modal-width: 28rem"
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
       >
         <div
-          style="border-radius: 1rem; background: var(--card-bg)"
-          class="modal-content border-0"
+          class="modal-dialog modal-dialog-centered"
+          style="--bs-modal-width: 28rem"
         >
-          <div class="modal-header border-0" style="margin-right: auto">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="d-flex flex-wrap gap-5">
-              <div class="hotel-select">
-                <div class="hotel-outline">
-                  <img
-                    width="116"
-                    src="/assets/images/1661856616_هتل-پارسیان-کوثر.jpg"
-                    alt=""
-                  />
+          <div
+            style="border-radius: 1rem; background: var(--card-bg)"
+            class="modal-content border-0"
+          >
+            <div class="modal-header border-0" style="margin-right: auto">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex flex-wrap gap-5">
+                <div class="hotel-select">
+                  <div class="hotel-outline">
+                    <img
+                      width="116"
+                      src="/assets/images/1661856616_هتل-پارسیان-کوثر.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="text-center hotel-name d-block mt-3">
+                    Ms. Ava Kris DVM
+                  </span>
                 </div>
-                <span class="text-center hotel-name d-block mt-3">
-                  Ms. Ava Kris DVM
-                </span>
-              </div>
-              <div class="hotel-select">
-                <div class="hotel-outline">
-                  <img
-                    width="116"
-                    src="/assets/images/636685697343706660.jpg"
-                    alt=""
-                  />
+                <div class="hotel-select">
+                  <div class="hotel-outline">
+                    <img
+                      width="116"
+                      src="/assets/images/636685697343706660.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="text-center hotel-name d-block mt-3">
+                    Ms. Ava Kris DVM
+                  </span>
                 </div>
-                <span class="text-center hotel-name d-block mt-3">
-                  Ms. Ava Kris DVM
-                </span>
-              </div>
-              <div class="hotel-select">
-                <div class="hotel-outline">
-                  <img
-                    width="116"
-                    src="/assets/images/094413447bozorg_shiraz1.jpg"
-                    alt=""
-                  />
+                <div class="hotel-select">
+                  <div class="hotel-outline">
+                    <img
+                      width="116"
+                      src="/assets/images/094413447bozorg_shiraz1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="text-center hotel-name d-block mt-3">
+                    Ms. Ava Kris DVM
+                  </span>
                 </div>
-                <span class="text-center hotel-name d-block mt-3">
-                  Ms. Ava Kris DVM
-                </span>
-              </div>
-              <div class="hotel-select">
-                <div class="hotel-outline">
-                  <img
-                    width="116"
-                    src="/assets/images/636685697343706660.jpg"
-                    alt=""
-                  />
+                <div class="hotel-select">
+                  <div class="hotel-outline">
+                    <img
+                      width="116"
+                      src="/assets/images/636685697343706660.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <span class="text-center hotel-name d-block mt-3">
+                    Ms. Ava Kris DVM
+                  </span>
                 </div>
-                <span class="text-center hotel-name d-block mt-3">
-                  Ms. Ava Kris DVM
-                </span>
-              </div>
-              <div class="hotel-select">
-                <div class="hotel-outline">
-                  <img width="116" src="/assets/images/images.png" alt="" />
+                <div class="hotel-select">
+                  <div class="hotel-outline">
+                    <img width="116" src="/assets/images/images.png" alt="" />
+                  </div>
+                  <span class="text-center hotel-name d-block mt-3">
+                    Ms. Ava Kris DVM
+                  </span>
                 </div>
-                <span class="text-center hotel-name d-block mt-3">
-                  Ms. Ava Kris DVM
-                </span>
               </div>
             </div>
+            <button
+              class="btn pt-1 hotel-submit text-white mt-4 mb-3 fs-5 mx-3"
+              style="background: var(--bs-green-400); border-radius: 1rem"
+            >
+              ثبت
+            </button>
           </div>
-          <button
-            class="btn pt-1 hotel-submit text-white mt-4 mb-3 fs-5 mx-3"
-            style="background: var(--bs-green-400); border-radius: 1rem"
-          >
-            ثبت
-          </button>
         </div>
       </div>
-    </div>
-   <header >
+      <header dir="rtl">
         <nav class="d-flex p-3 justify-content-between align-items-center">
           <div class="icon-bg padx-4 border-0 mt-0 rounded-5">
             <img
@@ -120,7 +120,11 @@ class Navbar extends HTMLElement {
           <form action="">
             <div class="search d-flex rounded-5 p-0">
               <input
-                class="form-control shadow-none rounded-5 p-2 border-0"
+                data-bs-toggle="popover-search"
+                data-bs-trigger="hover focus"
+                data-bs-placement="bottom"
+                data-bs-custom-class="search-popover rounded-5 border-gray-900 shadow-sm"
+                class="form-control search-inner-field popover-search-toggler shadow-none rounded-5 p-2 border-0"
                 placeholder="  مدیریت رسرواسیون  ..."
                 type="text"
               />
@@ -130,6 +134,34 @@ class Navbar extends HTMLElement {
               </div>
             </div>
           </form>
+          <div class="d-none popover-search-content gap-3 flex-column">
+            <div class="d-flex flex-column gap-2">
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+            </div>
+          </div>
 
           <div class="d-flex align-items-center me-0 gap-2">
             <div class="btn p-0 border-0">
@@ -413,22 +445,51 @@ class Navbar extends HTMLElement {
                 width="15"
               />
             </div>
-            <form action="" class="me-3">
-              <div class="search d-flex rounded-5">
-                <input
-                  class="form-control shadow-none rounded-5 p-2 border-0"
-                  placeholder="Reservation Search ... "
-                  type="text"
-                />
-                <div class="bg-orange btn border-0 rounded-5 pad-3">
-                  <img
-                    width="25"
-                    src="/assets/images/search-normal.svg"
-                    alt=""
-                  />
-                </div>
+             <form action="">
+            <div class="search d-flex rounded-5 p-0">
+              <input
+                data-bs-toggle="popover-search"
+                data-bs-trigger="hover focus"
+                data-bs-placement="bottom"
+                data-bs-custom-class="search-popover-l search-popover rounded-5 border-gray-900 shadow-sm"
+                class="form-control search-inner-field popover-search-toggler shadow-none rounded-5 p-2 border-0"
+                placeholder="Search Reservation..."
+                type="text"
+              />
+
+              <div class="bg-orange btn border-0 rounded-5 pad-3">
+                <img width="25" src="/assets/images/search-normal.svg" alt="" />
               </div>
-            </form>
+            </div>
+          </form>
+          <div class="d-none popover-search-content gap-3 flex-column">
+            <div class="d-flex flex-column gap-2">
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+              <div
+                class="d-flex search-item justify-content-between align-items-center"
+              >
+                <p class="m-0">13:20 - 2022/6/33</p>
+                <p class="m-0"><span>Fdsdffd FDfd</span> رزرواسیون</p>
+              </div>
+            </div>
+          </div>
             <div
               class="icon-bg border-0 mt-0 rounded-5 pad-2 btn border-0 rounded-5 pad-2"
             >
