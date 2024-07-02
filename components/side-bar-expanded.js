@@ -627,34 +627,51 @@ class ExpandedSideBar extends HTMLElement {
     if (currentPage) {
       const buttons = document.querySelectorAll(".accordion-button");
       const collapses = document.querySelectorAll(".accordion-collapse");
-      const navs = collapses[3].querySelectorAll(".nav-a");
 
       collapses.forEach((collapse, index) => {
-        const nav = collapse.querySelectorAll(".nav-a");
+        const navItems = collapse.querySelectorAll(".nav-a");
 
-        nav.forEach((item) => {
-          if (currentPage.includes("add/") || currentPage.includes("guests")) {
-            buttons.forEach((item) => {
-              item.classList.add("collapsed");
-            });
+        navItems.forEach((item) => {
+          const normalizedCurrentPage = currentPage.endsWith("/")
+            ? currentPage.slice(0, -1)
+            : currentPage;
 
-            collapses.forEach((item) => {
-              item.classList.remove("show");
-            });
-          } else if (
-            item.pathname == currentPage.slice(0, currentPage.length - 1)
+          const normalizedItemPathname = item.pathname.endsWith("/")
+            ? item.pathname.slice(0, -1)
+            : item.pathname;
+
+          console.log(
+            "Item Pathname:",
+            item.pathname,
+            "Normalized:",
+            normalizedItemPathname
+          );
+
+          if (
+            normalizedCurrentPage.includes("add/") ||
+            normalizedCurrentPage.includes("guests")
           ) {
-            buttons.forEach((item) => {
-              item.classList.add("collapsed");
+            buttons.forEach((btn) => {
+              btn.classList.add("collapsed");
             });
 
-            collapses.forEach((item) => {
-              item.classList.remove("show");
+            collapses.forEach((collapseItem) => {
+              collapseItem.classList.remove("show");
+            });
+          } else if (normalizedItemPathname === normalizedCurrentPage) {
+            buttons.forEach((btn) => {
+              btn.classList.add("collapsed");
+            });
+
+            collapses.forEach((collapseItem) => {
+              collapseItem.classList.remove("show");
             });
 
             collapse.classList.add("show");
 
-            buttons[index].classList.remove("collapsed");
+            if (buttons[index]) {
+              buttons[index].classList.remove("collapsed");
+            }
           }
         });
       });
