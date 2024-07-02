@@ -641,7 +641,9 @@ class ExpandedSideBar extends HTMLElement {
             collapses.forEach((item) => {
               item.classList.remove("show");
             });
-          } else if (item.pathname == currentPage) {
+          } else if (
+            item.pathname == currentPage.slice(0, currentPage.length - 1)
+          ) {
             buttons.forEach((item) => {
               item.classList.add("collapsed");
             });
