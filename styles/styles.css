@@ -613,7 +613,15 @@ img {
   }
 
   .available:hover {
-    background-color: var(--bs-dark) !important;
+    background-color: orange !important;
+  }
+
+  td.active {
+    background-color: orange !important;
+  }
+
+  td.in-range {
+    background-color: var(--bs-gray-900) !important;
   }
   .available {
     background-color: var(--bs-dark) !important;
