@@ -93,6 +93,10 @@ img {
   display: block;
 }
 
+select option {
+  font: inherit !important;
+}
+
 /* Table */
 
 .table-wrapper {

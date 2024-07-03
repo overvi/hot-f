@@ -34,86 +34,30 @@
             <div class="form-container">
               <h5 class="fw-bold p-3 border-bottom">افزودن نوع اتاق</h5>
               <form id="addroom-form" class="p-4">
-                <div class="d-flex gap-3">
-                  <div class="select-container" style="flex-basis: 50%">
-                    <label id="capacity-label" class="mb-3" for=""
-                      ><span class="text-danger mx-2">*</span>ظرفیت
-                    </label>
-                    <input
-                      id="capacity-input"
-                      type="hidden"
-                      class="d-none custom-select-input"
-                    />
-
-                    <div class="custom-select input form-control">
-                      <button
-                        id="capacity-input"
-                        type="button"
-                        class="select-button w-100 rounded5 border-0 btn p-0"
+                <div class="d-flex gap-3 align-items-center">
+                  <div class="select-container">
+                    <label class="mb-3" for=""
+                      ><span class="text-danger mx-2 d-inline-block">*</span>
+                      نوع اتاق</label
+                    >
+                    <div
+                      class="input form-container font-yekan border select-container px-3 d-flex justify-content-center"
+                      style="width: 10rem; height: 2.375rem"
+                    >
+                      <select
+                        name=""
+                        class="border-0 w-100"
+                        style="
+                          background: transparent;
+                          color: var(--bs-gray-600);
+                        "
+                        id=""
                       >
-                        <div
-                          class="selected-value d-flex justify-content-between"
-                        >
-                          <p class="mb-0 text-gray-500">انتخاب...</p>
-                          <div class="text-gray-500">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              fill="currentColor"
-                              class="bi bi-chevron-down"
-                              viewBox="0 0 16 16"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                              />
-                            </svg>
-                          </div>
-                        </div>
-                      </button>
-                      <ul class="select-dropdown">
-                        <li>
-                          <input
-                            type="radio"
-                            id="single"
-                            name="room-quantity"
-                          />
-                          <label for="single">Single</label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            id="double"
-                            name="room-quantity"
-                          />
-                          <label for="double">Double</label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            id="triple"
-                            name="room-quantity"
-                          />
-                          <label for="triple">Triple</label>
-                        </li>
-                        <li>
-                          <input type="radio" id="quad" name="room-quantity" />
-                          <label for="quad">Quad</label>
-                        </li>
-                        <li>
-                          <input
-                            type="radio"
-                            id="quad-plus"
-                            name="room-quantity"
-                          />
-                          <label for="quad-plus">Quad Plus</label>
-                        </li>
-                        <li>
-                          <input type="radio" id="twin" name="room-quantity" />
-                          <label for="twin">Twin</label>
-                        </li>
-                      </ul>
+                        <option value="">A</option>
+                        <option value="">B</option>
+                        <option value="">C</option>
+                        <option value="">D</option>
+                      </select>
                     </div>
                   </div>
                   <div class="select-container" style="flex-basis: 50%">
