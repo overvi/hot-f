@@ -4,6 +4,7 @@ for (let script of scripts) {
   if (script.getAttribute("single") !== null) {
     const customValue = script.getAttribute("single");
     $(function () {
+      // Load Persian settings for moment.js
       moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
       moment.locale("fa", {
@@ -71,12 +72,12 @@ for (let script of scripts) {
       $('input[name="datefilter"]').daterangepicker({
         autoUpdateInput: false,
         autoApply: true,
+        singleDatePicker: customValue === "true",
 
-        singleDatePicker: customValue == "true",
         locale: {
-          format: "jYYYY/jMM/jDD",
+          format: "jYYYY/jM/jD",
           direction: "rtl",
-          separator: customValue == "false" ? " <----" : "",
+          separator: customValue === "false" ? " <----" : "",
           applyLabel: "اعمال",
           cancelLabel: "لغو",
           fromLabel: "از",
@@ -103,8 +104,9 @@ for (let script of scripts) {
         jalaali: true,
       });
 
+      // Function to return the date in the correct format
       const returnDate = (picker) => {
-        if (customValue == "false") {
+        if (customValue === "false") {
           return (
             moment(picker.startDate).format("jYYYY/M/D") +
             "  <----  " +
@@ -122,6 +124,7 @@ for (let script of scripts) {
         }
       );
 
+      // Cancel event for daterangepicker
       $('input[name="datefilter"]').on(
         "cancel.daterangepicker",
         function (ev, picker) {

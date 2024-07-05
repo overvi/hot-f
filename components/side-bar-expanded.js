@@ -640,12 +640,7 @@ class ExpandedSideBar extends HTMLElement {
             ? item.pathname.slice(0, -1)
             : item.pathname;
 
-          console.log(
-            "Item Pathname:",
-            item.pathname,
-            "Normalized:",
-            normalizedItemPathname
-          );
+          console.log(normalizedItemPathname, normalizedCurrentPage);
 
           if (
             normalizedCurrentPage.includes("add/") ||
@@ -658,7 +653,10 @@ class ExpandedSideBar extends HTMLElement {
             collapses.forEach((collapseItem) => {
               collapseItem.classList.remove("show");
             });
-          } else if (normalizedItemPathname === normalizedCurrentPage) {
+          } else if (
+            normalizedItemPathname &&
+            normalizedCurrentPage.startsWith(normalizedItemPathname)
+          ) {
             buttons.forEach((btn) => {
               btn.classList.add("collapsed");
             });
@@ -677,7 +675,7 @@ class ExpandedSideBar extends HTMLElement {
       });
 
       document.querySelectorAll(".nav-a").forEach((link) => {
-        if (currentPage.includes(link.pathname)) {
+        if (link.pathname && currentPage.includes(link.pathname)) {
           link.classList.add("active-page");
         }
       });
