@@ -111,7 +111,7 @@ for (let script of scripts) {
             moment(picker.endDate).format("jYYYY/M/D")
           );
         } else {
-          return moment(picker.startDate).format("jYYYY/jM/jD");
+          return moment(picker.startDate).format("jYYYY/M/D");
         }
       };
 
