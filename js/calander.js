@@ -19,7 +19,6 @@ for (let script of scripts) {
         ),
         weekdaysShort: "یکش_دوش_سه‌_چه_پنج_جمع_شنب".split("_"),
         weekdaysMin: "ی_د_س_چ_پ_ج_ش".split("_"),
-
         longDateFormat: {
           LT: "HH:mm",
           LTS: "HH:mm:ss",
@@ -72,7 +71,8 @@ for (let script of scripts) {
       $('input[name="datefilter"]').daterangepicker({
         autoUpdateInput: false,
         autoApply: true,
-        singleDatePicker: customValue == "true" ? true : false,
+
+        singleDatePicker: customValue == "true",
         locale: {
           format: "jYYYY/jMM/jDD",
           direction: "rtl",
@@ -83,18 +83,32 @@ for (let script of scripts) {
           toLabel: "تا",
           customRangeLabel: "سفارشی",
           weekLabel: "ه",
-          daysOfWeek: moment().format("jYYYY/jM/jD"),
-          monthNames: moment().format("jYYYY/jM/jD"),
+          daysOfWeek: ["ی", "د", "س", "چ", "پ", "ج", "ش"],
+          monthNames: [
+            "فروردین",
+            "اردیبهشت",
+            "خرداد",
+            "تیر",
+            "مرداد",
+            "شهریور",
+            "مهر",
+            "آبان",
+            "آذر",
+            "دی",
+            "بهمن",
+            "اسفند",
+          ],
           firstDay: 6,
         },
+        jalaali: true,
       });
 
       const returnDate = (picker) => {
         if (customValue == "false") {
           return (
-            moment(picker.startDate).format("jYYYY/jM/jD") +
+            moment(picker.startDate).format("jYYYY/M/D") +
             "  <----  " +
-            moment(picker.endDate).format("jYYYY/jM/jD")
+            moment(picker.endDate).format("jYYYY/M/D")
           );
         } else {
           return moment(picker.startDate).format("jYYYY/jM/jD");
