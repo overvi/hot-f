@@ -177,9 +177,14 @@ select option {
   padding-inline: 0;
 }
 
-.table--crs td:not(:last-child) {
+.table-crs-en td:not(:first-child) {
   font-size: 12px;
 }
+
+.table-crs-fa td:not(:first-child) {
+  font-size: 12px;
+}
+
 
 .table--crs td {
   padding-block: 0.4rem;
@@ -795,7 +800,7 @@ select option {
 
 .crs-heading .bar {
   background-color: var(--bs-orange-700);
-  width: 15px;
+  width: 13%;
   height: 100%;
   position: absolute;
   right: 0;
