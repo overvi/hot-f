@@ -36,6 +36,7 @@
   --table-tr-hover-bg: var(--bs-gray-100);
   --table-tbody-bg: var(--bs-white);
   --table-thead-bg: var(--bs-gray-50);
+  --guest-card: var(--bs-light-amber);
   --search-box-bg: var(--bs-white);
   --hotel-name: var(--bs-gray-400);
   --card-bg: var(--bs-white);
@@ -50,6 +51,7 @@
   --bs-gray-900: #181818;
   --bs-gray-100: hsl(0, 0%, 95%);
   --bs-gray-50: #f9f9f9;
+  --bs-light-amber: #fff9eb;
   --bs-lightblue: #bfdbfe;
   --bs-orange-700: #f9b033;
   --bs-orange-300: rgba(245, 216, 112, 0.3);
@@ -61,6 +63,7 @@
   --table-tr-hover-bg: var(--bs-gray-900);
   --table-tbody-bg: var(--bs-dark);
   --table-thead-bg: var(--bs-gray-900);
+  --guest-card: var(--bs-gray-900);
   --search-box-bg: var(--bs-gray-900);
   --hotel-name: var(--bs-gray-700);
   --card-bg: var(--bs-dark);
@@ -184,7 +187,6 @@ select option {
 .table-crs-fa td:not(:first-child) {
   font-size: 12px;
 }
-
 
 .table--crs td {
   padding-block: 0.4rem;
