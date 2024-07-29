@@ -986,25 +986,27 @@
     </script>
 
     <script defer>
-      const popoverTriggerS = document.querySelector(".popover-details-btn");
-      const popoverDetailsContentS = document.querySelector(
+      const popoverTriggerS = document.querySelectorAll(".popover-details-btn");
+      const popoverDetailsContentS = document.querySelectorAll(
         ".popover-details-content"
       );
 
-      const contentT = popoverDetailsContentS.innerHTML;
-      popoverDetailsContentS.remove();
+      popoverDetailsContentS.forEach((content, index) => {
+        const contentS = content.innerHTML;
+        content.remove();
 
-      const popoverT = new bootstrap.Popover(popoverTriggerS, {
-        sanitize: false,
-        trigger: "click",
-        html: true,
-        content: contentT,
-      });
+        const popoverT = new bootstrap.Popover(popoverTriggerS[index], {
+          sanitize: false,
+          trigger: "click",
+          html: true,
+          content: contentS,
+        });
 
-      window.addEventListener("click", (ev) => {
-        if (!ev.target.closest(".popover-body")) {
-          popoverT.hide();
-        }
+        window.addEventListener("click", (ev) => {
+          if (!ev.target.closest(".popover-body")) {
+            popoverT.hide();
+          }
+        });
       });
     </script>
   </body>
