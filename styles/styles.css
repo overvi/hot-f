@@ -209,6 +209,10 @@ select option {
   margin-top: 1rem !important;
 }
 
+.w-fit {
+  width: fit-content;
+}
+
 .pad-2 {
   padding: 0.6rem;
 }
