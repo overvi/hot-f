@@ -29,6 +29,12 @@
   font-style: normal;
   font-weight: 800;
 }
+@font-face {
+  font-family: "Yekan";
+  src: url(/assets/fonts/YekanBakh-Heavy.woff2);
+  font-style: normal;
+  font-weight: 750;
+}
 
 /* General */
 
@@ -869,4 +875,30 @@ select option {
   color: var(--bs-black);
 }
 
-/* Map */
+/* Voucher */
+
+.voucher-card {
+  position: relative;
+}
+
+.vocher-card-except::before,
+.voucher-card::after {
+  content: " ";
+  display: block;
+  background: var(--bs-body-bg);
+  width: 15px;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  height: 30px;
+}
+.voucher-card::before {
+  left: 0;
+  border-radius: 0 5rem 5rem 0;
+}
+
+.voucher-card::after {
+  right: 0;
+  border-radius: 5rem 0 0 5rem;
+}
